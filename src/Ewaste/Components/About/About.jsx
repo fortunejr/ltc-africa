@@ -1,69 +1,115 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { about } from "../../../imports";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2
+    }
+  }
+};
+
+const imageVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
 
 const AboutEwaste = () => {
   return (
-    <section className="relative w-full py-20 px-4 bg-customBlue overflow-hidden">
-      {/* Decorative blurred shapes */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#3067a6]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 -right-24 w-96 h-96 bg-[#3067a6]/10 rounded-full blur-3xl" />
+    <section className="w-full bg-customBlue py-24 overflow-x-hidden">
+      <motion.div
+        className="max-w-7xl mx-auto px-6 md:px-12"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-      <div className="relative max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-14 items-center">
-          
           {/* IMAGE */}
-          <div data-aos="fade-right" className="relative group">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.03]">
-              <img
-                src={about}
-                alt="LTC Africa Recycling About Us"
-                className="w-full h-130 object-cover"
-              />
-
-              {/* Brand overlay */}
-              <div className="absolute inset-0 bg-linear-to-tr from-[#3067a6]/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-700" />
-            </div>
-
-            {/* Floating glow ring */}
-            <div className="absolute -inset-4 rounded-3xl border border-[#3067a6]/30 opacity-0 group-hover:opacity-100 transition duration-700" />
-          </div>
+          <motion.div
+            className="relative"
+            variants={imageVariants}
+          >
+            <img
+              src={about}
+              alt="LTC Africa Recycling About Us"
+              className="w-full h-[420px] object-cover rounded-xl"
+            />
+          </motion.div>
 
           {/* CONTENT */}
-          <div data-aos="fade-left">
-            <p className="font-semibold mb-4 uppercase tracking-widest relative inline-block text-white">
+          <motion.div
+            className="text-white"
+            variants={containerVariants}
+          >
+            <motion.p
+              className="text-sm uppercase tracking-widest mb-4 text-white/70"
+              variants={textVariants}
+            >
               LTC Africa Recycling Limited
-              <span className="absolute bg-customGreen left-0 -bottom-1 w-1/2 h-0.5 animate-pulse" />
-            </p>
+            </motion.p>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+            <motion.h2
+              className="text-4xl md:text-5xl font-semibold leading-tight mb-8"
+              variants={textVariants}
+            >
               About Us
-            </h2>
+            </motion.h2>
 
-            <p className="text-white text-lg leading-relaxed mb-6">
-              LTC Africa Recycling, a proud member of the <span className="font-semibold">(LTC Africa Group)</span>,
-              is a modern and fully registered Waste Electrical and Electronic Equipment (WEEE) management company
-              dedicated to redefining how Africa handles electronic waste.
-            </p>
+            <motion.p
+              className="text-lg leading-relaxed text-white/90 mb-6"
+              variants={textVariants}
+            >
+              LTC Africa Recycling, a proud member of the{" "}
+              <span className="font-medium">(LTC Africa Group)</span>, is a fully
+              registered Waste Electrical and Electronic Equipment (WEEE)
+              management company redefining how Africa handles electronic waste.
+            </motion.p>
 
-            <p className="text-white text-lg leading-relaxed mb-10">
-              Through innovative ITAD solutions, we help organizations securely recover value from outdated or
-              decommissioned electronic equipment while protecting sensitive data, promoting reuse, and minimizing
-              carbon emissions.
-            </p>
+            <motion.p
+              className="text-lg leading-relaxed text-white/90 mb-10"
+              variants={textVariants}
+            >
+              Through secure ITAD solutions, we help organizations recover value
+              from decommissioned electronic equipment while protecting data,
+              promoting reuse, and reducing environmental impact.
+            </motion.p>
 
-            {/* CTA */}
-            <a
+            <motion.a
               href="/e-waste/about"
-              className="inline-flex items-center gap-3 rounded-full bg-customGreen px-8 py-3 text-white text-sm font-semibold shadow-lg transition-all duration-300 hover:bg-[#24548c] hover:scale-105"
+              className="inline-block text-sm font-medium text-white border-b border-white/60 hover:border-white transition"
+              variants={textVariants}
             >
               Learn More
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
+
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

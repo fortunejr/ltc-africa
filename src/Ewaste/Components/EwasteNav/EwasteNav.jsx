@@ -15,7 +15,7 @@ const EwasteNav = () => {
   const handleLinkClick = () => setOpen(false);
 
   const navItems = [
-    { to: "/e-waste/the-company", label: "The Company" },
+    { to: "/e-waste", label: "Home" },
     { to: "/e-waste/about", label: "About Us" },
     { to: "/e-waste/services", label: "Services" },
     { to: "/e-waste/climate-change", label: "Climate Change" },
