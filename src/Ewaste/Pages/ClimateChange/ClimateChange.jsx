@@ -1,11 +1,10 @@
 import React from "react";
-import { carbon } from "../../../imports";
+import { carbon, climate } from "../../../imports";
 
 const ClimateChange = () => {
   return (
     <section className="bg-slate-50 py-28 text-slate-800">
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-32">
-
         {/* HEADER */}
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="text-sm uppercase tracking-widest text-customGreen">
@@ -24,11 +23,26 @@ const ClimateChange = () => {
           </p>
         </div>
 
+        {/* CLIMATE IMAGE */}
+        <div className="max-w-6xl mx-auto">
+          <div className="relative w-full h-80 md:h-116 rounded-2xl overflow-hidden">
+            <img
+              src={climate}
+              alt="Climate action and sustainability"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-slate-900/40 via-transparent to-transparent" />
+          </div>
+        </div>
+
         {/* INTRO */}
         <div className="max-w-5xl mx-auto space-y-6 text-slate-600 leading-relaxed">
           <p>
-            At <span className="font-medium text-slate-900">LTC Africa Recycling</span>, we
-            recognize that electronic waste is not only a waste management
+            At{" "}
+            <span className="font-medium text-slate-900">
+              LTC Africa Recycling
+            </span>
+            , we recognize that electronic waste is not only a waste management
             challenge but also a major climate and environmental issue.
             Uncontrolled dumping and burning of e-waste release greenhouse gases
             such as carbon dioxide and methane, alongside toxic substances that
@@ -76,7 +90,7 @@ const ClimateChange = () => {
                     environmental degradation.
                   </p>
                 </>
-              )
+              ),
             },
             {
               title: "Circular Economy for Climate Resilience",
@@ -96,7 +110,7 @@ const ClimateChange = () => {
                     strengthen economic resilience across Africa.
                   </p>
                 </>
-              )
+              ),
             },
             {
               title: "Low-Emission Operations & Sustainable Logistics",
@@ -119,7 +133,7 @@ const ClimateChange = () => {
                     processing emissions.
                   </li>
                 </ul>
-              )
+              ),
             },
             {
               title: "Carbon Measurement, Reporting & Offset Programs",
@@ -144,7 +158,7 @@ const ClimateChange = () => {
                     quantifying emission savings.
                   </p>
                 </>
-              )
+              ),
             },
             {
               title: "Partnerships, Education & Policy Support",
@@ -163,7 +177,7 @@ const ClimateChange = () => {
                     climate strategies and EPR frameworks.
                   </li>
                 </ul>
-              )
+              ),
             },
             {
               title: "Research, Innovation & Green Technology",
@@ -175,7 +189,7 @@ const ClimateChange = () => {
                     Promotion of green materials and eco-design in electronics.
                   </li>
                 </ul>
-              )
+              ),
             },
             {
               title: "Alignment with Global & Regional Climate Goals",
@@ -186,14 +200,16 @@ const ClimateChange = () => {
                   <li>African Union Agenda 2063.</li>
                   <li>ISO 14001 Environmental Management standards.</li>
                 </ul>
-              )
+              ),
             },
             {
               title: "Measurable Impact",
               body: (
                 <ul className="space-y-2 list-disc pl-5">
                   <li>Thousands of tons of e-waste diverted annually.</li>
-                  <li>Significant energy savings equivalent to powering homes.</li>
+                  <li>
+                    Significant energy savings equivalent to powering homes.
+                  </li>
                   <li>
                     Avoided emissions from informal burning and material
                     extraction.
@@ -202,8 +218,8 @@ const ClimateChange = () => {
                     Support for sustainable IT lifecycle management for clients.
                   </li>
                 </ul>
-              )
-            }
+              ),
+            },
           ].map((section, index) => (
             <div
               key={index}
@@ -243,7 +259,6 @@ const ClimateChange = () => {
             <div className="absolute inset-0 rounded-xl ring-1 ring-black/10" />
           </div>
         </div>
-
       </div>
     </section>
   );

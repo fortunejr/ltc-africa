@@ -17,6 +17,7 @@ import {
   Cpu,
   Landmark
 } from "lucide-react";
+import { itequipments, harzadous, telecom, others } from "../../../imports";
 
 const industries = [
   { name: "Telecom", icon: Radio },
@@ -85,45 +86,65 @@ const ServicesEwaste = () => {
         </div>
 
         {/* WHAT WE ACCEPT */}
-        <div className="space-y-16 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-900">
-            What We Accept
-          </h2>
+<div className="space-y-16 max-w-6xl">
+  <h2 className="text-2xl md:text-4xl font-semibold text-slate-900">
+    What We Accept
+  </h2>
 
-          <div className="grid gap-12 md:grid-cols-2">
-            {[
-              {
-                title: "IT Equipment",
-                text:
-                  "Desktop computers, laptops, servers, monitors, keyboards, printers, scanners, UPS systems, routers, network switches, storage devices, tablets, SIM cards, cables, and accessories."
-              },
-              {
-                title: "Telecom Equipment",
-                text:
-                  "Mobile phones, PBX systems, BTS components, antennas, CCTV systems, POS terminals, VoIP devices, satellite equipment, networking racks, and communication hardware."
-              },
-              {
-                title: "Hazardous Components",
-                text:
-                  "Batteries, toner cartridges, capacitors, transformers, circuit boards, mercury lamps, PCB boards, and electronic chips."
-              },
-              {
-                title: "Other Equipment",
-                text:
-                  "Medical electronic devices such as ECG systems and monitors, as well as audio-visual equipment including speakers and projectors."
-              }
-            ].map((item, index) => (
-              <div key={index} className="space-y-4">
-                <h3 className="text-lg font-medium text-customBlue">
-                  {item.title}
-                </h3>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
+  <div className="grid gap-10 sm:grid-cols-2">
+    {[
+      {
+        title: "IT Equipment",
+        text:
+          "Desktop computers, laptops, servers, monitors, keyboards, printers, scanners, UPS systems, routers, network switches, storage devices, tablets, SIM cards, cables, and accessories.",
+        image: itequipments,
+      },
+      {
+        title: "Telecom Equipment",
+        text:
+          "Mobile phones, PBX systems, BTS components, antennas, CCTV systems, POS terminals, VoIP devices, satellite equipment, networking racks, and communication hardware.",
+        image: telecom,
+      },
+      {
+        title: "Hazardous Components",
+        text:
+          "Batteries, toner cartridges, capacitors, transformers, circuit boards, mercury lamps, PCB boards, and electronic chips.",
+        image: harzadous,
+      },
+      {
+        title: "Other Equipment",
+        text:
+          "Medical electronic devices such as ECG systems and monitors, as well as audio-visual equipment including speakers and projectors.",
+        image: others,
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className="group rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden transition hover:shadow-lg"
+      >
+        {/* IMAGE */}
+        <div className="h-48 w-full overflow-hidden">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="h-full w-full object-contain  transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
+
+        {/* TEXT */}
+        <div className="p-6 space-y-3">
+          <h3 className="text-lg font-medium text-customBlue">
+            {item.title}
+          </h3>
+          <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+            {item.text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* SERVICES */}
         <div className="space-y-20 max-w-6xl">

@@ -1,4 +1,5 @@
 import React from "react";
+import { iso14001, iso27001, iso45001, iso9001, r2 } from "../../../imports";
 
 const AboutEwaste = () => {
   return (
@@ -119,49 +120,50 @@ const AboutEwaste = () => {
         </div>
 
         {/* CERTIFICATIONS */}
-        <div className="space-y-12">
-          <h2 className="text-center text-2xl md:text-4xl font-semibold text-slate-900">
-            Certification & Compliance
-          </h2>
+<div className="space-y-14">
+  <div className="mx-auto max-w-4xl text-center space-y-4">
+    <h2 className="text-2xl md:text-4xl font-semibold text-slate-900">
+      Certification & Compliance
+    </h2>
+    <p className="text-slate-600 leading-relaxed">
+      LTC Africa Recycling operates with full regulatory compliance, supported
+      by internationally recognized certifications that demonstrate our
+      commitment to quality, safety, data security, and environmental
+      responsibility.
+    </p>
+  </div>
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              [
-                "National & Regional Environmental Permits",
-                [
-                  "Waste Management License / Permit",
-                  "Hazardous Waste Handling Permit",
-                  "Import/Export Permit for E-Waste",
-                ],
-              ],
-              [
-                "International Conventions",
-                ["Basel Convention compliance", "EU WEEE Directive and EPR"],
-              ],
-              [
-                "Global Certifications",
-                [
-                  "ISO 14001",
-                  "ISO 9001",
-                  "R2 Responsible Recycling",
-                  "ISO 45001",
-                  "ISO 27001",
-                ],
-              ],
-            ].map(([title, items], index) => (
-              <div key={index} className="space-y-4">
-                <h3 className="text-lg font-medium text-customGreen">
-                  {title}
-                </h3>
-                <ul className="space-y-1 text-sm text-slate-600">
-                  {items.map((item, idx) => (
-                    <li key={idx}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+  <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    {[
+      { img: iso9001, title: "ISO 9001", subtitle: "Quality Management" },
+      { img: iso14001, title: "ISO 14001", subtitle: "Environmental Management" },
+      { img: iso45001, title: "ISO 45001", subtitle: "Occupational Health & Safety" },
+      { img: iso27001, title: "ISO 27001", subtitle: "Information Security" },
+      { img: r2, title: "R2 Certified", subtitle: "Responsible Recycling" },
+    ].map((cert, index) => (
+      <div
+        key={index}
+        className="group flex flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-sm border border-slate-100 transition-all hover:shadow-lg hover:-translate-y-1"
+      >
+        <div className="flex h-24 items-center justify-center">
+          <img
+            src={cert.img}
+            alt={cert.title}
+            className="max-h-20 object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </div>
+
+        <div className="mt-4 text-center space-y-1">
+          <h4 className="text-sm font-semibold text-slate-800">
+            {cert.title}
+          </h4>
+          <p className="text-xs text-slate-500">{cert.subtitle}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* LEADERSHIP */}
         <div className="space-y-12">

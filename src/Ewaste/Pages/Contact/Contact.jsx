@@ -17,9 +17,14 @@ const ContactEwaste = () => {
         </div>
 
         {/* Map Placeholder */}
-        <div className="rounded-3xl border border-gray-200 h-80 flex items-center justify-center text-gray-400">
-          Google Map – Office Locations & Address Pins
-        </div>
+<div className="rounded-3xl border border-gray-200 h-125 md:h-162.5 overflow-hidden">
+  <iframe
+    title="Map"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15093.767854472257!2d47.518595!3d-18.956079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07ff25bab41c3%3A0x7cd8a63292d40a08!2sAFRIPORT%20zone%20d&#39;activit%C3%A9%20mixte!5e0!3m2!1sen!2sng!4v1768950435791!5m2!1sen!2sng"
+    className="w-full h-full border-0"
+    loading="lazy"
+  />
+</div>
 
         {/* Contact Details */}
         <div className="grid md:grid-cols-2 gap-12">

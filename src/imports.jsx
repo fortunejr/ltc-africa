@@ -14,5 +14,17 @@ import permit from "./assets/permit.png";
 import global from "./assets/global.jpg";
 import sust from "./assets/sust.jpg";
 import carbon from "./assets/carbon.jpg";
+import iso14001 from "./assets/iso14001.png";
+import iso9001 from "./assets/iso9001.jpg";
+import r2 from "./assets/r2.png";
+import iso45001 from "./assets/iso45001.png";
+import iso27001 from "./assets/iso27001.png";
+import climate from "./assets/climate-change.jpg";
+import itequipments from "./assets/it-equipments.png";
+import telecom from "./assets/telecom.png";
+import harzadous from "./assets/harzadous.png";
+import others from "./assets/others.png";
+import co2 from "./assets/co2.jpg";
+import sdgs from "./assets/sdgs.jpg";
 
-export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain };
+export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain, iso14001, iso9001, r2, iso45001, iso27001, climate, itequipments, telecom, harzadous, others, co2, sdgs };
