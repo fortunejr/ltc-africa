@@ -1,36 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { realestate, agriculture, ewaste } from "../../imports";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { agric, ewastevid, realestate2, renewableenergy } from "../../imports";
 
 const slides = [
   {
-    image: realestate,
+    video: realestate2,
     title: "Smart Real Estate Solutions",
     subtitle: "Connecting properties with global opportunities through innovation.",
     link: "real-estate",
   },
   {
-    image: agriculture,
+    video: agric,
     title: "Empowering Modern Agriculture",
     subtitle: "Driving sustainable farming and agribusiness growth worldwide.",
     link: "agriculture",
   },
   {
-    image: ewaste,
+    video: ewastevid,
     title: "Responsible E-Waste Management",
     subtitle: "Transforming electronic waste into environmental impact.",
     link: "e-waste",
   },
   {
-    image: ewaste,
+    video: renewableenergy,
     title: "Renewable Energy",
     subtitle: "Harnessing nature to power a sustainable future for all.",
-    link: "e-waste",
+    link: "renewable-energy",
   },
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,9 +40,23 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    // Play current video and pause others
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === current) {
+          video.currentTime = 0; // Reset to start
+          video.play().catch(err => console.log("Video play error:", err));
+        } else {
+          video.pause();
+        }
+      }
+    });
+  }, [current]);
+
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Background Images */}
+      {/* Background Videos */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -49,12 +64,15 @@ const Hero = () => {
             index === current ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="h-full w-full object-cover brightness-[0.75]"
+          <video
+            ref={(el) => (videoRefs.current[index] = el)}
+            src={slide.video}
+            className="h-full w-full object-cover brightness-90"
+            muted
+            playsInline
+            loop
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/35" />
         </div>
       ))}
 
@@ -75,8 +93,8 @@ const Hero = () => {
                 }
                 ${
                   isActive
-                    ? "md:flex-[1.5] bg-white/10 backdrop-blur-lg"
-                    : "hidden md:flex bg-black/20 backdrop-blur-sm"
+                    ? "md:flex-[1.5] bg-white/5 backdrop-blur-md"
+                    : "hidden md:flex bg-black/30 backdrop-blur-sm"
                 }
               `}
             >
@@ -87,15 +105,15 @@ const Hero = () => {
                     : "opacity-50 translate-y-6"
                 }`}
               >
-                <div className="mb-6 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/10 text-[10px] font-semibold tracking-widest text-white">
+                <div className="mb-6 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm text-[10px] font-semibold tracking-widest text-white">
                   0{index + 1}
                 </div>
 
-                <h2 className="mb-4 text-3xl font-light leading-tight tracking-tight text-white md:text-2xl lg:text-4xl">
+                <h2 className="mb-4 text-3xl font-light leading-tight tracking-tight text-white md:text-2xl lg:text-4xl drop-shadow-lg">
                   {slide.title}
                 </h2>
 
-                <p className="mb-10 text-sm leading-relaxed text-white/85">
+                <p className="mb-10 text-sm leading-relaxed text-white/90 drop-shadow-md">
                   {slide.subtitle}
                 </p>
 

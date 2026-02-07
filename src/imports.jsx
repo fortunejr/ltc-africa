@@ -26,5 +26,9 @@ import harzadous from "./assets/harzadous.png";
 import others from "./assets/others.png";
 import co2 from "./assets/co2.jpg";
 import sdgs from "./assets/sdgs.jpg";
+import agric from "./assets/agric.mp4";
+import ewastevid from "./assets/ewastevid.mp4";
+import realestate2 from "./assets/realestate2.mp4";
+import renewableenergy from "./assets/renewableenergy.mp4";
 
-export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain, iso14001, iso9001, r2, iso45001, iso27001, climate, itequipments, telecom, harzadous, others, co2, sdgs };
+export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain, iso14001, iso9001, r2, iso45001, iso27001, climate, itequipments, telecom, harzadous, others, co2, sdgs, agric, ewastevid, realestate2, renewableenergy };
