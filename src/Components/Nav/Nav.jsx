@@ -27,7 +27,7 @@ const Nav = () => {
         {/* LEFT: Logo */}
         <div className="flex items-center">
           <a href="/" className="block">
-            <div className="h-12 w-auto flex items-center">
+            <div className="h-16 w-auto flex items-center">
               <img src={logo} alt="Logo" className="h-full w-auto" />
             </div>
           </a>

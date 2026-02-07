@@ -1,80 +1,96 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { logo } from "../../../imports";
 
-const Loader = () => {
+const Loader = ({ onFinished }) => {
+  const [isExiting, setIsExiting] = useState(false);
+
+  // Example trigger for the exit animation
+  useEffect(() => {
+    const timer = setTimeout(() => setIsExiting(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+  if (!isExiting) return;
+
+  const doneTimer = setTimeout(() => {
+    onFinished?.();
+  }, 1000); // MUST match duration-1000
+
+  return () => clearTimeout(doneTimer);
+}, [isExiting, onFinished]);
+
   return (
-    <div className="flex items-center justify-center h-screen bg-customGreen/95">
-      <div className="flex flex-col items-center gap-8 animate-fade-in">
-
-        {/* Rings + Logo */}
-        <div className="relative w-64 h-64 flex items-center justify-center">
+    <div className={`fixed inset-0 z-[9999] flex items-center justify-center bg-customBlue transition-all duration-1000 ease-in-out ${isExiting ? "opacity-0 scale-110 pointer-events-none" : "opacity-100"}`}>
+      
+      <div className="relative flex flex-col items-center">
+        
+        {/* The Orbiting Container */}
+        <div className={`relative w-48 h-48 flex items-center justify-center transition-transform duration-1000 ${isExiting ? "scale-50 opacity-0" : "scale-100"}`}>
           
-          {/* Outer Ring */}
-          <div className="absolute inset-0 rounded-full border-4 border-white/20 animate-spin-slow" />
+          {/* Minimalist SVG Progress Circle */}
+          <svg className="absolute inset-0 w-full h-full -rotate-90">
+            <circle
+              cx="96"
+              cy="96"
+              r="90"
+              stroke="white"
+              strokeWidth="1"
+              fill="transparent"
+              strokeOpacity="0.1"
+            />
+            <circle
+              cx="96"
+              cy="96"
+              r="90"
+              stroke="white"
+              strokeWidth="1.5"
+              fill="transparent"
+              strokeDasharray="565"
+              className="animate-draw-stroke"
+              strokeLinecap="round"
+            />
+          </svg>
 
-          {/* Inner Ring */}
-          <div className="absolute inset-6 rounded-full border-2 border-white/40 animate-spin-fast" />
+          {/* Ambient Background Glow */}
+          <div className="absolute w-32 h-32 bg-white/5 rounded-full blur-[60px] animate-pulse-slow" />
 
-          {/* Glow */}
-          <div className="absolute inset-10 rounded-full bg-white/10 blur-xl" />
-
-          {/* Logo */}
-          <div className="relative w-36 h-36 rounded-full bg-white flex items-center justify-center shadow-2xl animate-pulse-soft">
+          {/* Logo Container */}
+          <div className="relative z-10 p-4 transition-all duration-700 ">
             <img
               src={logo}
               alt="ZEWA Africa Logo"
-              className="w-28 h-28 object-contain"
+              className={`bg-white rounded-full w-24 h-24 object-contain transition-all duration-1000 ${isExiting ? "blur-md brightness-200" : "brightness-100"}`}
             />
           </div>
         </div>
 
+        {/* Minimalist Loading Text */}
+        <div className="mt-8 overflow-hidden">
+          <p className={`text-[10px] uppercase tracking-[0.6em] text-white font-light transition-all duration-1000 ${isExiting ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}>
+            LTC AFRICA
+          </p>
+        </div>
       </div>
 
-      {/* Animations */}
       <style jsx global>{`
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes draw-stroke {
+          0% { stroke-dashoffset: 565; opacity: 0; }
+          20% { opacity: 1; }
+          100% { stroke-dashoffset: 0; }
         }
 
-        @keyframes spin-fast {
-          from { transform: rotate(360deg); }
-          to { transform: rotate(0deg); }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 0.6; transform: scale(1.2); }
         }
 
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(12px); }
-          to { opacity: 1; transform: translateY(0); }
+        .animate-draw-stroke {
+          animation: draw-stroke 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
         }
 
-        @keyframes fade-in-delay {
-          from { opacity: 0; transform: translateY(8px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulse-soft {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.05); }
-        }
-
-        .animate-spin-slow {
-          animation: spin-slow 6s linear infinite;
-        }
-
-        .animate-spin-fast {
-          animation: spin-fast 2.5s linear infinite;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
-        }
-
-        .animate-fade-in-delay {
-          animation: fade-in-delay 0.9s ease-out forwards;
-        }
-
-        .animate-pulse-soft {
-          animation: pulse-soft 2.2s ease-in-out infinite;
+        .animate-pulse-slow {
+          animation: pulse-slow 4s ease-in-out infinite;
         }
       `}</style>
     </div>

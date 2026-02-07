@@ -19,39 +19,25 @@ import EwasteNav from "./Ewaste/Components/EwasteNav/EwasteNav";
 import { useEffect } from "react";
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
-  
-  useEffect(() => {
-    // Option 1: Hide loader after a fixed time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // show loader for 2 seconds
-
-    return () => clearTimeout(timer);
-
-  }, []);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
 
-  // check if current route is e-waste
   const isEwasteRoute = location.pathname.startsWith("/e-waste");
 
   return (
     <>
-    {loading ? (<Loader />) : (
-    <div>
-      
-      {/* Always show main Nav */}
+      {/* Loader overlays the app */}
+      {loading && <Loader onFinished={() => setLoading(false)} />}
+
+      {/* App is always mounted */}
       <Nav />
 
-      {/* Show EwasteNav ONLY on e-waste routes */}
       {isEwasteRoute && <EwasteNav />}
 
       <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Homepage />} />
-
         <Route path="/e-waste" element={<HomepageEwaste />} />
         <Route path="/e-waste/about" element={<AboutEwaste />} />
         <Route path="/e-waste/services" element={<ServicesEwaste />} />
@@ -61,12 +47,10 @@ function App() {
         <Route path="/e-waste/contact" element={<ContactEwaste />} />
       </Routes>
 
-      {/* Show Footer ONLY on e-waste routes */}
       {isEwasteRoute && <Footer />}
-    </div>
-    )}
     </>
   );
 }
+
 
 export default App;
