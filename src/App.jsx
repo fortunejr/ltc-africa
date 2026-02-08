@@ -17,6 +17,8 @@ import ClimateChange from "./Ewaste/Pages/ClimateChange/ClimateChange";
 import Footer from "./Ewaste/Components/Footer/Footer";
 import EwasteNav from "./Ewaste/Components/EwasteNav/EwasteNav";
 import { useEffect } from "react";
+import HomeLayout from "./Layouts/HomeLayout";
+import EwasteLayout from "./Layouts/EwasteLayout";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,31 +28,34 @@ function App() {
 
   return (
     <>
-      {/* Loader overlays the app */}
       {loading && <Loader onFinished={() => setLoading(false)} />}
-
-      {/* App is always mounted */}
-      <Nav />
-
-      {isEwasteRoute && <EwasteNav />}
 
       <ScrollToTop />
 
+      {/* home layout  */}
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/e-waste" element={<HomepageEwaste />} />
-        <Route path="/e-waste/about" element={<AboutEwaste />} />
-        <Route path="/e-waste/services" element={<ServicesEwaste />} />
-        <Route path="/e-waste/sdg-initiatives" element={<SDGEwaste />} />
-        <Route path="/e-waste/global-footprint" element={<GlobalFootprint />} />
-        <Route path="/e-waste/climate-change" element={<ClimateChange />} />
-        <Route path="/e-waste/contact" element={<ContactEwaste />} />
+        <Route element={<HomeLayout />}>
+          <Route path="/" element={<Homepage />} />
+        </Route>
+
+        {/* ewaste layout  */}
+        <Route element={<EwasteLayout />}>
+          <Route path="/e-waste" element={<HomepageEwaste />} />
+          <Route path="/e-waste/about" element={<AboutEwaste />} />
+          <Route path="/e-waste/services" element={<ServicesEwaste />} />
+          <Route path="/e-waste/sdg-initiatives" element={<SDGEwaste />} />
+          <Route
+            path="/e-waste/global-footprint"
+            element={<GlobalFootprint />}
+          />
+          <Route path="/e-waste/climate-change" element={<ClimateChange />} />
+          <Route path="/e-waste/contact" element={<ContactEwaste />} />
+        </Route>
       </Routes>
 
       {isEwasteRoute && <Footer />}
     </>
   );
 }
-
 
 export default App;
