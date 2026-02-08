@@ -32,30 +32,60 @@ const slides = [
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const videoRefs = useRef([]);
+  const hoverTimeout = useRef(null);
+  const playId = useRef(0);
 
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 8000); // Increased time slightly for better UX
+    }, 8000);
+
     return () => clearInterval(interval);
   }, []);
 
+  // Video control (race-condition safe)
   useEffect(() => {
+    const currentVideo = videoRefs.current[current];
+    if (!currentVideo) return;
+
+    // Unique play generation
+    const myPlayId = ++playId.current;
+
+    // Pause all other videos
     videoRefs.current.forEach((video, index) => {
-      if (video) {
-        if (index === current) {
-          video.currentTime = 0;
-          video.play().catch(err => console.log("Video play error:", err));
-        } else {
-          video.pause();
-        }
+      if (video && index !== current && !video.paused) {
+        video.pause();
       }
     });
+
+    // Play only if needed
+    if (!currentVideo.paused) return;
+
+    const playPromise = currentVideo.play();
+
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        // Ignore outdated or aborted play attempts
+        if (myPlayId !== playId.current) return;
+        if (err.name !== "AbortError") {
+          console.error("Video play error:", err);
+        }
+      });
+    }
   }, [current]);
+
+  // Throttled hover
+  const handleHover = (index) => {
+    clearTimeout(hoverTimeout.current);
+    hoverTimeout.current = setTimeout(() => {
+      setCurrent(index);
+    }, 150);
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Background Videos Layer */}
+      {/* Background Videos */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -66,51 +96,52 @@ const Hero = () => {
           <video
             ref={(el) => (videoRefs.current[index] = el)}
             src={slide.video}
-            className="h-full w-full object-cover"
-            style={{ filter: "brightness(0.75)" }} // Dimmed via filter instead of heavy blur
             muted
             playsInline
             loop
+            preload="metadata"
+            className="h-full w-full object-cover"
+            style={{ filter: "brightness(0.75)" }}
           />
-          {/* Subtle vignette overlay - keeps focus on text but keeps video clear */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
         </div>
       ))}
 
-      {/* Content Columns */}
-      <div className="relative z-10 flex h-full w-full flex-col md:flex-row">
+      {/* Content */}
+      <div className="cursor-default relative z-10 flex h-full w-full flex-col md:flex-row">
         {slides.map((slide, index) => {
           const isActive = current === index;
 
           return (
             <div
               key={index}
-              onMouseEnter={() => setCurrent(index)}
+              onMouseEnter={() => handleHover(index)}
               className={`relative flex flex-1 flex-col items-center justify-center px-8 text-center transition-all duration-700 ease-in-out
                 ${index !== slides.length - 1 ? "md:border-r md:border-white/5" : ""}
-                ${isActive ? "md:flex-[2] bg-black/10" : "hidden md:flex bg-transparent hover:bg-white/5"}
+                ${isActive ? "md:flex-[2] bg-black/10" : "hidden md:flex hover:bg-white/5"}
               `}
             >
-              {/* Content Box - Reduced blur and improved contrast */}
               <div
                 className={`max-w-md transition-all duration-1000 ${
-                  isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  isActive
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
                 }`}
               >
                 <div className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[10px] font-bold tracking-widest text-white">
                   0{index + 1}
                 </div>
 
-                <h2 className="mb-4 text-4xl font-extralight leading-tight tracking-tight text-white md:text-3xl lg:text-5xl drop-shadow-2xl">
+                <h2 className="mb-4 text-4xl font-extralight tracking-tight text-white md:text-3xl lg:text-5xl">
                   {slide.title}
                 </h2>
 
-                <p className="mx-auto mb-10 max-w-xs text-sm font-light leading-relaxed text-white/80 drop-shadow-lg">
+                <p className="mx-auto mb-10 max-w-xs text-sm font-light text-white/80">
                   {slide.subtitle}
                 </p>
 
                 <Link to={`/${slide.link}`}>
-                  <button className="group relative overflow-hidden rounded-full bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-blue-50 active:scale-95">
+                  <button className="rounded-full bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-blue-50 active:scale-95">
                     Explore
                   </button>
                 </Link>
@@ -120,17 +151,19 @@ const Hero = () => {
         })}
       </div>
 
-      {/* Modern Slim Indicators */}
-      <div className="absolute bottom-12 left-0 right-0 z-20 flex justify-center items-center gap-10">
+      {/* Indicators */}
+      <div className="absolute bottom-12 left-0 right-0 z-20 flex justify-center gap-10">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className="group flex flex-col items-center"
+            className="flex flex-col items-center"
           >
             <div
               className={`h-[2px] transition-all duration-700 ${
-                current === index ? "w-16 bg-white" : "w-6 bg-white/20 group-hover:bg-white/40"
+                current === index
+                  ? "w-16 bg-white"
+                  : "w-6 bg-white/20 hover:bg-white/40"
               }`}
             />
           </button>
