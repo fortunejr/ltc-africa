@@ -1,22 +1,22 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { agric, ewastevid, realestate2, renewableenergy } from "../../imports";
+import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish } from "../../imports";
 
 const slides = [
   {
-    video: realestate2,
+    video: crane,
     title: "Smart Real Estate Solutions",
     subtitle: "Connecting properties with global opportunities through innovation.",
     link: "real-estate",
   },
   {
-    video: agric,
+    video: tractor,
     title: "Empowering Modern Agriculture",
     subtitle: "Driving sustainable farming and agribusiness growth worldwide.",
     link: "agriculture",
   },
   {
-    video: ewastevid,
+    video: rubbish,
     title: "Responsible E-Waste Management",
     subtitle: "Transforming electronic waste into environmental impact.",
     link: "e-waste",

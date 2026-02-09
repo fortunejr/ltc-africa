@@ -30,5 +30,9 @@ import agric from "./assets/agric.mp4";
 import ewastevid from "./assets/ewastevid.mp4";
 import realestate2 from "./assets/realestate2.mp4";
 import renewableenergy from "./assets/renewableenergy.mp4";
+import crane from "./assets/crane.mp4";
+import farmer from "./assets/farmer.mp4";
+import tractor from "./assets/tractor.mp4";
+import rubbish from "./assets/rubbish.mp4";
 
-export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain, iso14001, iso9001, r2, iso45001, iso27001, climate, itequipments, telecom, harzadous, others, co2, sdgs, agric, ewastevid, realestate2, renewableenergy };
+export { logo, realestate, agriculture, ewaste, recycling, ewastevideo, garbage, dirtinwater, dirttruck, about, compliance, permit, global, sust, carbon, circularsustain, iso14001, iso9001, r2, iso45001, iso27001, climate, itequipments, telecom, harzadous, others, co2, sdgs, agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish };
