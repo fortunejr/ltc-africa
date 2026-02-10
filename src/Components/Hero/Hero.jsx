@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish } from "../../imports";
+import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish, ewastelast } from "../../imports";
 
 const slides = [
   {
@@ -16,7 +16,7 @@ const slides = [
     link: "agriculture",
   },
   {
-    video: rubbish,
+    video: ewastelast,
     title: "Responsible E-Waste Management",
     subtitle: "Transforming electronic waste into environmental impact.",
     link: "e-waste",
@@ -128,9 +128,6 @@ const Hero = () => {
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                <div className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[10px] font-bold tracking-widest text-white">
-                  0{index + 1}
-                </div>
 
                 <h2 className="mb-4 text-4xl font-extralight tracking-tight text-white md:text-3xl lg:text-5xl">
                   {slide.title}
