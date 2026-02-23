@@ -5,23 +5,26 @@ import {
   dirttruck,
   garbage,
   circularsustain,
+  telecommunication,
+  carbonemission,
+  itad,
 } from "../../../imports";
 
 const slides = [
   {
-    video: recycling,
+    video: telecommunication,
     title: "WEEE & Telecom Equipment Management",
     text:
       "We advance sustainable WEEE and telecom equipment management through a circular model built on repair, refurbishment, reuse, and recycling. This approach extends device lifecycles, improves resource efficiency, and reduces environmental impact.",
   },
   {
-    video: ewastevideo,
+    video: itad,
     title: "ITAD & Recovery Solutions",
     text:
       "We help organizations recover maximum value from decommissioned assets through secure ITAD, global partnerships, asset buyback, and compliant recycling processes.",
   },
   {
-    video: garbage,
+    video: carbonemission,
     title: "Social & Environmental Commitment",
     text:
       "Our operations reduce carbon emissions through responsible WEEE collection, pollution prevention, and energy efficient recycling initiatives across Africa.",

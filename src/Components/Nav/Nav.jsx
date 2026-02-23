@@ -15,9 +15,9 @@ const Nav = () => {
   const handleLinkClick = () => setOpen(false);
 
   const navItems = [
-    { to: "/e-waste", label: "E-waste Solution" },
-    { to: "/agriculture", label: "Agricultural Solution" },
-    { to: "/real-estate", label: "Real Estate Management" },
+    { to: "/e-waste", label: "The Company" },
+    // { to: "/agriculture", label: "Agricultural Solution" },
+    // { to: "/real-estate", label: "Real Estate Management" },
   ];
 
   return (

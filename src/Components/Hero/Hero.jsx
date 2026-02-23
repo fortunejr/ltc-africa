@@ -4,6 +4,12 @@ import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor,
 
 const slides = [
   {
+    video: ewastelast,
+    title: "Responsible E-Waste Management",
+    subtitle: "Transforming electronic waste into environmental impact.",
+    link: "e-waste",
+  },
+  {
     video: crane,
     title: "Smart Real Estate Solutions",
     subtitle: "Connecting properties with global opportunities through innovation.",
@@ -14,12 +20,6 @@ const slides = [
     title: "Empowering Modern Agriculture",
     subtitle: "Driving sustainable farming and agribusiness growth worldwide.",
     link: "agriculture",
-  },
-  {
-    video: ewastelast,
-    title: "Responsible E-Waste Management",
-    subtitle: "Transforming electronic waste into environmental impact.",
-    link: "e-waste",
   },
   {
     video: renewableenergy,

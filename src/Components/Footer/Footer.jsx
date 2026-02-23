@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, MapPin, Linkedin, Instagram, X, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { logo } from "../../../imports";
+
 
 const Footer = () => {
   return (
