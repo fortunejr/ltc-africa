@@ -20,7 +20,7 @@ const EwasteNav = () => {
     { to: "/e-waste/about", label: "About Us" },
     { to: "/e-waste/services", label: "Services" },
     { to: "/e-waste/climate-change", label: "Climate Change" },
-    { to: "/e-waste/circular-economy", label: "Circular Economy" },
+    // { to: "/e-waste/circular-economy", label: "Circular Economy" },
     { to: "/e-waste/sdg-initiatives", label: "SDG Initiatives" },
     { to: "/e-waste/global-footprint", label: "Global Footprint" },
     { to: "/e-waste/media", label: "Media" },

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { about } from "../../../imports";
+import { Link } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -99,13 +100,13 @@ const AboutEwaste = () => {
               promoting reuse, and reducing environmental impact.
             </motion.p>
 
-            <motion.a
-              href="/e-waste/about"
+            <Link
+              to="/e-waste/about"
               className="inline-block text-sm font-medium text-white border-b border-white/60 hover:border-white transition"
               variants={textVariants}
             >
               Learn More
-            </motion.a>
+            </Link>
           </motion.div>
 
         </div>
