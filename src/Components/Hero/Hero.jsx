@@ -1,30 +1,30 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish, ewastelast } from "../../imports";
+import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish, ewastelast, telecommunication } from "../../imports";
 
 const slides = [
   {
-    video: ewastelast,
-    title: "Responsible E-Waste Management",
-    subtitle: "Transforming electronic waste into environmental impact.",
+    video: telecommunication,
+    title: "IT /Telecom ASSET & WEEE MANAGEMENT",
+    subtitle: "We delivers end-to-end telecom asset lifecycle solutions across Africa, from secure decommissioning and refurbishment to certified resale and responsible recycling.",
     link: "e-waste",
   },
   {
-    video: crane,
-    title: "Smart Real Estate Solutions",
-    subtitle: "Connecting properties with global opportunities through innovation.",
-    link: "real-estate",
-  },
-  {
     video: tractor,
-    title: "Empowering Modern Agriculture",
-    subtitle: "Driving sustainable farming and agribusiness growth worldwide.",
+    title: "AGRICULTURAL & FARM WASTE SOLUTIONS",
+    subtitle: "We are delivering a sustainable agriculturaland farm waste solutions across Africa by transforming organic waste into compost, biofertilizers, and renewable energy, Empowering farmers to improve soil health, reduce environmental impact, and building circular farming systems that enhance productivity and long- term sustainability.",
     link: "agriculture",
   },
   {
+    video: crane,
+    title: "SMART REAL- ESTATE MANAGEMENT",
+    subtitle: "We are using advanced technology, data insights, and sustainable strategies to improve property performance, lower operating costs, and enhance tenant satisfaction by combining digital monitoring, predictive maintenance, energy management, and lifecycle planning to maximize long-term asset value and efficiency.",
+    link: "real-estate",
+  },
+  {
     video: renewableenergy,
-    title: "Renewable Energy",
-    subtitle: "Harnessing nature to power a sustainable future for all.",
+    title: "RENEWABLE & GREEN ENERGY SOLUTION",
+    subtitle: "We are harnessing clean sources such as solar, wind, hydro, and bioenergy to generate sustainable power while reducing carbon emissions, while promoting energy efficiency, environmental protection, and long- term cost savings for businesses and communities across Africa.",
     link: "renewable-energy",
   },
 ];

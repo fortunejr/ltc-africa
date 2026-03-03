@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { logo } from "../../imports";
+import { Link } from "react-router-dom";
 
 // Demo component - replace with your actual NavLink from react-router-dom
 const NavLink = ({ to, children, className, onClick }) => (
@@ -15,7 +16,7 @@ const Nav = () => {
   const handleLinkClick = () => setOpen(false);
 
   const navItems = [
-    { to: "/e-waste", label: "The Company" },
+    { to: "/thecompany", label: "The Company" },
     // { to: "/agriculture", label: "Agricultural Solution" },
     // { to: "/real-estate", label: "Real Estate Management" },
   ];
@@ -26,23 +27,23 @@ const Nav = () => {
 
         {/* LEFT: Logo */}
         <div className="flex items-center">
-          <a href="/" className="block">
+          <Link to="/" className="block">
             <div className="h-16 w-auto flex items-center">
               <img src={logo} alt="Logo" className="h-full w-auto" />
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* CENTER: Desktop Navlinks */}
         <ul className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm font-medium tracking-normal absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
           {navItems.map((item) => (
             <li key={item.to}>
-              <a
-                href={item.to}
+              <Link
+                to={item.to}
                 className="transition-all hover:text-gray-600 hover:border-b-2 hover:border-black hover:pb-1"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

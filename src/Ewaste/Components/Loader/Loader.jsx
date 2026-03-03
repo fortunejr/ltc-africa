@@ -6,7 +6,7 @@ const Loader = ({ onFinished }) => {
 
   // Example trigger for the exit animation
   useEffect(() => {
-    const timer = setTimeout(() => setIsExiting(true), 3000);
+    const timer = setTimeout(() => setIsExiting(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 

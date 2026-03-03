@@ -19,6 +19,8 @@ import EwasteNav from "./Ewaste/Components/EwasteNav/EwasteNav";
 import { useEffect } from "react";
 import HomeLayout from "./Layouts/HomeLayout";
 import EwasteLayout from "./Layouts/EwasteLayout";
+import Company from "./Pages/Company/Company";
+import UnderConstruction from "./Pages/UnderConstruction/UnderConstruction";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +38,10 @@ function App() {
       <Routes>
         <Route element={<HomeLayout />}>
           <Route path="/" element={<Homepage />} />
+          <Route path="/thecompany" element={<Company />} />
+          <Route path="/agriculture" element={<UnderConstruction />} />
+          <Route path="/real-estate" element={<UnderConstruction />} />
+          <Route path="/energy" element={<UnderConstruction />} />
         </Route>
 
         {/* ewaste layout  */}
