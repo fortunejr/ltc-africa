@@ -82,7 +82,7 @@ const Hero = () => {
           <div className="relative z-10 flex h-full items-center">
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
               <div className="max-w-2xl text-white">
-                <h1 className="mb-5 text-3xl md:text-6xl font-semibold leading-tight">
+                <h1 className="header-txt mb-5 text-3xl md:text-6xl font-semibold leading-tight">
                   {slide.title}
                 </h1>
 

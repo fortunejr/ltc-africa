@@ -1,208 +1,385 @@
 import React from "react";
-import { iso14001, iso27001, iso45001, iso9001, r2 } from "../../../imports";
+import { motion } from "framer-motion";
+import {
+  Factory,
+  Cpu,
+  Globe,
+  Recycle,
+  Leaf,
+  User,
+  Eye,
+  Target,
+} from "lucide-react";
+import { iso9001, iso14001, iso45001, iso27001, r2 } from "../../../imports";
+import { Link } from "react-router-dom";
+import Certifications from "../../Components/Certifications/Certifications";
+
+/* ANIMATION VARIANTS */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 80 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7 },
+  },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.85 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
 
 const AboutEwaste = () => {
   return (
-    <section className="w-full bg-white text-slate-800 py-28">
-      <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-32">
-        {/* INTRO */}
-        <div className="mx-auto max-w-3xl text-center space-y-6">
-          <span className="inline-block text-sm uppercase tracking-widest text-customGreen">
-            About Us
-          </span>
+    <section className="bg-white text-slate-800">
 
-          <h1 className="text-3xl md:text-5xl font-semibold text-slate-900">
-            LTC Africa Recycling
-          </h1>
+      {/* HERO */}
+      <div className="relative w-full h-[85vh] overflow-hidden">
 
-          <p className="text-lg md:text-xl text-customBlue">
+        <img
+          src="/images/about-img.jpg"
+          alt="LTC Africa Recycling"
+          className="absolute w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/80" />
+
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-center text-white"
+        >
+
+          <motion.h1
+            variants={fadeUp}
+            className="text-3xl lg:text-5xl mb-6 header-txt font-bold bg-customBlue w-fit p-2"
+          >
+            Welcome to LTC Africa Recycling!
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            className="text-xl md:text-2xl text-customGreen font-medium max-w-3xl"
+          >
             Pioneering Sustainable WEEE & IT/Telecom Waste Solutions Across
             Africa
-          </p>
+          </motion.p>
 
-          <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-            LTC Africa Recycling, a member of the LTC Africa Group, is a fully
-            registered Waste Electrical and Electronic Equipment management
-            company redefining how Africa handles electronic waste. With
-            borderless operations, we provide sustainable recycling, IT asset
-            disposition, and resource recovery across Africa.
-          </p>
-        </div>
+          <motion.p variants={fadeUp} className="uppercase font-bold my-2">
+            Explore this page
+          </motion.p>
 
-        {/* OUR STORY */}
-        <div className="mx-auto max-w-4xl space-y-6">
-          <h2 className="text-2xl md:text-4xl font-semibold text-slate-900">
-            Our Story
-          </h2>
+          <motion.div variants={fadeUp} className="space-y-1 text-base uppercase">
+            <p>
+              <a href="#about" className="hover:text-customGreen">
+                About The Group Company
+              </a>
+            </p>
 
-          <p className="text-slate-600 leading-relaxed">
-            Founded in 2013 in Accra, Ghana, LTC Africa Recycling started with a
-            bold vision: to transform electronic waste into valuable resources.
-            Over the years, we have grown into a pan-African leader in
-            responsible IT and electronic waste management.
-          </p>
+            <p>
+              <a
+                href="/e-waste/about/#who-are-we"
+                className="hover:text-customGreen"
+              >
+                Who We Are
+              </a>
+            </p>
 
-          <p className="text-slate-600 leading-relaxed">
-            Through early partnerships with Millicom Tigo, Vodafone Ghana, and
-            MultiChoice DStv, we built a reputation for structured, compliant,
-            and traceable e-waste solutions. Today, we operate across Nigeria,
-            Tanzania, South Africa, and Madagascar.
-          </p>
-        </div>
+            <p>
+              <a
+                href="/e-waste/about/#key-facts"
+                className="hover:text-customGreen"
+              >
+                Key Facts
+              </a>
+            </p>
 
-        {/* VALUES */}
-        <div className="space-y-12">
-          <h2 className="text-center text-2xl md:text-4xl font-semibold text-slate-900">
-            Our Values
-          </h2>
+            <p>
+              <a
+                href="/e-waste/about/#values"
+                className="hover:text-customGreen"
+              >
+                Our Values
+              </a>
+            </p>
 
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              [
-                "Integrity",
-                "We act with honesty, transparency, and ethical responsibility in every aspect of our operations.",
-              ],
-              [
-                "Innovation",
-                "We embrace new technologies and ideas to improve waste management and resource recovery.",
-              ],
-              [
-                "Accountability",
-                "We take full responsibility for our actions, ensuring reliable results and compliance.",
-              ],
-              [
-                "Safety",
-                "We prioritize health and safety in all operations for employees, clients, and communities.",
-              ],
-              [
-                "Partnership",
-                "We build strong relationships with governments, organizations, and communities for sustainable solutions.",
-              ],
-              [
-                "Circular Economy",
-                "We promote sustainable practices that reduce waste and create a continuous loop of resource efficiency.",
-              ],
-            ].map(([title, desc], index) => (
-              <div key={index} className="space-y-3">
-                <h3 className="text-lg font-medium text-customGreen">
-                  {title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+            <p>
+              <a
+                href="/e-waste/about/#mission"
+                className="hover:text-customGreen"
+              >
+                Mission & Vision
+              </a>
+            </p>
 
-        {/* MISSION & VISION */}
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="space-y-4 border-l-2 border-customGreen pl-6">
-            <h3 className="text-2xl font-semibold text-slate-900">
+            <p>
+              <a
+                href="/e-waste/about/#leadership"
+                className="hover:text-customGreen"
+              >
+                Leadership
+              </a>
+            </p>
+
+            <p>
+              <a
+                href="/e-waste/about/#certification"
+                className="hover:text-customGreen"
+              >
+                Certification
+              </a>
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* INTRO / WHO WE ARE */}
+
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-6xl mx-auto px-6 py-24 space-y-12"
+      >
+
+        <motion.div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+
+          <motion.p variants={fadeUp}>
+            LTC Africa Recycling, a proud member of the LTC Africa Group, is a
+            modern and fully registered Waste Electrical and Electronic
+            Equipment (WEEE) management company dedicated to redefining how
+            Africa handles electronic waste. Since our inception in 2013, we
+            have grown into a pan-African leader in sustainable, compliant, and
+            technology-driven e-waste management, while also advancing the
+            circular economy through responsible recycling, IT asset disposition
+            (ITAD), and resource recovery.
+          </motion.p>
+
+          <motion.p variants={fadeUp}>
+            With borderless operations and facilities strategically located in
+            Nigeria, Ghana, Morocco, South Africa, Botswana, Tanzania, and
+            Madagascar, LTC Africa Recycling provides end-to-end e-waste
+            management and on-site collection services without the limits of
+            geographical area or location.
+          </motion.p>
+
+          <motion.p variants={fadeUp}>
+            Through innovative ITAD solutions, we help organizations securely
+            recover value from outdated or decommissioned electronic equipment
+            while protecting sensitive data, promoting reuse, and minimizing
+            carbon emissions.
+          </motion.p>
+
+          <motion.p variants={fadeUp}>
+            Backed by a diverse team of over 80 professionals, we combine
+            technical expertise, sustainability-driven innovation, and integrity
+            to deliver customized recycling solutions for corporate
+            organizations, telecom operators, government agencies, and
+            communities across Africa.
+          </motion.p>
+
+          <motion.p variants={fadeUp}>
+            At LTC Africa Recycling, we stand for innovation, integrity,
+            accountability, and impact in every operation.
+          </motion.p>
+
+          <motion.p
+            variants={fadeUp}
+            id="who-are-we"
+            className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center"
+          >
+            Who we are!
+          </motion.p>
+
+          <motion.p variants={fadeUp}>
+            LTC Recycling Limited is an African telecommunications asset
+            management and recycling company. It focuses on sustainable
+            lifecycle solutions for telecom infrastructure.
+          </motion.p>
+
+        </motion.div>
+
+        {/* KEY FACTS */}
+
+        <motion.h2
+          variants={fadeUp}
+          id="key-facts"
+          className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center"
+        >
+          Key Facts
+        </motion.h2>
+
+        <motion.div
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center"
+        >
+          {[
+            {
+              icon: Factory,
+              header: "Industry:",
+              text: "Telecommunications asset management and recycling",
+            },
+            {
+              icon: Cpu,
+              header: "Primary focus:",
+              text: "Network equipment recovery and materials recycling",
+            },
+            { icon: Globe, header: "Region of operation:", text: " Africa" },
+            {
+              icon: Recycle,
+              header: "Services:",
+              text: "Decommissioning, logistics, refurbishment, and e-waste recycling",
+            },
+            {
+              icon: Leaf,
+              header: "Sustainability goal:",
+              text: "Circular economy for telecom assets",
+            },
+          ].map(({ icon: Icon, header, text }, i) => (
+            <motion.div
+              key={i}
+              variants={scaleIn}
+              whileHover={{ scale: 1.05 }}
+              className="p-6 bg-white border border-gray-100 rounded-2xl shadow hover:shadow-2xl transition-all"
+            >
+              <Icon className="mx-auto text-customGreen mb-3" size={28} />
+              <p className="text-lg font-bold">{header}</p>
+              <p className="text-sm text-gray-600">{text}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* MISSION / VISION */}
+
+        <div id="mission" className="grid lg:grid-cols-2 gap-8 mt-16">
+
+          <motion.div
+            variants={fadeLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
+          >
+            <h3 className="text-2xl font-bold text-customBlue mb-4 flex gap-2">
+              <Target />
               Our Mission
             </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              To revolutionize electronic waste management by unlocking the true
-              value of waste and advancing circular economy innovation,
-              empowering organizations to reduce environmental impact and create
-              sustainable value.
-            </p>
-          </div>
 
-          <div className="space-y-4 border-l-2 border-customBlue pl-6">
-            <h3 className="text-2xl font-semibold text-slate-900">
+            <p className="text-gray-600 leading-relaxed">
+              Our mission is to revolutionize electronic waste by unlocking
+              the true value of waste and establishing new benchmarks in
+              circular economy innovation...
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={fadeRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
+          >
+            <h3 className="text-2xl font-bold text-customBlue mb-4 flex gap-2">
+              <Eye />
               Our Vision
             </h3>
-            <p className="text-sm text-slate-600 leading-relaxed">
-              To be Africa’s most trusted e-waste management and resource
-              recovery company, setting standards in compliance, innovation, and
-              circular economy excellence.
+
+            <p className="text-gray-600 leading-relaxed">
+              To be Africa’s most trusted and sustainable e-waste management
+              and resource recovery company, while setting industry standards
+              innovation, compliance, and circular economy excellence.
             </p>
-          </div>
+          </motion.div>
         </div>
-
-        {/* CERTIFICATIONS */}
-<div className="space-y-14">
-  <div className="mx-auto max-w-4xl text-center space-y-4">
-    <h2 className="text-2xl md:text-4xl font-semibold text-slate-900">
-      Certification & Compliance
-    </h2>
-    <p className="text-slate-600 leading-relaxed">
-      LTC Africa Recycling operates with full regulatory compliance, supported
-      by internationally recognized certifications that demonstrate our
-      commitment to quality, safety, data security, and environmental
-      responsibility.
-    </p>
-  </div>
-
-  <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-    {[
-      { img: iso9001, title: "ISO 9001", subtitle: "Quality Management" },
-      { img: iso14001, title: "ISO 14001", subtitle: "Environmental Management" },
-      { img: iso45001, title: "ISO 45001", subtitle: "Occupational Health & Safety" },
-      { img: iso27001, title: "ISO 27001", subtitle: "Information Security" },
-      { img: r2, title: "R2 Certified", subtitle: "Responsible Recycling" },
-    ].map((cert, index) => (
-      <div
-        key={index}
-        className="group flex flex-col items-center justify-center rounded-2xl bg-white p-6 shadow-sm border border-slate-100 transition-all hover:shadow-lg hover:-translate-y-1"
-      >
-        <div className="flex h-24 items-center justify-center">
-          <img
-            src={cert.img}
-            alt={cert.title}
-            className="max-h-20 object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-
-        <div className="mt-4 text-center space-y-1">
-          <h4 className="text-sm font-semibold text-slate-800">
-            {cert.title}
-          </h4>
-          <p className="text-xs text-slate-500">{cert.subtitle}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-
 
         {/* LEADERSHIP */}
-        <div className="space-y-12">
-          <h2 className="text-center text-2xl md:text-4xl font-semibold text-slate-900">
+
+        <div id="leadership" className="mt-20">
+
+          <h2 className="header-txt text-3xl md:text-4xl font-bold text-[#003333] mb-6 text-center">
             Leadership
           </h2>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-8"
+          >
             {[
-              { name: "Engr. Adeleye A. Tani", role: "Founder/Group CEO" },
-              {
-                name: "Mr. Sam Ladipo",
-                role: "Group Chief Operation Director",
-              },
-              { name: "Mrs. Folake Ademola", role: "Chief Financial Director" },
-              { name: "Mr. Colpas Kari", role: "Head of Sale & Marketing" },
-              {
-                name: "Mrs. Florentine Razaiarivony",
-                role: "Head of Sustainability, Partnerships & Compliance",
-              },
-              {
-                name: "Mr. Dominic Anomah",
-                role: "Regional Director – MENA Africa",
-              },
-              { name: "Ms. Margaret Dolapo Awe", role: "Head of PR & CSR" },
-            ].map((leader, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-start justify-center p-6 rounded-2xl bg-white shadow hover:shadow-lg transition hover:-translate-y-1 cursor-pointer"
+              ["Engr. Adeleye A. Tani", "Founder/Group CEO"],
+              ["Mr. Sam Ladipo", "Group Chief Operation Director"],
+              ["Mrs. Folake Ademola", "Chief Financial Director"],
+              ["Mr. Colpas Kari", "Head of Sale & Marketing"],
+              [
+                "Mrs. Florentine Razaiarivony",
+                "Head of Sustainability, Partnerships & Compliance",
+              ],
+              ["Mr. Dominic Anomah", "Regional Director – MENA Africa"],
+              ["Ms. Margaret Dolapo A", "Head of PR & CSR"],
+            ].map(([name, role], i) => (
+              <motion.div
+                key={i}
+                variants={scaleIn}
+                whileHover={{ scale: 1.03 }}
+                className="bg-white border flex gap-3 items-center border-gray-100 rounded-2xl p-6 shadow hover:shadow-2xl"
               >
-                <h4 className="text-lg font-semibold text-slate-800">
-                  {leader.name}
-                </h4>
-                <p className="mt-1 text-sm text-slate-500">{leader.role}</p>
-              </div>
+                <User />
+
+                <div>
+                  <h4 className="font-semibold text-slate-900">{name}</h4>
+                  <p className="text-sm text-gray-500 mt-1">{role}</p>
+                </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
+
         </div>
-      </div>
+
+        {/* CERTIFICATIONS */}
+
+        <div id="certification" className="">
+          <Certifications />
+        </div>
+
+      </motion.div>
     </section>
   );
 };

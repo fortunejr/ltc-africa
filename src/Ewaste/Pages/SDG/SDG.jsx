@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { sdgs } from "../../../imports";
+import { CloudSnow, Trash2, Users } from "lucide-react";
 
 const sdgGoals = [
   {
@@ -49,13 +51,26 @@ const sdgGoals = [
   },
 ];
 
+// Animation variants
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const SDGEwaste = () => {
   return (
-    <section className="bg-white py-16 md:py-20 px-6">
+    <section className="bg-white py-28 md:py-20 px-6">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-950">
+          <h2 className="text-3xl md:text-4xl font-bold header-txt text-[#003333]">
             LTC SDG Initiative
           </h2>
           <p className="mt-4 text-base text-gray-600 leading-relaxed">
@@ -65,24 +80,29 @@ const SDGEwaste = () => {
         </div>
 
         {/* SDG Visual */}
-<div className="flex justify-center">
-  <div className="relative w-[40%] h-70 md:h-full overflow-hidden rounded-2xl">
-    <img
-      src={sdgs}
-      alt="UN Sustainable Development Goals"
-      className="w-full h-full object-contain"
-    />
-    <div className="absolute inset-0" />
-  </div>
-</div>
-
+        <div className="flex justify-center">
+          <div className="relative lg:w-[40%] h-70 md:h-full overflow-hidden rounded-2xl">
+            <img
+              src={sdgs}
+              alt="UN Sustainable Development Goals"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
 
         {/* SDG Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={container}
+        >
           {sdgGoals.map((sdg) => (
-            <div
+            <motion.div
               key={sdg.id}
               className="rounded-xl border border-gray-100 bg-white p-5 hover:shadow-sm transition"
+              variants={fadeUp}
             >
               <span className="text-xs font-medium text-gray-400">
                 SDG {sdg.id}
@@ -93,32 +113,58 @@ const SDGEwaste = () => {
               <p className="mt-2 text-sm text-gray-600 leading-relaxed">
                 {sdg.text}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Impact Stats */}
-        <div className="grid sm:grid-cols-3 gap-6 text-center">
-          <div className="rounded-xl bg-gray-50 p-6">
+        <motion.div
+          className="grid sm:grid-cols-3 gap-6 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={container}
+        >
+          <motion.div
+            className="rounded-xl bg-gray-50 p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow"
+            variants={fadeUp}
+          >
+            <Trash2 className="text-blue-950 mb-3" size={36} />
             <h4 className="text-3xl font-semibold text-blue-950">10,000+</h4>
             <p className="mt-1 text-sm text-gray-600">
               Tons of E-Waste Recycled
             </p>
-          </div>
-          <div className="rounded-xl bg-gray-50 p-6">
+          </motion.div>
+
+          <motion.div
+            className="rounded-xl bg-gray-50 p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow"
+            variants={fadeUp}
+          >
+            <Users className="text-blue-950 mb-3" size={36} />
             <h4 className="text-3xl font-semibold text-blue-950">5,000+</h4>
             <p className="mt-1 text-sm text-gray-600">Green Jobs Created</p>
-          </div>
-          <div className="rounded-xl bg-gray-50 p-6">
+          </motion.div>
+
+          <motion.div
+            className="rounded-xl bg-gray-50 p-6 flex flex-col items-center shadow hover:shadow-lg transition-shadow"
+            variants={fadeUp}
+          >
+            <CloudSnow className="text-blue-950 mb-3" size={36} />
             <h4 className="text-3xl font-semibold text-blue-950">25,000+</h4>
             <p className="mt-1 text-sm text-gray-600">
               CO₂ Emissions Prevented
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Framework */}
-        <div className="rounded-2xl bg-gray-50 p-8">
+        <motion.div
+          className="rounded-2xl bg-gray-50 p-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUp}
+        >
           <h3 className="text-xl font-semibold text-blue-950 mb-6">
             Our SDG Implementation Framework
           </h3>
@@ -142,23 +188,35 @@ const SDGEwaste = () => {
               Partnerships to scale sustainability.
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Africa Impact */}
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-semibold text-blue-950 mb-3">
+        <motion.div
+          className="max-w-4xl mx-auto text-center space-y-6 px-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUp}
+        >
+
+          {/* Heading */}
+          <h3 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt mb-2">
             Impact Across Africa
           </h3>
-          <p className="text-sm text-gray-600 leading-relaxed">
+
+          {/* Description */}
+          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
             LTC Africa Recycling reduces e-waste accumulation, recovers valuable
             resources, empowers communities, and supports governments and
             corporations in meeting sustainability and regulatory goals.
           </p>
-          <p className="mt-4 text-sm font-medium text-gray-700">
+
+          {/* Quote */}
+          <p className="mt-6 text-base md:text-lg font-medium text-gray-800 italic">
             “Transforming e-waste into opportunity while building a sustainable
             Africa.”
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

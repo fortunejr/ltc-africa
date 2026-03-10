@@ -11,7 +11,7 @@ const ClimateChange = () => {
             Sustainability
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold header-txt text-[#003333]">
             Climate Change & Climate Action
           </h2>
 
@@ -241,13 +241,29 @@ const ClimateChange = () => {
             <h3 className="text-2xl md:text-3xl font-semibold text-slate-900">
               Our Pledge for a Low-Carbon Future
             </h3>
-            <p className="text-slate-600 leading-relaxed">
-              LTC Africa Recycling is committed to achieving carbon-neutral
-              operations by 2030 through renewable energy adoption, operational
-              efficiency, and partnerships with climate-focused organizations.
-              Climate action is embedded into our mission, values, and daily
-              operations.
-            </p>
+            <div className="text-slate-600 leading-relaxed space-y-4">
+              <p>
+                We remain committed to achieving carbon-neutral operations by
+                2030, through:
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Increased renewable energy use.</li>
+                <li>Continuous efficiency improvements.</li>
+                <li>
+                  Collaboration with green partners and climate-focused
+                  organizations.
+                </li>
+              </ul>
+
+              <p>
+                At LTC Africa Recycling, climate action is not a side project —
+                it is embedded in our mission, values, and everyday operations.
+                We believe that by managing e-waste responsibly, we are not only
+                protecting the environment but also shaping Africa’s transition
+                toward a low-carbon, sustainable future.
+              </p>
+            </div>
           </div>
 
           <div className="relative">

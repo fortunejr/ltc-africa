@@ -78,7 +78,7 @@ const AboutEwaste = () => {
               className="text-4xl md:text-5xl font-semibold leading-tight mb-8"
               variants={textVariants}
             >
-              About Us
+              Who We Are
             </motion.h2>
 
             <motion.p

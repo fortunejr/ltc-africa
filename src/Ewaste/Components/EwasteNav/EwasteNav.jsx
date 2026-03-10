@@ -77,13 +77,13 @@ const EwasteNav = () => {
                 index !== navItems.length - 1 ? "border-b border-gray-100" : ""
               }
             >
-              <a
-                href={item.to}
+              <Link
+                to={item.to}
                 onClick={handleLinkClick}
                 className="block py-3 transition-colors hover:text-gray-600"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

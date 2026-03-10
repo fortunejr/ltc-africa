@@ -130,8 +130,8 @@ const Company = () => {
             variants={staggerContainer}
           >
             {/* Vision */}
-            <motion.div className="group relative bg-white backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="relative overflow-hidden rounded-t-3xl">
+            <motion.div className="group relative bg-white backdrop-blur-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <div className="relative overflow-hidden ">
                 <video
                   src="/videos/greencity.mp4"
                   className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
@@ -145,7 +145,7 @@ const Company = () => {
 
               <div className="p-6 lg:p-8 space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-customBlue/10 rounded-2xl">
+                  <div className="p-3 bg-customBlue/10 ">
                     <Eye className="w-8 h-8 text-customBlue" />
                   </div>
 
@@ -165,8 +165,8 @@ const Company = () => {
             </motion.div>
 
             {/* Mission */}
-            <motion.div className="group relative bg-white backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="relative overflow-hidden rounded-t-3xl">
+            <motion.div className="group relative bg-white backdrop-blur-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+              <div className="relative overflow-hidden">
                 <video
                   src="/videos/windmill.mp4"
                   className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
@@ -180,7 +180,7 @@ const Company = () => {
 
               <div className="p-6 lg:p-8 space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-customBlue/10 rounded-2xl">
+                  <div className="p-3 bg-customBlue/10">
                     <Target className="w-8 h-8 text-customBlue" />
                   </div>
 

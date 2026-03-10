@@ -6,7 +6,7 @@ const ContactEwaste = () => {
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold">Contact Us</h2>
+          <h2 className="text-4xl md:text-4xl font-bold text-[#003333] header-txt">Contact Us</h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
             Get in touch with LTC Africa Recycling for partnerships, services,
             and sustainable e-waste management solutions across Africa and

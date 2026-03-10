@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import {
   Building2,
   ShieldCheck,
@@ -17,7 +16,7 @@ import {
   Ship,
   Plane,
   Cpu,
-  Landmark
+  Landmark,
 } from "lucide-react";
 
 const industries = [
@@ -37,7 +36,7 @@ const industries = [
   { name: "Aviation", icon: Plane },
   { name: "Public Utilities", icon: Landmark },
   { name: "Real Estate", icon: Building2 },
-  { name: "IT & Software", icon: Cpu }
+  { name: "IT & Software", icon: Cpu },
 ];
 
 const containerVariants = {
@@ -45,112 +44,153 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
-      delayChildren: 0.2
-    }
-  }
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
+    transition: { duration: 0.5 },
+  },
 };
 
 const ServicesEwaste = () => {
+  const services = [
+    {
+      title: "IT/Telecom Equipment",
+      text: "Desktop computers, laptops, servers, monitors, printers, network devices, storage equipment, mobile phones, PBX systems, antennas, CCTV systems, POS terminals and other telecom infrastructure.",
+      image: "/images/pile.jpg",
+    },
+    {
+      title: "Hazardous Components",
+      text: "Batteries (Li-ion, lead-acid), toner cartridges, capacitors, transformers, circuit boards, fluorescent tubes and mercury containing lamps.",
+      image: "/images/hazard.jpg",
+    },
+    {
+      title: "Medical Electronics",
+      text: "Medical electronic devices including ECG machines, monitoring equipment and other hospital electronic systems.",
+      image: "/images/medical.jpg",
+    },
+  ];
+
   return (
-    <section className="bg-gray-50 py-20 overflow-x-hidden">
+    <section className="bg-[#fcfcfc] py-24 md:py-32 overflow-hidden">
       <motion.div
-        className="max-w-7xl mx-auto px-4"
+        className="max-w-7xl mx-auto px-6 lg:px-12"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
+        viewport={{ once: true }}
       >
         {/* Header */}
         <motion.div
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="max-w-3xl mx-auto text-center mb-24"
           variants={itemVariants}
         >
-          <h2 className="text-3xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
             Core E-Waste & ITAD Services
           </h2>
-          <p className="text-gray-600 text-base leading-relaxed">
+
+          <p className="text-gray-500 text-lg leading-relaxed">
             We deliver responsible e-waste management and IT Asset Disposition
             services across Africa, helping organizations securely recover,
-            refurbish, and recycle electronic assets.
+            refurbish and recycle electronic assets.
           </p>
         </motion.div>
 
-        {/* Services */}
+        {/* Services Layout */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20"
+          className="grid lg:grid-cols-2 gap-12 mb-28"
           variants={containerVariants}
         >
-          {[
-            {
-              title: "IT Equipment",
-              text: "Laptops, servers, monitors, printers, UPS systems, networking devices, storage media, tablets, and accessories."
-            },
-            {
-              title: "Telecom Equipment",
-              text: "Mobile phones, PBX systems, BTS components, antennas, CCTV, POS terminals, and satellite devices."
-            },
-            {
-              title: "Hazardous Components",
-              text: "Batteries, toner cartridges, transformers, circuit boards, mercury lamps, PCB boards, and chips."
-            },
-            {
-              title: "Other Equipment",
-              text: "Medical electronics and audio-visual equipment such as monitors, speakers, and projectors."
-            }
-          ].map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-white border border-gray-200 rounded-xl p-6"
-              variants={itemVariants}
-            >
-              <h3 className="text-base font-semibold text-gray-900 mb-3">
-                {service.title}
+          {/* Featured Service */}
+          <motion.div
+            className="relative overflow-hidden border border-gray-200 bg-white shadow-sm group"
+            variants={itemVariants}
+          >
+            <div className="h-[420px] w-full overflow-hidden">
+              <img
+                src={services[0].image}
+                alt={services[0].title}
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+              />
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+
+            <div className="absolute bottom-10 left-10 max-w-lg text-white">
+              <h3 className="text-3xl font-bold mb-4">
+                {services[0].title}
               </h3>
-              <p className="text-sm text-gray-600">
-                {service.text}
+
+              <p className="text-sm leading-relaxed text-white/90">
+                {services[0].text}
               </p>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
+
+          {/* Secondary Services */}
+          <div className="grid sm:grid-cols-2 gap-8">
+            {services.slice(1).map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-white border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 group"
+                variants={itemVariants}
+              >
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-customGreen">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-sm text-gray-500 leading-relaxed">
+                    {service.text}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Industries */}
-        <motion.div
-          className="mb-20"
-          variants={containerVariants}
-        >
-          <motion.h3
-            className="text-2xl font-semibold text-center text-gray-900 mb-10"
+        <motion.div className="mb-24" variants={containerVariants}>
+          <motion.div
+            className="flex items-center justify-center gap-4 mb-12"
             variants={itemVariants}
           >
-            Industries We Serve
-          </motion.h3>
+            <div className="h-px w-12 bg-gray-300" />
+            <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
+              Industries We Serve
+            </h3>
+            <div className="h-px w-12 bg-gray-300" />
+          </motion.div>
 
           <motion.div
-            className="flex flex-wrap justify-center gap-3"
+            className="flex flex-wrap justify-center gap-4"
             variants={containerVariants}
           >
             {industries.map((industry, index) => {
               const Icon = industry.icon;
+
               return (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-gray-700 text-sm"
+                  className="flex items-center gap-2 px-3 py-3 border border-gray-200 bg-white text-gray-600 text-sm font-medium hover:border-customGreen hover:text-customGreen hover:shadow-md transition"
                   variants={itemVariants}
                 >
-                  <Icon size={16} />
+                  <Icon size={18} strokeWidth={1.5} />
                   <span>{industry.name}</span>
                 </motion.div>
               );
@@ -159,13 +199,10 @@ const ServicesEwaste = () => {
         </motion.div>
 
         {/* CTA */}
-        <motion.div
-          className="text-center"
-          variants={itemVariants}
-        >
+        <motion.div className="text-center" variants={itemVariants}>
           <Link
             to="/e-waste/services"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 transition"
+            className="inline-flex items-center justify-center px-10 py-4 bg-customBlue text-white text-sm font-bold uppercase tracking-widest hover:bg-customGreen transition shadow-lg"
           >
             View Full E-Waste Services
           </Link>
