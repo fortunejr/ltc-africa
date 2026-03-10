@@ -7,9 +7,9 @@ const container = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const leftItem = {
@@ -17,8 +17,8 @@ const leftItem = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
 };
 
 const rightItem = {
@@ -26,8 +26,8 @@ const rightItem = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
-  }
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
 };
 
 const textItem = {
@@ -35,8 +35,8 @@ const textItem = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7 }
-  }
+    transition: { duration: 0.7 },
+  },
 };
 
 const Welcome = () => {
@@ -50,7 +50,6 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
 
   return (
     <section className="relative w-full bg-white py-12 md:py-24 overflow-hidden">
-
       {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-64 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/topography.png')]" />
 
@@ -61,7 +60,6 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        
         {/* Left Images */}
         <motion.div
           variants={leftItem}
@@ -76,9 +74,9 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
 
             <div className="absolute bottom-0 left-0 w-full h-2 bg-customGreen" />
 
-            <div className="absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 bg-[#003333] flex items-center justify-center shadow-lg cursor-pointer hover:bg-customGreen transition-colors">
+            {/* <div className="absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 bg-[#003333] flex items-center justify-center shadow-lg cursor-pointer hover:bg-customGreen transition-colors">
               <div className="w-0 h-0 border-t-[6px] md:border-t-[8px] border-t-transparent border-l-[10px] md:border-l-[12px] border-l-white border-b-[6px] md:border-b-[8px] border-b-transparent ml-1" />
-            </div>
+            </div> */}
           </div>
 
           <motion.div
@@ -97,7 +95,6 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
 
         {/* Right Content */}
         <motion.div variants={rightItem} className="flex flex-col">
-
           <motion.h2
             variants={textItem}
             className="header-txt text-3xl md:text-5xl font-bold text-[#003333] leading-tight mb-6 md:mb-8"
@@ -122,7 +119,6 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
               </button>
             </Link>
           </motion.div>
-
         </motion.div>
       </motion.div>
     </section>

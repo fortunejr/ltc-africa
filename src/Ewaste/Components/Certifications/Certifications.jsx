@@ -68,7 +68,7 @@ const itemVariants = {
 
 const Certifications = () => {
   return (
-    <section className="w-full bg-gray-50 py-28 md:py-36 overflow-hidden">
+    <section className="w-full bg-customGreen py-28 md:py-36 overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12"
         variants={containerVariants}
@@ -78,7 +78,7 @@ const Certifications = () => {
       >
         {/* Header */}
         <motion.div className="text-center mb-24" variants={itemVariants}>
-          <span className="text-customGreen font-bold tracking-[0.25em] text-xs uppercase block mb-5">
+          <span className="text-white font-bold tracking-[0.25em] text-xs uppercase block mb-5">
             Compliance & Standards
           </span>
 

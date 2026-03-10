@@ -85,7 +85,7 @@ const SDGEwaste = () => {
             <img
               src={sdgs}
               alt="UN Sustainable Development Goals"
-              className="w-full h-full object-cover"
+              className="w-full h-full"
             />
           </div>
         </div>
@@ -171,45 +171,89 @@ const SDGEwaste = () => {
           <ul className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
             <li>
               <span className="font-medium text-blue-950">Integration:</span>{" "}
-              SDGs embedded into business strategy.
+              Embedding SDG targets into every level of our operations and
+              business strategy.
             </li>
             <li>
               <span className="font-medium text-blue-950">Innovation:</span>{" "}
-              Digital tools for transparency and traceability.
+              Leveraging technology and digital tools for traceability,
+              data-driven reporting, and efficient waste recovery.
             </li>
             <li>
               <span className="font-medium text-blue-950">
                 Impact Measurement:
               </span>{" "}
-              Clear carbon and social metrics.
+              Providing transparent metrics on carbon reduction, resource
+              recovery, and social impact.
             </li>
             <li>
               <span className="font-medium text-blue-950">Collaboration:</span>{" "}
-              Partnerships to scale sustainability.
+              Partnering with industry leaders and development organizations to
+              achieve shared sustainability goals.
             </li>
           </ul>
         </motion.div>
 
-        {/* Africa Impact */}
         <motion.div
-          className="max-w-4xl mx-auto text-center space-y-6 px-4"
+          className="max-w-4xl mx-auto text-center space-y-6 px-4 mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
         >
-
           {/* Heading */}
-          <h3 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt mb-2">
-            Impact Across Africa
+          <h3 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt mb-4">
+            Our SDG Commitment
           </h3>
 
           {/* Description */}
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            LTC Africa Recycling reduces e-waste accumulation, recovers valuable
-            resources, empowers communities, and supports governments and
-            corporations in meeting sustainability and regulatory goals.
+            “Through the{" "}
+            <span className="font-semibold text-customGreen">
+              LTC SDG Initiative
+            </span>
+            , we are creating a roadmap for a greener, smarter, and more
+            inclusive Africa  where waste becomes a resource, people thrive,
+            and the planet prospers.”
           </p>
+        </motion.div>
+
+        {/* Africa Impact */}
+        <motion.div
+          className="max-w-4xl mx-auto text-left md:text-center space-y-6 px-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUp}
+        >
+          {/* Heading */}
+          <h3 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt mb-4">
+            Impact Across Africa
+          </h3>
+
+          {/* Bullet Points */}
+          <ul className="list-disc list-inside space-y-3 text-gray-700 text-base md:text-lg leading-relaxed">
+            <li>
+              Reduces electronic waste accumulation and environmental
+              contamination.
+            </li>
+            <li>
+              Recovers valuable resources for local industry, reducing
+              dependence on imported raw materials.
+            </li>
+            <li>
+              Empowers communities through awareness, education, and job
+              creation.
+            </li>
+            <li>
+              Supports governments and corporations in meeting regulatory
+              compliance and sustainability goals.
+            </li>
+            <li>
+              Reduces Africa’s carbon footprint through sustainable e-waste
+              recycling and resource recovery.
+            </li>
+          </ul>
 
           {/* Quote */}
           <p className="mt-6 text-base md:text-lg font-medium text-gray-800 italic">
