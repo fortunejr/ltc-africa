@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { logo } from "../../imports";
+// import { logo } from "../../imports";
 import { Link } from "react-router-dom";
 
 // Demo component - replace with your actual NavLink from react-router-dom
@@ -23,13 +23,13 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between relative">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
 
         {/* LEFT: Logo */}
         <div className="flex items-center">
           <Link to="/" className="block">
             <div className="h-16 w-auto flex items-center">
-              <img src={logo} alt="Logo" className="h-full w-auto" />
+              <img src= "/images/ltc-logo.png" alt="Logo" className="h-24 w-auto" />
             </div>
           </Link>
         </div>

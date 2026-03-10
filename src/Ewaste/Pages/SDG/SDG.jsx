@@ -66,8 +66,8 @@ const fadeUp = {
 
 const SDGEwaste = () => {
   return (
-    <section className="bg-white py-28 md:py-20 px-6">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <section className="bg-white py-28 px-6">
+      <div className="max-w-7xl mx-auto space-y-32">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold header-txt text-[#003333]">

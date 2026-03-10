@@ -27,3 +27,16 @@ html {
   font-family: "Bricolage Grotesque", sans-serif;
   font-style: normal;
 }
+
+
+
+::selection {
+  background-color: #18AFBE; /* your highlight color */
+  color: #000000; /* optional: text color */
+}
+
+/* For Firefox (requires a separate selector) */
+::-moz-selection {
+  background-color: #18AFBE;
+  color: #000000;
+}

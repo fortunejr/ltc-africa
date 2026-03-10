@@ -46,12 +46,21 @@ const slides = [
 const Hero = () => {
   const [current, setCurrent] = useState(0);
 
+  // Auto-slide every 9s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 9000);
     return () => clearInterval(interval);
   }, []);
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -102,7 +111,21 @@ const Hero = () => {
         </div>
       ))}
 
-      {/* Indicators */}
+      {/* Prev / Next Buttons */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-3 text-white hover:bg-black/60 transition"
+      >
+        &#10094;
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/40 p-3 text-white hover:bg-black/60 transition"
+      >
+        &#10095;
+      </button>
+
+      {/* Indicator Dots */}
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
         {slides.map((_, index) => (
           <button

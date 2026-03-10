@@ -93,7 +93,7 @@ const ServicesEwaste = () => {
           className="max-w-3xl mx-auto text-center mb-24"
           variants={itemVariants}
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#003333] header-txt mb-6 tracking-tight">
             Core E-Waste & ITAD Services
           </h2>
 

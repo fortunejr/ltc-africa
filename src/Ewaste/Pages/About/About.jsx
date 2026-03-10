@@ -63,7 +63,7 @@ const staggerContainer = {
 
 const AboutEwaste = () => {
   return (
-    <section className="bg-white text-slate-800">
+    <section className="bg-white text-slate-800 py-20">
 
       {/* HERO */}
       <div className="relative w-full h-[85vh] overflow-hidden">
@@ -85,14 +85,14 @@ const AboutEwaste = () => {
 
           <motion.h1
             variants={fadeUp}
-            className="text-3xl lg:text-5xl mb-6 header-txt font-bold bg-customBlue w-fit p-2"
+            className="text-3xl lg:text-4xl mb-6 header-txt font-bold bg-customBlue w-fit p-2"
           >
             Welcome to LTC Africa Recycling!
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="text-xl md:text-2xl text-customGreen font-medium max-w-3xl"
+            className="text-xl md:text-xl text-customGreen font-medium max-w-3xl"
           >
             Pioneering Sustainable WEEE & IT/Telecom Waste Solutions Across
             Africa
@@ -105,7 +105,7 @@ const AboutEwaste = () => {
           <motion.div variants={fadeUp} className="space-y-1 text-base uppercase">
             <p>
               <a href="#about" className="hover:text-customGreen">
-                About The Group Company
+                About The Company
               </a>
             </p>
 
@@ -176,7 +176,7 @@ const AboutEwaste = () => {
         className="max-w-6xl mx-auto px-6 py-24 space-y-12"
       >
 
-        <motion.div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+        <motion.div id="about" className="space-y-6 text-gray-700 text-lg leading-relaxed">
 
           <motion.p variants={fadeUp}>
             LTC Africa Recycling, a proud member of the LTC Africa Group, is a
