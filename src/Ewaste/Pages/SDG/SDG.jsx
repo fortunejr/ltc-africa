@@ -165,7 +165,7 @@ const SDGEwaste = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
         >
-          <h3 className="text-xl font-semibold text-blue-950 mb-6">
+          <h3 className="text-xl font-semibold text-[#003333] mb-6">
             Our SDG Implementation Framework
           </h3>
           <ul className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">

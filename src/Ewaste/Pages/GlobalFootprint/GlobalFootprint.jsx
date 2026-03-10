@@ -28,7 +28,7 @@ const GlobalFootprint = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUp}
         >
-          <h2 className="text-3xl header-txt md:text-4xl font-bold text-blue-950">
+          <h2 className="text-3xl header-txt md:text-4xl font-bold text-[#003333]">
             Our Global Footprint
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
