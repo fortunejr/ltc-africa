@@ -101,10 +101,28 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* WhatsApp Button */}
+        <a
+          href={`https://wa.me/+261328681658`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 p-2 hover:animate-slide-up transition-all duration-300 z-50"
+          aria-label="WhatsApp"
+        >
+          <img
+            className="lg:h-16 lg:w-16 h-10 "
+            src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png"
+            alt=""
+          />
+        </a>
+
         {/* BOTTOM BAR */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3">
           <div className="flex flex-wrap gap-4">
-            <Link to="/termsandconditions" className="hover:text-white transition">
+            <Link
+              to="/termsandconditions"
+              className="hover:text-white transition"
+            >
               Terms & Conditions
             </Link>
             <Link to="/cookie-policy" className="hover:text-white transition">
