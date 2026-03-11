@@ -81,7 +81,7 @@ const SDGEwaste = () => {
 
         {/* SDG Visual */}
         <div className="flex justify-center">
-          <div className="relative lg:w-[40%] h-70 md:h-full overflow-hidden rounded-2xl">
+          <div className="relative lg:w-[40%] md:h-full overflow-hidden rounded-2xl">
             <img
               src={sdgs}
               alt="UN Sustainable Development Goals"
