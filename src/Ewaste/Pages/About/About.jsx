@@ -110,7 +110,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#who-we-are"
+                href="#who-we-are"
                 className="hover:text-customGreen p-2"
               >
                 Who We Are
@@ -118,7 +118,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#key-facts"
+                href="#key-facts"
                 className="hover:text-customGreen p-2"
               >
                 Key Facts
@@ -126,7 +126,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#values"
+                href="#values"
                 className="hover:text-customGreen p-2"
               >
                 Our Values
@@ -134,7 +134,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#mission"
+                href="#mission"
                 className="hover:text-customGreen p-2"
               >
                 Mission & Vision
@@ -142,7 +142,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#leadership"
+                href="#leadership"
                 className="hover:text-customGreen p-2"
               >
                 Leadership
@@ -150,7 +150,7 @@ const AboutEwaste = () => {
             </p>
             <p>
               <a
-                href="/e-waste/about/#certification"
+                href="#certification"
                 className="hover:text-customGreen p-2"
               >
                 Certification
@@ -211,10 +211,10 @@ const AboutEwaste = () => {
             accountability, and impact in every operation.
           </motion.p>
 
-          <div className="pt-10 space-y-6">
+          <div id="who-we-are" className="pt-10 space-y-6">
             <motion.p
               variants={fadeUp}
-              id="who-we-are"
+              
               className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center p-2"
             >
               Who we are!

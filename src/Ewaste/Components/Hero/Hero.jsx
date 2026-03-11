@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black/40" />
 
           {/* Bottom gradient fade */}
-          <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-customBlue via-customBlue/70 to-transparent" />
+          <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black via-black/70 to-transparent" />
 
           {/* Content */}
           <div className="relative z-10 flex h-full items-center">
