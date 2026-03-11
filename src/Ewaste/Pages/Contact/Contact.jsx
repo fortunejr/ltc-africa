@@ -21,7 +21,7 @@ const ContactEwaste = () => {
           <iframe
             title="LTC Africa Madagascar Location"
             src="https://www.google.com/maps?q=Bat%20II%20Afriport%20Warehouse%20Forello%20Tanjumbato%20Antananarivo%20Madagascar&output=embed"
-            className="w-full h-52"
+            className="w-full h-full"
             loading="lazy"
           ></iframe>
         </div>
