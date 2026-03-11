@@ -21,6 +21,10 @@ import HomeLayout from "./Layouts/HomeLayout";
 import EwasteLayout from "./Layouts/EwasteLayout";
 import Company from "./Pages/Company/Company";
 import UnderConstruction from "./Pages/UnderConstruction/UnderConstruction";
+import TermsandConditions from "./Pages/TermsandCondition/TermsandConditions";
+import CookiePolicy from "./Pages/CookiePolicy/CookiePolicy";
+import DataPolicy from "./Pages/DataPolicy/DataPolicy";
+import Media from "./Ewaste/Pages/Media/Media";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,6 +46,9 @@ function App() {
           <Route path="/agriculture" element={<UnderConstruction />} />
           <Route path="/real-estate" element={<UnderConstruction />} />
           <Route path="/energy" element={<UnderConstruction />} />
+          <Route path="/termsandconditions" element={<TermsandConditions />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/privacy-policy" element={<DataPolicy />} />
         </Route>
 
         {/* ewaste layout  */}
@@ -56,6 +63,7 @@ function App() {
           />
           <Route path="/e-waste/climate-change" element={<ClimateChange />} />
           <Route path="/e-waste/contact" element={<ContactEwaste />} />
+          <Route path="/e-waste/media" element={<Media />} />
         </Route>
       </Routes>
 

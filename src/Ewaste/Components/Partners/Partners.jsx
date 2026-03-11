@@ -46,7 +46,8 @@ const Partners = () => {
   };
 
   return (
-    <section className="w-full py-20 md:py-32">
+    <section className="relative w-full py-20 md:py-32 bg-customBlue/10">
+        <div className="absolute inset-0 bg-[url('/images/painttxt.jpg')] opacity-25"></div>
       <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
         
         {/* Header */}
@@ -74,7 +75,7 @@ const Partners = () => {
 
         {/* Logo Grid */}
         <motion.div
-          className="grid [grid-template-columns:repeat(auto-fit,minmax(140px,1fr))] gap-10 items-center justify-items-center opacity-70"
+          className="grid [grid-template-columns:repeat(auto-fit,minmax(70px,1fr))] gap-10 items-center justify-items-center opacity-70"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -103,7 +104,7 @@ const Partners = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-sm text-gray-400 uppercase tracking-widest mb-6">
+          <p className="text-sm text-gray-900 uppercase tracking-widest mb-6">
             Collaborating across sectors
           </p>
 
@@ -111,13 +112,13 @@ const Partners = () => {
             {categories.map((cat) => (
               <span
                 key={cat}
-                className="px-5 py-2 bg-white/40 text-gray-700 rounded-full text-sm font-medium"
+                className="px-5 py-2 bg-white text-gray-900 rounded-full text-sm font-medium"
               >
                 {cat}
               </span>
             ))}
 
-            <span className="px-5 py-2 text-gray-400 text-sm italic">
+            <span className="px-5 py-2 text-gray-900 text-sm italic">
               ...and many more
             </span>
           </div>

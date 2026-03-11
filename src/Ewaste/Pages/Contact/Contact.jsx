@@ -6,7 +6,9 @@ const ContactEwaste = () => {
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-4xl font-bold text-[#003333] header-txt">Contact Us</h2>
+          <h2 className="text-4xl md:text-4xl font-bold text-[#003333] header-txt">
+            Contact Us
+          </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed">
             Get in touch with LTC Africa Recycling for partnerships, services,
             and sustainable e-waste management solutions across Africa and
@@ -17,11 +19,11 @@ const ContactEwaste = () => {
         {/* Map Placeholder */}
         <div className="rounded-3xl border border-gray-200 h-125 md:h-162.5 overflow-hidden">
           <iframe
-            title="Map"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15093.767854472257!2d47.518595!3d-18.956079!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07ff25bab41c3%3A0x7cd8a63292d40a08!2sAFRIPORT%20zone%20d&#39;activit%C3%A9%20mixte!5e0!3m2!1sen!2sng!4v1768950435791!5m2!1sen!2sng"
-            className="w-full h-full border-0"
+            title="LTC Africa Madagascar Location"
+            src="https://www.google.com/maps?q=Bat%20II%20Afriport%20Warehouse%20Forello%20Tanjumbato%20Antananarivo%20Madagascar&output=embed"
+            className="w-full h-52"
             loading="lazy"
-          />
+          ></iframe>
         </div>
 
         {/* Contact Details */}

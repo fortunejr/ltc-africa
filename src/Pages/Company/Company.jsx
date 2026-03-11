@@ -21,9 +21,9 @@ const Company = () => {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white">
-          <h1 className="text-5xl mb-6 header-txt font-bold bg-customBlue w-fit p-2">The Company</h1>
-
-          <div className="space-y-2 text-lg">
+          <h1 className="text-3xl lg:text-4xl mb-6 header-txt font-bold bg-customBlue w-fit p-2">The Company</h1>
+          <p className="font-bold my-1">EXPLORE THIS PAGE</p>
+          <div className="space-y-2 text-base">
             <p><a href="#about" className="text-white hover:text-customGreen transition-colors">About The Group Company</a></p>
             <p><Link to="/e-waste" className="text-white hover:text-customGreen transition-colors">IT/TELECEOM ASSET & WEEE Management</Link></p>
             <p><Link to="/agriculture" className="text-white hover:text-customGreen transition-colors">Agricultural & Farm Waste Solutions</Link></p>
@@ -36,7 +36,7 @@ const Company = () => {
       {/* CONTENT */}
       <div id="about" className="max-w-6xl mx-auto px-6 py-24">
         <div className="mb-16">
-          <h1 className="text-4xl font-semibold mb-4 header-txt text-customBlue">
+          <h1 className="text-3xl lg:text-4xl font-semibold mb-4 header-txt text-customBlue">
             About the Group Company
           </h1>
           <h2 className="text-xl text-gray-600">
@@ -44,7 +44,7 @@ const Company = () => {
           </h2>
         </div>
 
-        <div className="space-y-10 text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-10 text-base text-gray-700 leading-relaxed">
           <p>
             LTC Africa Group is a leading African company committed to
             delivering comprehensive, innovative, and sustainable solutions

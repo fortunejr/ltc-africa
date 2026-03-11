@@ -1,6 +1,7 @@
 import React from "react";
 import { Mail, MapPin, Linkedin, Instagram, X, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const Footer = () => {
@@ -26,10 +27,10 @@ const Footer = () => {
                 <p>Regional Office Nigeria: 4 Association Road, Governors Road Lagos</p>
               </div>
 
-              <div className="flex items-start gap-3">
+              {/* <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
                 <p>Regional Office South Africa</p>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -55,7 +56,7 @@ const Footer = () => {
                 <Instagram size={16} />
               </a>
               <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition">
-                <X size={16} />
+                <FaXTwitter size={16} />
               </a>
             </div>
           </div>
@@ -65,11 +66,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Find Us</h3>
             <div className="rounded-xl overflow-hidden">
               <iframe
-                title="Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.449491496961!2d47.51604732352138!3d-18.95574620870842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07ff25bab41c3%3A0x7cd8a63292d40a08!2sAFRIPORT%20zone%20d&#39;activit%C3%A9%20mixte!5e0!3m2!1sen!2sng!4v1768694400693!5m2!1sen!2sng"
+                title="LTC Africa Madagascar Location"
+                src="https://www.google.com/maps?q=Bat%20II%20Afriport%20Warehouse%20Forello%20Tanjumbato%20Antananarivo%20Madagascar&output=embed"
                 className="w-full h-52"
-                loading="lazy"
-              />
+                loading="lazy"fadeindata
+              ></iframe>
             </div>
           </div>
 
@@ -78,8 +79,8 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3">
           <div className="flex flex-wrap gap-4">
-            <Link to="/terms" className="hover:text-white transition">Terms & Conditions</Link>
-            <Link to="/cookies" className="hover:text-white transition">Cookies Policy</Link>
+            <Link to="/termsandconditions" className="hover:text-white transition">Terms & Conditions</Link>
+            <Link to="/cookie-policy" className="hover:text-white transition">Cookies Policy</Link>
             <Link to="/privacy-policy" className="hover:text-white transition">Data Privacy</Link>
           </div>
 

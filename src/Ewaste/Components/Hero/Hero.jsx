@@ -92,7 +92,7 @@ const Hero = () => {
 
                 <a
                   href="/e-waste/contact"
-                  className="inline-flex items-center rounded bg-customGreen px-6 py-3 text-sm md:text-base font-medium text-white transition hover:opacity-90"
+                  className="inline-flex items-center  bg-customGreen px-6 py-3 text-sm md:text-base font-medium text-white transition hover:opacity-90"
                 >
                   Contact Us
                 </a>
@@ -108,7 +108,7 @@ const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`h-1.5 w-6 rounded-full transition ${
+            className={`h-1.5 w-1.5 rounded-full transition ${
               current === index ? "bg-white" : "bg-white/30"
             }`}
           />

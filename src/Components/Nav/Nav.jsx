@@ -23,13 +23,13 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
+      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between relative">
 
         {/* LEFT: Logo */}
         <div className="flex items-center">
           <Link to="/" className="block">
             <div className="h-16 w-auto flex items-center">
-              <img src= "/images/ltc-logo.png" alt="Logo" className="h-24 w-auto" />
+              <img src= "/images/ltc-logo.png" alt="Logo" className="h-16 w-auto" />
             </div>
           </Link>
         </div>
@@ -70,13 +70,13 @@ const Nav = () => {
               key={item.to} 
               className={index !== navItems.length - 1 ? "border-b border-gray-100" : ""}
             >
-              <a
-                href={item.to}
+              <Link
+                to={item.to}
                 onClick={handleLinkClick}
                 className="block py-3 transition-colors hover:text-gray-600"
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

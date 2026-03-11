@@ -33,7 +33,7 @@ const EwasteNav = () => {
         <div className="flex items-center">
           <Link to="/e-waste" className="block">
             <div className="h-12 w-auto flex items-center">
-              <img src="/images/ltc-logo.png" alt="Logo" className="w-20" />
+              <img src="/images/ltc-logo.png" alt="Logo" className="w-16" />
             </div>
           </Link>
         </div>
