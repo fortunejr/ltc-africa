@@ -11,7 +11,7 @@ const Company = () => {
   return (
     <section className="bg-white text-[#111]">
       {/* HERO */}
-      <div className="relative w-full h-[70vh] overflow-hidden">
+      <div className="relative w-full h-[80vh] overflow-hidden pt-30">
         <img
           src="https://images.unsplash.com/photo-1772326049701-bcdda505ef51?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="corporate"

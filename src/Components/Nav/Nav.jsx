@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 // import { logo } from "../../imports";
 import { Link } from "react-router-dom";
+import TopBar from "../TopBar/TopBar";
 
 // Demo component - replace with your actual NavLink from react-router-dom
 const NavLink = ({ to, children, className, onClick }) => (
@@ -23,13 +24,19 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
+      <div className="hidden lg:block">
+        <TopBar />
+      </div>
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between relative">
-
         {/* LEFT: Logo */}
         <div className="flex items-center">
           <Link to="/" className="block">
             <div className="h-16 w-auto flex items-center">
-              <img src= "/images/ltc-logo.png" alt="Logo" className="h-16 w-auto" />
+              <img
+                src="/images/ltc-logo.png"
+                alt="Logo"
+                className="h-16 w-auto"
+              />
             </div>
           </Link>
         </div>
@@ -66,9 +73,11 @@ const Nav = () => {
       >
         <ul className="flex flex-col px-4 p y-3 text-sm font-medium">
           {navItems.map((item, index) => (
-            <li 
-              key={item.to} 
-              className={index !== navItems.length - 1 ? "border-b border-gray-100" : ""}
+            <li
+              key={item.to}
+              className={
+                index !== navItems.length - 1 ? "border-b border-gray-100" : ""
+              }
             >
               <Link
                 to={item.to}
@@ -79,6 +88,8 @@ const Nav = () => {
               </Link>
             </li>
           ))}
+
+          
         </ul>
       </div>
     </nav>

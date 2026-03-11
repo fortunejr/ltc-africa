@@ -62,7 +62,7 @@ const itemVariants = {
 
 const ServicesEwaste = () => {
   return (
-    <section className="w-full bg-white text-slate-800 py-28">
+    <section className="w-full bg-white text-slate-800 py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-32">
         {/* CORE SERVICE */}
         <div className="max-w-4xl space-y-6">

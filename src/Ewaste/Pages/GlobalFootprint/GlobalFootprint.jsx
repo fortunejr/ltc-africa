@@ -16,7 +16,7 @@ const fadeUp = {
 
 const GlobalFootprint = () => {
   return (
-    <section className="bg-white py-28 px-6">
+    <section className="bg-white py-36 px-6">
       <div className="max-w-7xl mx-auto space-y-20">
 
         {/* Header */}

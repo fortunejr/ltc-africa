@@ -79,10 +79,10 @@ const Hero = () => {
           <div className="pointer-events-none absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-black via-black/70 to-transparent" />
 
           {/* Content */}
-          <div className="relative z-10 flex h-full items-center">
+          <div className="relative z-10 pt-14 flex h-full items-center">
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
               <div className="max-w-2xl text-white">
-                <h1 className="header-txt mb-5 text-3xl md:text-6xl font-semibold leading-tight">
+                <h1 className="header-txt mb-5 text-3xl md:text-6xl font-semibold leading-14">
                   {slide.title}
                 </h1>
 

@@ -108,7 +108,7 @@ const Hero = () => {
       ))}
 
       {/* Content */}
-      <div className="cursor-default relative z-10 flex h-full w-full flex-col md:flex-row">
+      <div className="cursor-default relative z-10 lg:pt-30 flex h-full w-full flex-col md:flex-row">
         {slides.map((slide, index) => {
           const isActive = current === index;
 

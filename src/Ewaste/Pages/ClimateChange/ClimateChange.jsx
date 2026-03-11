@@ -3,7 +3,7 @@ import { carbon, climate } from "../../../imports";
 
 const ClimateChange = () => {
   return (
-    <section className="bg-slate-50 py-28 text-slate-800">
+    <section className="bg-slate-50 py-36 text-slate-800">
       <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-32">
         {/* HEADER */}
         <div className="max-w-3xl mx-auto text-center space-y-6">

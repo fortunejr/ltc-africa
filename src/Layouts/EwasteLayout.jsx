@@ -1,6 +1,6 @@
-import React from 'react'
-import EwasteNav from '../Ewaste/Components/EwasteNav/EwasteNav';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import EwasteNav from "../Ewaste/Components/EwasteNav/EwasteNav";
+import { Outlet } from "react-router-dom";
 
 const EwasteLayout = () => (
   <>
@@ -9,4 +9,4 @@ const EwasteLayout = () => (
   </>
 );
 
-export default EwasteLayout
+export default EwasteLayout;

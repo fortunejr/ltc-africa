@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactEwaste = () => {
   return (
-    <section className="py-24 px-6">
+    <section className="py-36 px-6">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center">
