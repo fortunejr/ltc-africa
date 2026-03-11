@@ -81,7 +81,7 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
 
           <motion.div
             variants={leftItem}
-            className="relative z-0 w-1/2 -ml-16 mt-32 shadow-xl hidden lg:block"
+            className="relative z-0 w-1/2 -ml-10 mt-10 md:mt-20 shadow-xl"
           >
             <img
               src="/images/parts.jpg"
