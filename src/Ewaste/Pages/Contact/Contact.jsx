@@ -17,7 +17,7 @@ const ContactEwaste = () => {
         </div>
 
         {/* Map Placeholder */}
-        <div className="rounded-3xl border border-gray-200 h-125 md:h-162.5 overflow-hidden">
+        <div className="rounded-3xl border border-gray-200 h-fit md:h-162.5 overflow-hidden">
           <iframe
             title="LTC Africa Madagascar Location"
             src="https://www.google.com/maps?q=Bat%20II%20Afriport%20Warehouse%20Forello%20Tanjumbato%20Antananarivo%20Madagascar&output=embed"
@@ -100,11 +100,6 @@ const ContactEwaste = () => {
                 >
                   Operations@Ltcafrica
                 </a>
-              </p>
-
-              <p className="text-sm">
-                Terms &amp; Conditions of Service · Website Cookies · Code of
-                Conduct · Data Privacy Policy
               </p>
             </div>
           </div>
