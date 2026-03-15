@@ -10,13 +10,13 @@ const slides = [
     link: "e-waste",
   },
   {
-    video: tractor,
+    video: "/videos/farm.mp4",
     title: "AGRICULTURAL & FARM WASTE SOLUTIONS",
     subtitle: "We are delivering a sustainable agriculturaland farm waste solutions across Africa by transforming organic waste into compost, biofertilizers, and renewable energy, Empowering farmers to improve soil health, reduce environmental impact, and building circular farming systems that enhance productivity and long- term sustainability.",
     link: "agriculture",
   },
   {
-    video: crane,
+    video: "/videos/realestate.mp4",
     title: "SMART REAL- ESTATE MANAGEMENT",
     subtitle: "We are using advanced technology, data insights, and sustainable strategies to improve property performance, lower operating costs, and enhance tenant satisfaction by combining digital monitoring, predictive maintenance, energy management, and lifecycle planning to maximize long-term asset value and efficiency.",
     link: "real-estate",
@@ -108,7 +108,7 @@ const Hero = () => {
       ))}
 
       {/* Content */}
-      <div className="cursor-default relative z-10 lg:pt-30 flex h-full w-full flex-col md:flex-row">
+      <div className="cursor-default relative z-10  flex h-full w-full flex-col md:flex-row">
         {slides.map((slide, index) => {
           const isActive = current === index;
 

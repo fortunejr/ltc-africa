@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import TopBar from "../../../Components/TopBar/TopBar";
-
-// Demo component - replace with your actual NavLink from react-router-dom
-const NavLink = ({ to, children, className, onClick }) => (
-  <a href={to} className={className} onClick={onClick}>
-    {children}
-  </a>
-);
 
 const EwasteNav = () => {
   const [open, setOpen] = useState(false);
+  const [language, setLanguage] = useState("EN");
 
   const handleLinkClick = () => setOpen(false);
 
@@ -20,70 +13,77 @@ const EwasteNav = () => {
     { to: "/e-waste/about", label: "About Us" },
     { to: "/e-waste/services", label: "Services" },
     { to: "/e-waste/climate-change", label: "Climate Change" },
-    // { to: "/e-waste/circular-economy", label: "Circular Economy" },
     { to: "/e-waste/sdg-initiatives", label: "SDG Initiatives" },
-    { to: "/e-waste/global-footprint", label: "Global Footprint" },
+    { to: "/global-footprint", label: "Global Footprint" },
     { to: "/e-waste/media", label: "Media" },
     { to: "/e-waste/contact", label: "Contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
-      <div className="hidden lg:block">
-        <TopBar />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between relative">
-        {/* LEFT: Logo */}
-        <div className="flex items-center">
-          <Link to="/e-waste" className="block">
-            <div className="h-12 w-auto flex items-center">
-              <img src="/images/ltc-logo.png" alt="Logo" className="w-16" />
-            </div>
-          </Link>
-        </div>
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* LOGO */}
+          <div className="flex-shrink-0 flex items-center">
+            <Link to="/" className="transition-opacity hover:opacity-90">
+              <img src="/images/ltc-logo.png" alt="logo" className="w-16" />
+            </Link>
+          </div>
 
-        {/* CENTER: Desktop Navlinks */}
-        <ul className="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm font-medium tracking-normal absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
-          {navItems.map((item) => (
-            <li key={item.to}>
+          {/* DESKTOP NAV */}
+          <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
+            {navItems.map((item) => (
               <Link
+                key={item.to}
                 to={item.to}
-                className="transition-all hover:text-gray-600 hover:border-b-2 hover:border-black hover:pb-1"
+                className="hover:text-customGreen transition-colors"
               >
                 {item.label}
               </Link>
-            </li>
-          ))}
-        </ul>
+            ))}
 
-        {/* MOBILE HAMBURGER */}
-        <button
-          className="md:hidden p-1 hover:bg-gray-100 rounded transition-colors"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+            {/* LANGUAGE SWITCH BUTTON */}
+            <button
+              onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
+              className="ml-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+            >
+              {language}
+            </button>
+          </div>
+
+          {/* MOBILE TOGGLE */}
+          <div className="md:hidden flex items-center gap-2">
+            {/* LANGUAGE SWITCHER */}
+            <button
+              onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
+              className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+            >
+              {language}
+            </button>
+
+            <button
+              className="p-2 text-gray-600"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50 transition-all duration-300 ease-in-out overflow-hidden ${
-          open ? "max-h-128 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out overflow-hidden ${
+          open ? "max-h-screen py-4" : "max-h-0 py-0"
         }`}
       >
-        <ul className="flex flex-col px-4 p y-3 text-sm font-medium">
-          {navItems.map((item, index) => (
-            <li
-              key={item.to}
-              className={
-                index !== navItems.length - 1 ? "border-b border-gray-100" : ""
-              }
-            >
+        <ul className="flex flex-col p-6 gap-2 font-semibold text-gray-700">
+          {navItems.map((item) => (
+            <li key={item.to}>
               <Link
                 to={item.to}
                 onClick={handleLinkClick}
-                className="block py-3 transition-colors hover:text-gray-600"
+                className="block py-3 px-2 rounded-lg hover:bg-gray-50 transition-colors"
               >
                 {item.label}
               </Link>

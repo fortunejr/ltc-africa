@@ -25,6 +25,9 @@ import TermsandConditions from "./Pages/TermsandCondition/TermsandConditions";
 import CookiePolicy from "./Pages/CookiePolicy/CookiePolicy";
 import DataPolicy from "./Pages/DataPolicy/DataPolicy";
 import Media from "./Ewaste/Pages/Media/Media";
+import Agriculture from "./Agriculture/Agriculture";
+import RealEstate from "./RealEstate/RealEstate";
+import RenewableEnergy from "./RenewableEnergy/RenewableEnergy";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,12 +46,17 @@ function App() {
         <Route element={<HomeLayout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="/thecompany" element={<Company />} />
-          <Route path="/agriculture" element={<UnderConstruction />} />
-          <Route path="/real-estate" element={<UnderConstruction />} />
-          <Route path="/energy" element={<UnderConstruction />} />
+          <Route path="/agriculture" element={<Agriculture />} />
+          <Route path="/real-estate" element={<RealEstate />} />
+          <Route path="/renewable-energy" element={<RenewableEnergy />} />
           <Route path="/termsandconditions" element={<TermsandConditions />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/privacy-policy" element={<DataPolicy />} />
+          <Route
+            path="/global-footprint"
+            element={<GlobalFootprint />}
+          />
+          <Route path="/contact" element={<ContactEwaste />} />
         </Route>
 
         {/* ewaste layout  */}
@@ -57,12 +65,7 @@ function App() {
           <Route path="/e-waste/about" element={<AboutEwaste />} />
           <Route path="/e-waste/services" element={<ServicesEwaste />} />
           <Route path="/e-waste/sdg-initiatives" element={<SDGEwaste />} />
-          <Route
-            path="/e-waste/global-footprint"
-            element={<GlobalFootprint />}
-          />
           <Route path="/e-waste/climate-change" element={<ClimateChange />} />
-          <Route path="/e-waste/contact" element={<ContactEwaste />} />
           <Route path="/e-waste/media" element={<Media />} />
         </Route>
       </Routes>

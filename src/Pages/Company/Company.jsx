@@ -1,19 +1,95 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Eye, Target } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Eye, Target, User } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const staggerContainer = {
   visible: { transition: { staggerChildren: 0.2 } },
 };
 
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.45 },
+  },
+};
+
 const Company = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+  const sectors = [
+    {
+      title: "IT/TELECEOM ASSET & WEEE Management",
+      img: "/images/telecom.jpg",
+      text: `In the IT and Telecom sector, LTC Africa Group provides complete
+      asset and WEEE (Waste Electrical and Electronic Equipment)
+      management solutions. From secure decommissioning, data destruction,
+      and refurbishment of IT and telecom equipment to certified recycling
+      and remarketing, the Group ensures compliance with global
+      environmental standards, protects sensitive data, and helps
+      organizations recover maximum value from retired assets. These
+      solutions not only reduce electronic waste but also promote a
+      circular economy, contributing to sustainable industrial practices
+      across the continent.`,
+    },
+    {
+      title: "Agriculture & Farm Waste Management",
+      img: "/images/agric.jpg",
+      text: `In Agriculture and Farm Waste Management, LTC Africa Group champions
+      sustainable farming practices and also transforming organic and farm
+      waste into valuable resources such as compost, biofertilizers, and
+      renewable energy. By helping farmers improve soil fertility,
+      increase crop yields, and reduce environmental impact, the Group
+      fosters climate-smart agriculture and circular farming systems.
+      These initiatives address critical challenges in food security,
+      resource management, and environmental sustainability, while
+      creating long-term economic opportunities for local communities.`,
+    },
+    {
+      title: "Smart Real Estate Management",
+      img: "/images/realestate.jpeg",
+      text: `Also the Group’s Smart Real Estate Management solutions integrate
+      advanced technology, data analytics, and intelligent systems to
+      optimize property performance and enhance tenant experiences.
+      Through digital monitoring, predictive maintenance, energy-efficient
+      solutions, and lifecycle asset planning, LTC Africa ensures
+      properties operate at peak efficiency while maximizing long-term
+      value. These smart infrastructure strategies support urban
+      development, reduce operational costs, and promote sustainable real
+      estate practices across commercial, institutional, and residential
+      projects.`,
+    },
+    {
+      title: "Renewable & Green Energy Solution",
+      img: "/images/windmill.jpg",
+      text: `In the Renewable and Green Energy sector, LTC Africa Group drives
+      Africa’s clean energy transition by delivering scalable solutions in
+      solar, wind, hydro, and bioenergy. The Group designs and implements
+      energy strategies that reduce carbon emissions, increase access to
+      reliable and sustainable power, and promote cost-effective energy
+      generation for industries, businesses, and communities. By focusing
+      on renewable energy solutions, LTC Africa contributes to climate
+      action, energy resilience, and sustainable development across the
+      continent.`,
+    },
+  ];
+
   return (
-    <section className="bg-white text-[#111]">
+    <section className="bg-white text-[#111] font-sans">
       {/* HERO */}
-      <div className="relative w-full h-[80vh] overflow-hidden pt-30">
+      <div className="relative w-full h-[80vh] overflow-hidden pt-2">
         <img
-          src="https://images.unsplash.com/photo-1772326049701-bcdda505ef51?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://images.unsplash.com/photo-1772326049701-bcdda505ef51?q=80&w=1933&auto=format&fit=crop"
           alt="corporate"
           className="absolute w-full h-full object-cover"
         />
@@ -21,30 +97,38 @@ const Company = () => {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center text-white">
-          <h1 className="text-3xl lg:text-4xl mb-6 header-txt font-bold bg-customBlue w-fit p-2">The Company</h1>
+          <h1 className="text-3xl lg:text-4xl mb-6 header-txt font-bold bg-customBlue w-fit px-4 py-2">
+            The Company
+          </h1>
+
           <p className="font-bold my-1">EXPLORE THIS PAGE</p>
+
           <div className="space-y-2 text-base">
-            <p><a href="#about" className="text-white hover:text-customGreen transition-colors">About The Group Company</a></p>
-            <p><Link to="/e-waste" className="text-white hover:text-customGreen transition-colors">IT/TELECEOM ASSET & WEEE Management</Link></p>
-            <p><Link to="/agriculture" className="text-white hover:text-customGreen transition-colors">Agricultural & Farm Waste Solutions</Link></p>
-            <p><Link to="/real-estate" className="text-white hover:text-customGreen transition-colors">Smart Real Estate Management</Link></p>
-            <p><Link to="/energy" className="text-white hover:text-customGreen transition-colors">Renewable & Green Energy Solution</Link></p>
+            <p>
+              <a
+                href="#who-are-we"
+                className="text-white hover:text-customGreen transition-colors"
+              >
+                Who We Are
+              </a>
+            </p>
           </div>
         </div>
       </div>
 
       {/* CONTENT */}
-      <div id="about" className="max-w-6xl mx-auto px-6 py-24">
-        <div className="mb-16">
+      <div id="who-are-we" className="max-w-6xl mx-auto px-6 py-24">
+        <div className="mb-10">
           <h1 className="text-3xl lg:text-4xl font-semibold mb-4 header-txt text-customBlue">
             About the Group Company
           </h1>
+
           <h2 className="text-xl text-gray-600">
             LTC Africa Group Corporate Introduction
           </h2>
         </div>
 
-        <div className="space-y-10 text-base text-gray-700 leading-relaxed">
+        <div className="space-y-12 text-base text-gray-700 leading-relaxed">
           <p>
             LTC Africa Group is a leading African company committed to
             delivering comprehensive, innovative, and sustainable solutions
@@ -56,55 +140,44 @@ const Company = () => {
             maintaining the highest environmental and social standards.
           </p>
 
-          <p>
-            In the IT and Telecom sector, LTC Africa Group provides complete
-            asset and WEEE (Waste Electrical and Electronic Equipment)
-            management solutions. From secure decommissioning, data destruction,
-            and refurbishment of IT and telecom equipment to certified recycling
-            and remarketing, the Group ensures compliance with global
-            environmental standards, protects sensitive data, and helps
-            organizations recover maximum value from retired assets. These
-            solutions not only reduce electronic waste but also promote a
-            circular economy, contributing to sustainable industrial practices
-            across the continent.
-          </p>
+          <h1
+            id="what-we-do"
+            className="text-3xl lg:text-4xl font-semibold header-txt text-customBlue scroll-mt-32"
+          >
+            What We do
+          </h1>
 
-          <p>
-            In Agriculture and Farm Waste Management, LTC Africa Group champions
-            sustainable farming practices and also transforming organic and farm
-            waste into valuable resources such as compost, biofertilizers, and
-            renewable energy. By helping farmers improve soil fertility,
-            increase crop yields, and reduce environmental impact, the Group
-            fosters climate-smart agriculture and circular farming systems.
-            These initiatives address critical challenges in food security,
-            resource management, and environmental sustainability, while
-            creating long-term economic opportunities for local communities.
-          </p>
+          {/* SECTORS */}
+          <div className="space-y-24 mt-10">
+            {sectors.map((sector, index) => (
+              <div
+                key={sector.title}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  index % 2 === 1 ? "lg:grid-flow-dense" : ""
+                }`}
+              >
+                <div
+                  className={`relative ${
+                    index % 2 === 1 ? "lg:col-start-2" : ""
+                  }`}
+                >
+                  <img
+                    src={sector.img}
+                    alt={sector.title}
+                    className="w-full h-[340px] object-cover rounded-2xl shadow-xl"
+                  />
+                </div>
 
-          <p>
-            Also the Group’s Smart Real Estate Management solutions integrate
-            advanced technology, data analytics, and intelligent systems to
-            optimize property performance and enhance tenant experiences.
-            Through digital monitoring, predictive maintenance, energy-efficient
-            solutions, and lifecycle asset planning, LTC Africa ensures
-            properties operate at peak efficiency while maximizing long-term
-            value. These smart infrastructure strategies support urban
-            development, reduce operational costs, and promote sustainable real
-            estate practices across commercial, institutional, and residential
-            projects.
-          </p>
+                <div>
+                  <h2 className="header-txt font-bold text-2xl mb-6">
+                    {sector.title}
+                  </h2>
 
-          <p>
-            In the Renewable and Green Energy sector, LTC Africa Group drives
-            Africa’s clean energy transition by delivering scalable solutions in
-            solar, wind, hydro, and bioenergy. The Group designs and implements
-            energy strategies that reduce carbon emissions, increase access to
-            reliable and sustainable power, and promote cost-effective energy
-            generation for industries, businesses, and communities. By focusing
-            on renewable energy solutions, LTC Africa contributes to climate
-            action, energy resilience, and sustainable development across the
-            continent.
-          </p>
+                  <p className="text-gray-700 leading-relaxed">{sector.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
 
           <p>
             With a holistic approach that combines technology, sustainability,
@@ -119,89 +192,106 @@ const Company = () => {
         </div>
       </div>
 
-      {/* VISION MISSION */}
-      <div className="bg-[#111] py-24">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* VISION & MISSION */}
+      <div
+        id="mission-vision"
+        className="bg-slate-900 py-32 relative overflow-hidden scroll-mt-32"
+      >
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-customBlue/5 skew-x-12 translate-x-32" />
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
-            className="grid lg:grid-cols-2 gap-8 lg:gap-16"
+            className="grid lg:grid-cols-2 gap-12"
+            variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
+            viewport={{ once: true }}
           >
-            {/* Vision */}
-            <motion.div className="group relative bg-white backdrop-blur-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="relative overflow-hidden ">
-                <video
-                  src="/videos/greencity.mp4"
-                  className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-
-              <div className="p-6 lg:p-8 space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-customBlue/10 ">
-                    <Eye className="w-8 h-8 text-customBlue" />
-                  </div>
-
-                  <h3 className="text-xl lg:text-2xl font-bold text-customBlue">
-                    Our Vision
-                  </h3>
+            <motion.div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-xl">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-4 bg-customGreen/20 rounded-full">
+                  <Eye className="w-10 h-10 text-customGreen" />
                 </div>
 
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  To be Africa’s leading integrated solutions group, driving
-                  sustainable transformation through innovation, circular
-                  economy practices, smart infrastructure, and renewable energy
-                  while empowering businesses, institutions, and communities to
-                  thrive in a resilient and environmentally responsible future.
-                </p>
+                <h3 className="text-3xl header-txt font-bold text-white">
+                  Our Vision
+                </h3>
               </div>
+
+              <p className="text-xl text-gray-300 leading-relaxed font-light">
+                To be Africa’s leading integrated solutions group, driving
+                sustainable transformation through innovation and circular
+                economy practices, thrive in a resilient and environmentally
+                responsible future.
+              </p>
             </motion.div>
 
-            {/* Mission */}
-            <motion.div className="group relative bg-white backdrop-blur-xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="relative overflow-hidden">
-                <video
-                  src="/videos/windmill.mp4"
-                  className="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-
-              <div className="p-6 lg:p-8 space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-customBlue/10">
-                    <Target className="w-8 h-8 text-customBlue" />
-                  </div>
-
-                  <h3 className="text-xl lg:text-2xl font-bold text-customBlue">
-                    Our Mission
-                  </h3>
+            <motion.div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-xl">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-4 bg-customGreen/20 rounded-full">
+                  <Target className="w-10 h-10 text-customGreen" />
                 </div>
 
-                <p className="text-gray-600 text-base lg:text-lg leading-relaxed">
-                  To deliver comprehensive, technology-driven, and sustainable
-                  solutions across IT/Telecom Asset &amp; WEEE Management,
-                  Agricultural &amp; Farm Waste Management, Smart Real Estate
-                  Management, and Renewable &amp; Green Energy by maximizing
-                  value, ensuring compliance and data security, improving
-                  productivity, reducing environmental impact, and accelerating
-                  inclusive economic growth across Africa.
-                </p>
+                <h3 className="text-3xl font-bold text-white header-txt">
+                  Our Mission
+                </h3>
               </div>
+
+              <p className="text-gray-300 leading-relaxed">
+                To deliver comprehensive, technology-driven, and sustainable
+                solutions across IT/Telecom Asset & WEEE Management,
+                Agricultural & Farm Waste Management, Smart Real Estate, and
+                Renewable Energy by maximizing value and accelerating inclusive
+                economic growth.
+              </p>
             </motion.div>
           </motion.div>
         </div>
+      </div>
+
+      {/* LEADERSHIP */}
+      <div id="leadership" className=" lg:px-28 px-6 py-20 bg-gray-50 scroll-mt-32">
+        <h2 className="header-txt text-3xl md:text-4xl font-bold text-[#003333] mb-14 text-center">
+          Leadership
+        </h2>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {[
+            ["Engr. Adeleye A. Tani", "Founder/Group CEO"],
+            ["Mr. Sam Ladipo", "Group Chief Operation Director"],
+            ["Mrs. Folake Ademola", "Chief Financial Director"],
+            ["Mr. Colpas Kari", "Head of Sale & Marketing"],
+            [
+              "Mrs. Florentine Razaiarivony",
+              "Head of Sustainability, Partnerships & Compliance",
+            ],
+            ["Mr. Dominic Anomah", "Regional Director – MENA Africa"],
+            ["Ms. Margaret Dolapo A", "Head of PR & CSR"],
+          ].map(([name, role], i) => (
+            <motion.div
+              key={i}
+              variants={scaleIn}
+              className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition"
+            >
+              <div className="flex items-center gap-4">
+                <div className="bg-amber-100 rounded-full p-3">
+                  <User />
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-slate-900">{name}</h4>
+                  <p className="text-sm text-gray-500 mt-1">{role}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -84,7 +84,7 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
             className="relative z-0 w-1/2 -ml-10 mt-10 md:mt-20 shadow-xl"
           >
             <img
-              src="/images/parts.jpg"
+              src="/images/factory.jpeg"
               alt="E-waste"
               className="w-full h-[400px] object-cover"
             />

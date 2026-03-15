@@ -17,7 +17,7 @@ const fadeUp = {
 const GlobalFootprint = () => {
   return (
     <section className="bg-white py-36 px-6">
-      <div className="max-w-7xl mx-auto space-y-20">
+      <div className=" space-y-20">
 
         {/* Header */}
         <motion.div
@@ -47,19 +47,19 @@ const GlobalFootprint = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full lg:w-3/4 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-full">
             <img
-              src="/images/world-map.jpg"
+              src="/images/map.png"
               alt="Global Footprint"
-              className="w-full h-64 md:h-96 object-cover"
+              className="w-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/20" />
+            {/* <div className="absolute inset-0 bg-black/20" /> */}
           </div>
         </motion.div>
 
         {/* Compliance / Standards */}
         <motion.div
-          className="grid md:grid-cols-2 gap-10 items-start"
+          className="grid md:grid-cols-2 gap-10 items-start max-w-7xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -89,7 +89,7 @@ const GlobalFootprint = () => {
 
         {/* Global Partnerships */}
         <motion.div
-          className="rounded-2xl bg-gray-50 p-8 space-y-4 shadow-md"
+          className="rounded-2xl bg-gray-50 p-8 space-y-4 shadow-md max-w-7xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -127,7 +127,7 @@ const GlobalFootprint = () => {
 
         {/* Stats */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

@@ -278,7 +278,7 @@ const AboutEwaste = () => {
         </motion.div>
 
         {/* MISSION / VISION */}
-        <div id="mission" className="grid lg:grid-cols-2 gap-8 mt-16">
+        {/* <div id="mission" className="grid lg:grid-cols-2 gap-8 mt-16">
           <motion.div
             variants={fadeLeft}
             initial="hidden"
@@ -316,50 +316,8 @@ const AboutEwaste = () => {
               innovation, compliance, and circular economy excellence.
             </p>
           </motion.div>
-        </div>
+        </div> */}
 
-        {/* LEADERSHIP */}
-        <div id="leadership" className="mt-20">
-          <h2 className="header-txt text-3xl md:text-4xl font-bold text-[#003333] mb-6 text-center p-4">
-            Leadership
-          </h2>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {[
-              ["Engr. Adeleye A. Tani", "Founder/Group CEO"],
-              ["Mr. Sam Ladipo", "Group Chief Operation Director"],
-              ["Mrs. Folake Ademola", "Chief Financial Director"],
-              ["Mr. Colpas Kari", "Head of Sale & Marketing"],
-              [
-                "Mrs. Florentine Razaiarivony",
-                "Head of Sustainability, Partnerships & Compliance",
-              ],
-              ["Mr. Dominic Anomah", "Regional Director – MENA Africa"],
-              ["Ms. Margaret Dolapo A", "Head of PR & CSR"],
-            ].map(([name, role], i) => (
-              <motion.div
-                key={i}
-                variants={scaleIn}
-                className="bg-white border flex gap-3 items-center border-gray-100 rounded-2xl p-6"
-              >
-                <div className="bg-amber-100 rounded-full p-2">
-                  <User />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-slate-900">{name}</h4>
-                  <p className="text-sm text-gray-500 mt-1">{role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
       </motion.div>
       {/* CERTIFICATIONS */}
       <div id="certification" className="">
