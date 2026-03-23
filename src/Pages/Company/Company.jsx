@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Eye, Target, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import GovernancePolicy from "../../Components/GovernancePolicy/GovernancePolicy";
 
 const staggerContainer = {
   visible: { transition: { staggerChildren: 0.2 } },
@@ -250,7 +251,10 @@ const Company = () => {
       </div>
 
       {/* LEADERSHIP */}
-      <div id="leadership" className=" lg:px-28 px-6 py-20 bg-gray-50 scroll-mt-32">
+      <div
+        id="leadership"
+        className=" lg:px-28 px-6 py-20 bg-gray-50 scroll-mt-32"
+      >
         <h2 className="header-txt text-3xl md:text-4xl font-bold text-[#003333] mb-14 text-center">
           Leadership
         </h2>
@@ -292,6 +296,10 @@ const Company = () => {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+
+      <div id = "governance-policy">
+        <GovernancePolicy />
       </div>
     </section>
   );

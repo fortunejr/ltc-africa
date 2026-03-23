@@ -28,6 +28,8 @@ import Media from "./Ewaste/Pages/Media/Media";
 import Agriculture from "./Agriculture/Agriculture";
 import RealEstate from "./RealEstate/RealEstate";
 import RenewableEnergy from "./RenewableEnergy/RenewableEnergy";
+import CircularEconomy from "./Pages/CircularEconomy/CircularEconomy";
+import GovernancePolicy from "./Components/GovernancePolicy/GovernancePolicy";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,11 +54,14 @@ function App() {
           <Route path="/termsandconditions" element={<TermsandConditions />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/privacy-policy" element={<DataPolicy />} />
+          <Route path="/circular-economy" element={<CircularEconomy />} />
+          <Route path="/governance-policy" element={<GovernancePolicy />} />
           <Route
             path="/global-footprint"
             element={<GlobalFootprint />}
           />
           <Route path="/contact" element={<ContactEwaste />} />
+          <Route path="/media" element={<Media />} />
         </Route>
 
         {/* ewaste layout  */}
@@ -66,7 +71,6 @@ function App() {
           <Route path="/e-waste/services" element={<ServicesEwaste />} />
           <Route path="/e-waste/sdg-initiatives" element={<SDGEwaste />} />
           <Route path="/e-waste/climate-change" element={<ClimateChange />} />
-          <Route path="/e-waste/media" element={<Media />} />
         </Route>
       </Routes>
 

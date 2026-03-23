@@ -16,7 +16,7 @@ const EwasteNav = () => {
     { to: "/e-waste/sdg-initiatives", label: "SDG Initiatives" },
     { to: "/global-footprint", label: "Global Footprint" },
     { to: "/e-waste/media", label: "Media" },
-    { to: "/e-waste/contact", label: "Contact" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (

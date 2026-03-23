@@ -108,7 +108,7 @@ const Nav = () => {
                   </Link>
                   <Link
                     className="block px-5 py-2.5 hover:bg-gray-50 hover:text-customGreen"
-                    to="/"
+                    to="/thecompany/#governance-policy"
                   >
                     Governance Policy
                   </Link>
@@ -164,16 +164,16 @@ const Nav = () => {
             </div>
 
             <Link
-              to="/circular-economy"
-              className="hover:text-customGreen transition-colors text-nowrap"
-            >
-              Circular Economy
-            </Link>
-            <Link
               to="/global-footprint"
               className="hover:text-customGreen transition-colors text-nowrap"
             >
               Global Footprint
+            </Link>
+            <Link
+              to="/circular-economy"
+              className="hover:text-customGreen transition-colors text-nowrap"
+            >
+              Circular Economy
             </Link>
             <Link
               to="/media"
@@ -190,9 +190,7 @@ const Nav = () => {
 
             {/* LANGUAGE SWITCH BUTTON */}
             <button
-              onClick={() =>
-                setLanguage(language === "EN" ? "FR" : "EN")
-              }
+              onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
               className="ml-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
             >
               {language}
@@ -203,9 +201,7 @@ const Nav = () => {
           <div className="md:hidden flex items-center gap-2">
             {/* LANGUAGE SWITCHER */}
             <button
-              onClick={() =>
-                setLanguage(language === "EN" ? "FR" : "EN")
-              }
+              onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
               className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
             >
               {language}
@@ -280,7 +276,7 @@ const Nav = () => {
                 Leadership
               </Link>
               <Link
-                to="/"
+                to="/thecompany/#governance-policy"
                 onClick={handleLinkClick}
                 className="block py-2 text-gray-500 font-medium"
               >
