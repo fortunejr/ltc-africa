@@ -71,6 +71,7 @@ function App() {
           <Route path="/e-waste/services" element={<ServicesEwaste />} />
           <Route path="/e-waste/sdg-initiatives" element={<SDGEwaste />} />
           <Route path="/e-waste/climate-change" element={<ClimateChange />} />
+          <Route path="/e-waste/contact" element={<ContactEwaste />} />
         </Route>
       </Routes>
 
