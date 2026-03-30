@@ -16,12 +16,16 @@ import {
   Plane,
   Cpu,
   Landmark,
+  Pickaxe,
+  FishingHook,
 } from "lucide-react";
 import { itequipments, harzadous, telecom, others } from "../../../imports";
 import { motion } from "framer-motion";
 
 const industries = [
   { name: "Telecom", icon: Radio },
+  { name: "Mining", icon: Pickaxe },
+  { name: "Marine", icon: FishingHook },
   { name: "Finance", icon: Banknote },
   { name: "Government", icon: ShieldCheck },
   { name: "Energy", icon: Leaf },
@@ -70,9 +74,9 @@ const ServicesEwaste = () => {
             What We Do
           </span>
 
-          <h1 className="text-3xl md:text-4xl header-txt font-bold text-[#003333]">
+          {/* <h1 className="text-3xl md:text-4xl header-txt font-bold text-[#003333]">
             Core Services
-          </h1>
+          </h1> */}
 
           <p className="text-base md:text-lg text-slate-600 leading-relaxed">
             At LTC Africa Recycling, we specialize in borderless e-waste
@@ -82,6 +86,52 @@ const ServicesEwaste = () => {
             refurbish and recycle their decommissioned IT/ Electronic Waste
             Equipment Assets efficiently, wherever they are.Industries
           </p>
+        </div>
+
+        {/* SERVICES */}
+        <div className="space-y-20 max-w-6xl">
+          <h2 className="text-2xl md:text-4xl font-bold header-txt text-[#003333]">
+            Our Services
+          </h2>
+
+          {[
+            {
+              title: "Borderless Collection & Recycling",
+              text: "We provide nationwide and cross-border collection of Waste Electrical and Electronic Equipment through mobile recycling units and certified logistics partners. Our model allows fast response, lower logistics costs, and compliant recycling services across Africa.",
+            },
+            {
+              title: "IT Asset Recovery & Management",
+              text: "We manage decommissioned IT and telecom assets through secure inventory, auditing, valuation, and certified data destruction, ensuring maximum recovery value and full regulatory compliance.",
+            },
+            {
+              title: "Extended Producer Responsibility (EPR)",
+              text: "We design and manage EPR programs for governments, manufacturers, importers, and distributors, ensuring responsible take-back, traceability, and compliant recycling of electronic waste.",
+            },
+            {
+              title: "Consultancy & Environmental Advisory",
+              text: "Our advisory services support organizations and governments with sustainability planning, circular economy integration, carbon reduction strategies, and regulatory compliance training.",
+            },
+            {
+              title: "Buyback & Remarketing",
+              text: "Through structured buyback and resale programs, we help organizations recover financial value from decommissioned assets through repair, refurbishment, resale, reuse, or material recovery.",
+            },
+            {
+              title: "WEEE to Renewable Energy",
+              text: "By combining refurbished batteries with solar technology, we transform electronic waste into clean, affordable energy solutions for homes, businesses, and communities across Africa.",
+            },
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="border-l-2 border-customGreen pl-6 space-y-3"
+            >
+              <h3 className="text-xl font-medium text-slate-900">
+                {service.title}
+              </h3>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                {service.text}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* INDUSTRIES */}
@@ -167,51 +217,6 @@ const ServicesEwaste = () => {
           </div>
         </div>
 
-        {/* SERVICES */}
-        <div className="space-y-20 max-w-6xl">
-          <h2 className="text-2xl md:text-4xl font-bold header-txt text-[#003333]">
-            Our Services
-          </h2>
-
-          {[
-            {
-              title: "Borderless Collection & Recycling",
-              text: "We provide nationwide and cross-border collection of Waste Electrical and Electronic Equipment through mobile recycling units and certified logistics partners. Our model allows fast response, lower logistics costs, and compliant recycling services across Africa.",
-            },
-            {
-              title: "IT Asset Recovery & Management",
-              text: "We manage decommissioned IT and telecom assets through secure inventory, auditing, valuation, and certified data destruction, ensuring maximum recovery value and full regulatory compliance.",
-            },
-            {
-              title: "Extended Producer Responsibility (EPR)",
-              text: "We design and manage EPR programs for governments, manufacturers, importers, and distributors, ensuring responsible take-back, traceability, and compliant recycling of electronic waste.",
-            },
-            {
-              title: "Consultancy & Environmental Advisory",
-              text: "Our advisory services support organizations and governments with sustainability planning, circular economy integration, carbon reduction strategies, and regulatory compliance training.",
-            },
-            {
-              title: "Buyback & Remarketing",
-              text: "Through structured buyback and resale programs, we help organizations recover financial value from decommissioned assets through repair, refurbishment, resale, reuse, or material recovery.",
-            },
-            {
-              title: "WEEE to Renewable Energy",
-              text: "By combining refurbished batteries with solar technology, we transform electronic waste into clean, affordable energy solutions for homes, businesses, and communities across Africa.",
-            },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className="border-l-2 border-customGreen pl-6 space-y-3"
-            >
-              <h3 className="text-xl font-medium text-slate-900">
-                {service.title}
-              </h3>
-              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                {service.text}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

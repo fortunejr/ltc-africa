@@ -240,7 +240,7 @@ const GovernancePolicy = () => {
           <p>
             For more information about our governance practices, please contact
             us at:
-            <span className="text-customBlue font-medium"> []</span>
+            <span className="text-customBlue font-medium">policy@ltcafrica.com</span>
           </p>
         </motion.div>
 

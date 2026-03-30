@@ -3,7 +3,6 @@ import React from "react";
 const Agriculture = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
-
       {/* Background Video */}
       <video
         autoPlay
@@ -24,15 +23,17 @@ const Agriculture = () => {
           Agriculture & Farm Waste Management
         </h1>
 
-        <p className="text-gray-300 text-lg mb-8">
+        <p className="text-gray-300 text-lg mb-10">
           This page is currently under development.
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-semibold text-customGreen">
-          ag.farm@ltcafrica.com
-        </h2>
+        <a
+          href="mailto:ag.farm@ltcafrica.com"
+          className="inline-block bg-customGreen text-white px-10 py-4 text-lg font-semibold transition duration-300 hover:opacity-90"
+        >
+          Learn More
+        </a>
       </div>
-
     </section>
   );
 };

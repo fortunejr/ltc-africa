@@ -74,7 +74,7 @@ function App() {
         </Route>
       </Routes>
 
-      {isEwasteRoute && <Footer />}
+      {/* {isEwasteRoute && <Footer />} */}
     </>
   );
 }

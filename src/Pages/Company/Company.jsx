@@ -90,7 +90,7 @@ const Company = () => {
       {/* HERO */}
       <div className="relative w-full h-[80vh] overflow-hidden pt-2">
         <img
-          src="https://images.unsplash.com/photo-1772326049701-bcdda505ef51?q=80&w=1933&auto=format&fit=crop"
+          src="/images/company-collage.png"
           alt="corporate"
           className="absolute w-full h-full object-cover"
         />
@@ -102,15 +102,39 @@ const Company = () => {
             The Company
           </h1>
 
-          <p className="font-bold my-1">EXPLORE THIS PAGE</p>
+          {/* <p className="font-bold my-1">EXPLORE THIS PAGE</p> */}
 
           <div className="space-y-2 text-base">
-            <p>
+            <p className="flex flex-col uppercase">
               <a
                 href="#who-are-we"
                 className="text-white hover:text-customGreen transition-colors"
               >
                 Who We Are
+              </a>
+              <a
+                href="#what-we-do"
+                className="text-white hover:text-customGreen transition-colors"
+              >
+                What We Do 
+              </a>
+              <a
+                href="#mission-vision"
+                className="text-white hover:text-customGreen transition-colors"
+              >
+                Mission & Vision
+              </a>
+              <a
+                href="#leadership"
+                className="text-white hover:text-customGreen transition-colors"
+              >
+                Leadership
+              </a>
+              <a
+                href="#governance-policy"
+                className="text-white hover:text-customGreen transition-colors"
+              >
+                Governance Policy
               </a>
             </p>
           </div>

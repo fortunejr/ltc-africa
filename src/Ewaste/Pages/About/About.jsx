@@ -104,11 +104,6 @@ const AboutEwaste = () => {
             className="space-y-1 text-base uppercase px-2"
           >
             <p>
-              <a href="#about" className="hover:text-customGreen p-2">
-                About The Company
-              </a>
-            </p>
-            <p>
               <a
                 href="#who-we-are"
                 className="hover:text-customGreen p-2"
@@ -122,30 +117,6 @@ const AboutEwaste = () => {
                 className="hover:text-customGreen p-2"
               >
                 Key Facts
-              </a>
-            </p>
-            <p>
-              <a
-                href="#values"
-                className="hover:text-customGreen p-2"
-              >
-                Our Values
-              </a>
-            </p>
-            <p>
-              <a
-                href="#mission"
-                className="hover:text-customGreen p-2"
-              >
-                Mission & Vision
-              </a>
-            </p>
-            <p>
-              <a
-                href="#leadership"
-                className="hover:text-customGreen p-2"
-              >
-                Leadership
               </a>
             </p>
             <p>
@@ -172,7 +143,7 @@ const AboutEwaste = () => {
           id="about"
           className="space-y-6 text-gray-700 text-base leading-relaxed px-2 md:px-4"
         >
-          <motion.p variants={fadeUp} className="p-4">
+          {/* <motion.p variants={fadeUp} className="p-4">
             LTC Africa Recycling, a proud member of the LTC Africa Group, is a
             modern and fully registered Waste Electrical and Electronic
             Equipment (WEEE) management company dedicated to redefining how
@@ -209,7 +180,7 @@ const AboutEwaste = () => {
           <motion.p variants={fadeUp} className="p-4">
             At LTC Africa Recycling, we stand for innovation, integrity,
             accountability, and impact in every operation.
-          </motion.p>
+          </motion.p> */}
 
           <div id="who-we-are" className="pt-10 space-y-6">
             <motion.p
