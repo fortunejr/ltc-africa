@@ -45,7 +45,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+    <nav className="bg-customLemon fixed top-0 left-0 w-full z-50  shadow-sm">
       <div className="px-4">
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}
@@ -56,8 +56,8 @@ const Nav = () => {
           </div>
 
           {/* DESKTOP NAV */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-8 text-[15px] font-semibold text-gray-700">
-            <Link to="/" className="hover:text-customGreen transition-colors">
+          <div className="hidden md:flex items-center gap-4 lg:gap-8 text-[15px] font-semibold text-white">
+            <Link to="/" className="hover:text-customBlue transition-colors">
               Home
             </Link>
 
@@ -68,8 +68,8 @@ const Nav = () => {
               onMouseLeave={() => setCompanyOpen(false)}
             >
               <button
-                className={`flex items-center gap-1 hover:text-customGreen transition-colors ${
-                  companyOpen ? "text-customGreen" : ""
+                className={`flex items-center gap-1 hover:text-customBlue transition-colors ${
+                  companyOpen ? "text-customBlue" : ""
                 }`}
               >
                 The Company
@@ -81,7 +81,7 @@ const Nav = () => {
                 />
               </button>
               {companyOpen && (
-                <div className="absolute top-[80px] left-0 w-52 bg-white border border-gray-100 shadow-xl py-2 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute top-[80px] left-0 w-52 bg-white border border-gray-100 shadow-xl py-2 animate-in fade-in slide-in-from-top-2 text-gray-700">
                   <Link
                     className="block px-5 py-2.5 hover:bg-gray-50 hover:text-customGreen"
                     to="/thecompany/#who-are-we"
@@ -123,8 +123,8 @@ const Nav = () => {
               onMouseLeave={() => setSolutionsOpen(false)}
             >
               <button
-                className={`flex items-center gap-1 hover:text-customGreen transition-colors ${
-                  solutionsOpen ? "text-customGreen" : ""
+                className={`flex items-center gap-1 hover:text-customBlue transition-colors ${
+                  solutionsOpen ? "text-customBlue" : ""
                 }`}
               >
                 Solutions
@@ -136,13 +136,13 @@ const Nav = () => {
                 />
               </button>
               {solutionsOpen && (
-                <div className="absolute left-0 top-[80px] w-full bg-white border-t border-gray-100 shadow-2xl">
+                <div className="absolute left-0 top-[80px] w-full bg-white  shadow-2xl">
                   <div className="max-w-7xl mx-auto px-8 py-12 grid md:grid-cols-4 gap-8">
                     {solutions.map((item, i) => (
                       <Link
                         key={i}
                         to={item.link}
-                        className="group block rounded-xl overflow-hidden border border-gray-100 hover:shadow-lg transition"
+                        className="group block  overflow-hidden  hover:shadow-lg transition"
                       >
                         <div className="h-40 overflow-hidden">
                           <img
@@ -165,25 +165,25 @@ const Nav = () => {
 
             <Link
               to="/global-footprint"
-              className="hover:text-customGreen transition-colors text-nowrap"
+              className="hover:text-customBlue transition-colors text-nowrap"
             >
               Global Footprint
             </Link>
             <Link
               to="/circular-economy"
-              className="hover:text-customGreen transition-colors text-nowrap"
+              className="hover:text-customBlue transition-colors text-nowrap"
             >
               Circular Economy
             </Link>
             <Link
               to="/media"
-              className="hover:text-customGreen transition-colors"
+              className="hover:text-customBlue transition-colors"
             >
               Media
             </Link>
             <Link
               to="/contact"
-              className="bg-customGreen text-white px-5 py-2.5 rounded-full hover:customGreen transition-all shadow-md"
+              className="bg-customGreen text-white px-5 py-2.5 hover:customGreen transition-all shadow-md"
             >
               Contact
             </Link>
@@ -191,7 +191,7 @@ const Nav = () => {
             {/* LANGUAGE SWITCH BUTTON */}
             <button
               onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
-              className="ml-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+              className="ml-4 px-3 py-1 border border-gray-300 text-white  hover:bg-gray-100 transition"
             >
               {language}
             </button>
@@ -202,13 +202,13 @@ const Nav = () => {
             {/* LANGUAGE SWITCHER */}
             <button
               onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
-              className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+              className="px-2 py-1 border border-gray-300 text-white  hover:bg-gray-100 hover:text-black transition"
             >
               {language}
             </button>
 
             <button
-              className="p-2 text-gray-600"
+              className="p-2 text-white"
               onClick={() => setOpen(!open)}
             >
               {open ? <X size={28} /> : <Menu size={28} />}
@@ -219,7 +219,7 @@ const Nav = () => {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-white border-t border-gray-100 overflow-y-auto transition-all duration-300 ease-in-out ${
+        className={`md:hidden bg-white  overflow-y-auto transition-all duration-300 ease-in-out ${
           open ? "max-h-screen" : "max-h-0"
         }`}
       >
@@ -307,12 +307,12 @@ const Nav = () => {
                   key={i}
                   to={item.link}
                   onClick={handleLinkClick}
-                  className="flex items-center gap-3 py-3 px-2 rounded-lg hover:bg-gray-50 transition"
+                  className="flex items-center gap-3 py-3 px-2  hover:bg-gray-50 transition"
                 >
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-12 h-12 object-cover rounded-md flex-shrink-0"
+                    className="w-12 h-12 object-cover flex-shrink-0"
                   />
                   <span className="text-gray-600 font-medium text-sm">
                     {item.title}
@@ -349,7 +349,7 @@ const Nav = () => {
             <Link
               to="/contact"
               onClick={handleLinkClick}
-              className="block w-full text-center bg-customGreen text-white py-3 rounded-lg"
+              className="block w-full text-center bg-customGreen text-white py-3"
             >
               Contact Us
             </Link>

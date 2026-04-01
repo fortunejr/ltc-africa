@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, Target, User } from "lucide-react";
 import { useLocation } from "react-router-dom";
@@ -20,6 +20,12 @@ const scaleIn = {
 const Company = () => {
   const location = useLocation();
 
+  const [openIndex, setOpenIndex] = useState(null);
+
+const toggleSector = (index) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
+
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
@@ -31,17 +37,10 @@ const Company = () => {
   const sectors = [
     {
       title: "IT/TELECEOM ASSET & WEEE Management",
-      img: "/images/telecom.jpg",
+      img: "https://images.unsplash.com/photo-1549319114-d67887c51aed?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       text: `In the IT and Telecom sector, LTC Africa Group provides complete
       asset and WEEE (Waste Electrical and Electronic Equipment)
-      management solutions. From secure decommissioning, data destruction,
-      and refurbishment of IT and telecom equipment to certified recycling
-      and remarketing, the Group ensures compliance with global
-      environmental standards, protects sensitive data, and helps
-      organizations recover maximum value from retired assets. These
-      solutions not only reduce electronic waste but also promote a
-      circular economy, contributing to sustainable industrial practices
-      across the continent.`,
+      management solutions.`,
     },
     {
       title: "Agriculture & Farm Waste Management",
@@ -49,39 +48,21 @@ const Company = () => {
       text: `In Agriculture and Farm Waste Management, LTC Africa Group champions
       sustainable farming practices and also transforming organic and farm
       waste into valuable resources such as compost, biofertilizers, and
-      renewable energy. By helping farmers improve soil fertility,
-      increase crop yields, and reduce environmental impact, the Group
-      fosters climate-smart agriculture and circular farming systems.
-      These initiatives address critical challenges in food security,
-      resource management, and environmental sustainability, while
-      creating long-term economic opportunities for local communities.`,
+      renewable energy.`,
     },
     {
       title: "Smart Real Estate Management",
       img: "/images/realestate.jpeg",
       text: `Also the Group’s Smart Real Estate Management solutions integrate
       advanced technology, data analytics, and intelligent systems to
-      optimize property performance and enhance tenant experiences.
-      Through digital monitoring, predictive maintenance, energy-efficient
-      solutions, and lifecycle asset planning, LTC Africa ensures
-      properties operate at peak efficiency while maximizing long-term
-      value. These smart infrastructure strategies support urban
-      development, reduce operational costs, and promote sustainable real
-      estate practices across commercial, institutional, and residential
-      projects.`,
+      optimize property performance and enhance tenant experiences.`,
     },
     {
       title: "Renewable & Green Energy Solution",
       img: "/images/windmill.jpg",
       text: `In the Renewable and Green Energy sector, LTC Africa Group drives
       Africa’s clean energy transition by delivering scalable solutions in
-      solar, wind, hydro, and bioenergy. The Group designs and implements
-      energy strategies that reduce carbon emissions, increase access to
-      reliable and sustainable power, and promote cost-effective energy
-      generation for industries, businesses, and communities. By focusing
-      on renewable energy solutions, LTC Africa contributes to climate
-      action, energy resilience, and sustainable development across the
-      continent.`,
+      solar, wind, hydro, and bioenergy.`,
     },
   ];
 
@@ -116,7 +97,7 @@ const Company = () => {
                 href="#what-we-do"
                 className="text-white hover:text-customGreen transition-colors"
               >
-                What We Do 
+                What We Do
               </a>
               <a
                 href="#mission-vision"
@@ -142,8 +123,9 @@ const Company = () => {
       </div>
 
       {/* CONTENT */}
-      <div id="who-are-we" className="max-w-6xl mx-auto px-6 py-24">
-        <div className="mb-10">
+      <div className="bg-customGreen/5">
+      <div id="who-are-we" className="max-w-6xl mx-auto px-6 py-24 ">
+        <div className="mb-10 ">
           <h1 className="text-3xl lg:text-4xl font-semibold mb-4 header-txt text-customBlue">
             About the Group Company
           </h1>
@@ -153,7 +135,7 @@ const Company = () => {
           </h2>
         </div>
 
-        <div className="space-y-12 text-base text-gray-700 leading-relaxed">
+        <div className="space-y-12 text-base text-gray-700  leading-relaxed">
           <p>
             LTC Africa Group is a leading African company committed to
             delivering comprehensive, innovative, and sustainable solutions
@@ -174,34 +156,47 @@ const Company = () => {
 
           {/* SECTORS */}
           <div className="space-y-24 mt-10">
-            {sectors.map((sector, index) => (
-              <div
-                key={sector.title}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-dense" : ""
-                }`}
-              >
+            {sectors.map((sector, index) => {
+              return (
                 <div
-                  className={`relative ${
-                    index % 2 === 1 ? "lg:col-start-2" : ""
+                  key={sector.title}
+                  className={`grid lg:grid-cols-2 gap-12 items-start ${
+                    index % 2 === 1 ? "lg:grid-flow-dense" : ""
                   }`}
                 >
-                  <img
-                    src={sector.img}
-                    alt={sector.title}
-                    className="w-full h-[340px] object-cover rounded-2xl shadow-xl"
-                  />
-                </div>
+                  <div
+                    className={`relative ${
+                      index % 2 === 1 ? "lg:col-start-2" : ""
+                    }`}
+                  >
+                    <img
+                      src={sector.img}
+                      alt={sector.title}
+                      className="w-full h-[340px] object-cover shadow-xl"
+                    />
+                  </div>
 
-                <div>
-                  <h2 className="header-txt font-bold text-2xl mb-6">
-                    {sector.title}
-                  </h2>
+                  <div>
+                    <h2 className="header-txt font-bold text-2xl mb-6">
+                      {sector.title}
+                    </h2>
 
-                  <p className="text-gray-700 leading-relaxed">{sector.text}</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      {sector.text}
+                    </p>
+
+                    <a href="https://wa.me/+261328681658">
+                    <button
+                      onClick={() => toggleSector(index)}
+                      className="mt-4 bg-customGreen text-white font-semibold px-4 py-2 hover:bg-customGreen/80 transition-colors cursor-pointer"
+                    >
+                      Learn more
+                    </button>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <p>
@@ -215,6 +210,7 @@ const Company = () => {
             growth, and environmental stewardship throughout Africa.
           </p>
         </div>
+      </div>
       </div>
 
       {/* VISION & MISSION */}
@@ -277,7 +273,7 @@ const Company = () => {
       {/* LEADERSHIP */}
       <div
         id="leadership"
-        className=" lg:px-28 px-6 py-20 bg-gray-50 scroll-mt-32"
+        className=" lg:px-28 px-6 py-20 bg-customLemon/20 scroll-mt-32"
       >
         <h2 className="header-txt text-3xl md:text-4xl font-bold text-[#003333] mb-14 text-center">
           Leadership
@@ -322,7 +318,7 @@ const Company = () => {
         </motion.div>
       </div>
 
-      <div id = "governance-policy">
+      <div id="governance-policy">
         <GovernancePolicy />
       </div>
     </section>

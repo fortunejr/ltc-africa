@@ -138,7 +138,7 @@ const Hero = () => {
                 </p>
 
                 <Link to={`/${slide.link}`}>
-                  <button className="cursor-pointer rounded-full bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-blue-50 active:scale-95">
+                  <button className="cursor-pointer  bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-blue-50 active:scale-95">
                     Explore
                   </button>
                 </Link>

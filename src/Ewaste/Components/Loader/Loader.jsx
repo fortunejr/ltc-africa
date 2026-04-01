@@ -17,7 +17,7 @@ const Loader = ({ onFinished }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-[#003333] transition-opacity duration-1000 ease-in-out ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-customBlue transition-opacity duration-1000 ease-in-out ${
         isExiting ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >

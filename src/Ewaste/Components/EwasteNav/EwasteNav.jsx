@@ -20,9 +20,9 @@ const EwasteNav = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="px-4">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-sm bg-customLemon">
+      <div className="px-4 ">
+        <div className="flex items-center justify-between h-20 ">
           {/* LOGO */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="transition-opacity hover:opacity-90">
@@ -31,12 +31,12 @@ const EwasteNav = () => {
           </div>
 
           {/* DESKTOP NAV */}
-          <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
+          <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-white">
             {navItems.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="hover:text-customGreen transition-colors"
+                className="hover:text-black transition-colors"
               >
                 {item.label}
               </Link>
@@ -56,13 +56,13 @@ const EwasteNav = () => {
             {/* LANGUAGE SWITCHER */}
             <button
               onClick={() => setLanguage(language === "EN" ? "FR" : "EN")}
-              className="px-2 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+              className="px-2 py-1 text-white border border-gray-300 hover:bg-gray-100 hover:text-black transition"
             >
               {language}
             </button>
 
             <button
-              className="p-2 text-gray-600"
+              className="p-2 text-white"
               onClick={() => setOpen(!open)}
             >
               {open ? <X size={28} /> : <Menu size={28} />}
@@ -73,7 +73,7 @@ const EwasteNav = () => {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-white border-t border-gray-100 transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`md:hidden bg-white transition-all duration-300 ease-in-out overflow-hidden ${
           open ? "max-h-screen py-4" : "max-h-0 py-0"
         }`}
       >

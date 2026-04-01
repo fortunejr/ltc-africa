@@ -18,10 +18,14 @@ import {
   Plane,
   Cpu,
   Landmark,
+  Pickaxe,
+  FishingHook,
 } from "lucide-react";
 
 const industries = [
   { name: "Telecom", icon: Radio },
+  { name: "Mining", icon: Pickaxe },
+  { name: "Marine", icon: FishingHook },
   { name: "Finance", icon: Banknote },
   { name: "Government", icon: ShieldCheck },
   { name: "Energy", icon: Leaf },
@@ -125,9 +129,7 @@ const ServicesEwaste = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 
             <div className="absolute bottom-10 left-10 max-w-lg text-white">
-              <h3 className="text-3xl font-bold mb-4">
-                {services[0].title}
-              </h3>
+              <h3 className="text-3xl font-bold mb-4">{services[0].title}</h3>
 
               <p className="text-sm leading-relaxed text-white/90">
                 {services[0].text}

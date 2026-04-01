@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
 
 const Partners = () => {
   const partnerList = [
@@ -8,9 +12,9 @@ const Partners = () => {
     "/images/huawei.png",
     "/images/startimes.png",
     "/images/wfp.png",
-    "/images/epa.jpg",
+    "/images/epa.png",
     "/images/yas.png",
-    "/images/undp.webp",
+    "/images/undp.jpg",
     "/images/orange.png",
     "/images/mtn.png",
     "/images/airtel.png",
@@ -18,38 +22,21 @@ const Partners = () => {
     "/images/dstv.png",
     "/images/canal.png",
     "/images/ecoreco.jpg",
-    "/images/strong.jpg",
+    "/images/camusat.png",
+    "/images/strong.png",
     "/images/blueline.png",
     "/images/parabole.jpg",
     "/images/zte.png",
-    "/images/camusat.png",
   ];
 
   const categories = ["Banks", "Healthcare", "Schools"];
 
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.08,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
     <section className="relative w-full py-20 md:py-32 bg-customBlue/10">
-        <div className="absolute inset-0 bg-[url('/images/painttxt.jpg')] opacity-25"></div>
-      <div className="max-w-7xl mx-auto px-6 md:px-20 text-center">
-        
+      <div className="absolute inset-0 bg-[url('/images/painttxt.jpg')] opacity-25"></div>
+
+      <div className="max-w-7xl mx-auto px-6 md:px-20 text-center relative z-10">
+
         {/* Header */}
         <motion.div
           className="mb-16 max-w-3xl mx-auto"
@@ -73,28 +60,38 @@ const Partners = () => {
           </p>
         </motion.div>
 
-        {/* Logo Grid */}
-        <motion.div
-          className="grid [grid-template-columns:repeat(auto-fit,minmax(70px,1fr))] gap-10 items-center justify-items-center opacity-70"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+        {/* Sliding Logos */}
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={40}
+          slidesPerView={6}
+          loop={true}
+          speed={3000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 2 },
+            640: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 6 },
+          }}
+          className="opacity-70"
         >
           {partnerList.map((partner, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              className="flex items-center justify-center h-16 w-full grayscale hover:grayscale-0 transition-all duration-300"
-            >
-              <img
-                src={partner}
-                alt="partner logo"
-                className="max-h-14 object-contain"
-              />
-            </motion.div>
+<SwiperSlide key={index}>
+  <div className="flex items-center justify-center h-20 w-full transition duration-300">
+    <img
+      src={partner}
+      alt="partner logo"
+      className="h-full w-auto object-contain"
+    />
+  </div>
+</SwiperSlide>
           ))}
-        </motion.div>
+        </Swiper>
 
         {/* Categories */}
         <motion.div
