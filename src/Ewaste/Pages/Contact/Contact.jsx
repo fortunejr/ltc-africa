@@ -38,7 +38,7 @@ const ContactEwaste = () => {
         />
       </div>
 
-      <div className="absolute inset-0 bg-customLemon/10"></div>
+      <div className="absolute inset-0 bg-customGreen/5"></div>
 
       <motion.div
         className="relative z-10 max-w-7xl mx-auto"
