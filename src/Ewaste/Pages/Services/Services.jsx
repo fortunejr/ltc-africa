@@ -78,7 +78,7 @@ const ServicesEwaste = () => {
             Core Services
           </h1> */}
 
-          <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base md:text-lg text-slate-600 leading-relaxed mt-5">
             At LTC Africa Recycling, we specialize in borderless e-waste
             management and IT Asset Deposition (ITAD) with recovery solutions
             across Africa. Our operations are designed to be mobile, flexible,
