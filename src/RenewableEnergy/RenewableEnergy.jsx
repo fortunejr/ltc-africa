@@ -30,7 +30,7 @@ const RenewableEnergy = () => {
         </p>
 
         <a
-          href="mailto:a.energy@ltcafrica.com"
+          href="mailto:r.energy@ltcafrica.com"
           className="inline-block bg-customGreen text-white px-10 py-4  text-lg font-semibold transition duration-300 hover:opacity-90"
         >
           Learn More

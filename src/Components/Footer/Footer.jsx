@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
                 <p>
-                  HQ Office Nigeria: 4 Association Road, Governors Road Lagos
+                  HQ Administative Office Nigeria: 4 Association Road, Governors Road Lagos
                 </p>
               </div>
 
@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
                 <p>
-                  Regional Office Madagascar – Bat 49B II Afriport Warehouse, Antananarivo Madagascar.
+                  Regional Facilities – Ghana, Botswana, Tanzania, Morocco, South Africa.
                 </p>
               </div>
 
