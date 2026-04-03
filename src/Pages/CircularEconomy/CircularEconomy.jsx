@@ -140,7 +140,7 @@ const CircularEconomy = () => {
             />
             <div className="p-7 space-y-4">
               <h3 className="font-semibold text-blue-950 text-lg">
-                4. Responsible Sourcing
+                4. Responsible Sourcing and Innovation 
               </h3>
 
               <p className="text-base text-gray-600">
@@ -196,7 +196,7 @@ const CircularEconomy = () => {
             />
             <div className="p-7 space-y-4">
               <h3 className="font-semibold text-blue-950 text-lg">
-                6. Innovation and Partnerships
+                6. Win-Win Partnership
               </h3>
 
               <p className="text-base text-gray-600">

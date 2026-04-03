@@ -20,7 +20,8 @@ const EwasteNav = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 shadow-sm bg-customLemon">
+    // bg-gray-800/90
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-sm bg-customLemon/80">
       <div className="px-4 ">
         <div className="flex items-center justify-between h-20 ">
           {/* LOGO */}

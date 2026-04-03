@@ -118,7 +118,7 @@ const Hero = () => {
               onMouseEnter={() => handleHover(index)}
               className={`relative flex flex-1 flex-col items-center justify-center px-8 text-center transition-all duration-700 ease-in-out
                 ${index !== slides.length - 1 ? "md:border-r md:border-white/5" : ""}
-                ${isActive ? "md:flex-[2] bg-black/10" : "hidden md:flex hover:bg-white/5"}
+                ${isActive ? "md:flex-[2] " : "hidden md:flex hover:bg-white/"}
               `}
             >
               <div
@@ -129,7 +129,7 @@ const Hero = () => {
                 }`}
               >
 
-                <h2 className="mb-4 text-4xl font-extralight tracking-tight text-white md:text-3xl lg:text-5xl">
+                <h2 className="mb-4 text-4xl font-light tracking-tight text-white md:text-3xl lg:text-5xl">
                   {slide.title}
                 </h2>
 
@@ -138,7 +138,7 @@ const Hero = () => {
                 </p>
 
                 <Link to={`/${slide.link}`}>
-                  <button className="cursor-pointer  bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-blue-50 active:scale-95">
+                  <button className="cursor-pointer bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-customGreen hover:text-white active:scale-95">
                     Explore
                   </button>
                 </Link>

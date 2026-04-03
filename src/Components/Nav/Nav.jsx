@@ -45,7 +45,7 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-customLemon fixed top-0 left-0 w-full z-50  shadow-sm">
+    <nav className="bg-customLemon/80 fixed top-0 left-0 w-full z-50  shadow-sm">
       <div className="px-4">
         <div className="flex items-center justify-between h-20">
           {/* LOGO */}

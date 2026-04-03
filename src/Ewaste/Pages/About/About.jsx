@@ -104,26 +104,17 @@ const AboutEwaste = () => {
             className="space-y-1 text-base uppercase px-2"
           >
             <p>
-              <a
-                href="#who-we-are"
-                className="hover:text-customGreen p-2"
-              >
+              <a href="#who-we-are" className="hover:text-customGreen p-2">
                 Who We Are
               </a>
             </p>
             <p>
-              <a
-                href="#key-facts"
-                className="hover:text-customGreen p-2"
-              >
+              <a href="#key-facts" className="hover:text-customGreen p-2">
                 Key Facts
               </a>
             </p>
             <p>
-              <a
-                href="#certification"
-                className="hover:text-customGreen p-2"
-              >
+              <a href="#certification" className="hover:text-customGreen p-2">
                 Certification
               </a>
             </p>
@@ -185,7 +176,6 @@ const AboutEwaste = () => {
           <div id="who-we-are" className="pt-10 space-y-6">
             <motion.p
               variants={fadeUp}
-              
               className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center p-2"
             >
               Who we are!
@@ -194,7 +184,11 @@ const AboutEwaste = () => {
             <motion.p variants={fadeUp} className="p-4">
               LTC Recycling Limited is an African telecommunications asset
               management and recycling company. It focuses on sustainable
-              lifecycle solutions for telecom infrastructure.
+              lifecycle solutions for telecom infrastructure. We advance
+              sustainable WEEE and telecom equipment management through a
+              circular model built on repair, refurbishment, reuse, and
+              recycling. This approach extends device lifecycles, improves
+              resource efficiency, and reduces environmental impact.
             </motion.p>
           </div>
         </motion.div>
@@ -288,7 +282,6 @@ const AboutEwaste = () => {
             </p>
           </motion.div>
         </div> */}
-
       </motion.div>
       {/* CERTIFICATIONS */}
       <div id="certification" className="">
