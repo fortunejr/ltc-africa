@@ -13,6 +13,7 @@ import {
 import { iso9001, iso14001, iso45001, iso27001, r2 } from "../../../imports";
 import { Link } from "react-router-dom";
 import Certifications from "../../Components/Certifications/Certifications";
+import { useTranslation } from "react-i18next";
 
 /* ANIMATION VARIANTS */
 
@@ -62,8 +63,40 @@ const staggerContainer = {
 };
 
 const AboutEwaste = () => {
+
+  const { t } = useTranslation();
+
+  const keyFacts = [
+    {
+      icon: Factory,
+      header: t("ewasteAboutPage.keyFacts.facts.industry.header"),
+      text: t("ewasteAboutPage.keyFacts.facts.industry.text"),
+    },
+    {
+      icon: Cpu,
+      header: t("ewasteAboutPage.keyFacts.facts.focus.header"),
+      text: t("ewasteAboutPage.keyFacts.facts.focus.text"),
+    },
+    {
+      icon: Globe,
+      header: t("ewasteAboutPage.keyFacts.facts.region.header"),
+      text: t("ewasteAboutPage.keyFacts.facts.region.text"),
+    },
+    {
+      icon: Recycle,
+      header: t("ewasteAboutPage.keyFacts.facts.services.header"),
+      text: t("ewasteAboutPage.keyFacts.facts.services.text"),
+    },
+    {
+      icon: Leaf,
+      header: t("ewasteAboutPage.keyFacts.facts.sustainability.header"),
+      text: t("ewasteAboutPage.keyFacts.facts.sustainability.text"),
+    },
+  ];
+
   return (
     <section className="bg-white text-slate-800 pt-20">
+
       {/* HERO */}
       <div className="relative w-full h-[85vh] overflow-hidden">
         <img
@@ -80,23 +113,23 @@ const AboutEwaste = () => {
           variants={staggerContainer}
           className="relative z-10 max-w-6xl mx-auto px-6 h-full flex flex-col justify-center text-white"
         >
+
           <motion.h1
             variants={fadeUp}
             className="text-3xl lg:text-4xl mb-6 header-txt font-bold bg-customBlue w-fit p-2"
           >
-            Welcome to LTC Africa Recycling!
+            {t("ewasteAboutPage.hero.title")}
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="text-base md:text-xl text-customGreen font-medium max-w-3xl p-2"
           >
-            Pioneering Sustainable WEEE & IT/Telecom Waste Solutions Across
-            Africa
+            {t("ewasteAboutPage.hero.subtitle")}
           </motion.p>
 
           <motion.p variants={fadeUp} className="uppercase font-bold my-2 p-2">
-            Explore this page
+            {t("ewasteAboutPage.hero.explore")}
           </motion.p>
 
           <motion.div
@@ -105,20 +138,23 @@ const AboutEwaste = () => {
           >
             <p>
               <a href="#who-we-are" className="hover:text-customGreen p-2">
-                Who We Are
+                {t("ewasteAboutPage.hero.whoWeAre")}
               </a>
             </p>
+
             <p>
               <a href="#key-facts" className="hover:text-customGreen p-2">
-                Key Facts
+                {t("ewasteAboutPage.hero.keyFacts")}
               </a>
             </p>
+
             <p>
               <a href="#certification" className="hover:text-customGreen p-2">
-                Certification
+                {t("ewasteAboutPage.hero.certification")}
               </a>
             </p>
           </motion.div>
+
         </motion.div>
       </div>
 
@@ -130,66 +166,25 @@ const AboutEwaste = () => {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto py-24 space-y-12"
       >
+
         <motion.div
           id="about"
           className="space-y-6 text-gray-700 text-base leading-relaxed px-2 md:px-4"
         >
-          {/* <motion.p variants={fadeUp} className="p-4">
-            LTC Africa Recycling, a proud member of the LTC Africa Group, is a
-            modern and fully registered Waste Electrical and Electronic
-            Equipment (WEEE) management company dedicated to redefining how
-            Africa handles electronic waste. Since our inception in 2013, we
-            have grown into a pan-African leader in sustainable, compliant, and
-            technology-driven e-waste management, while also advancing the
-            circular economy through responsible recycling, IT asset disposition
-            (ITAD), and resource recovery.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="p-4">
-            With borderless operations and facilities strategically located in
-            Nigeria, Ghana, Morocco, South Africa, Botswana, Tanzania, and
-            Madagascar, LTC Africa Recycling provides end-to-end e-waste
-            management and on-site collection services without the limits of
-            geographical area or location.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="p-4">
-            Through innovative ITAD solutions, we help organizations securely
-            recover value from outdated or decommissioned electronic equipment
-            while protecting sensitive data, promoting reuse, and minimizing
-            carbon emissions.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="p-4">
-            Backed by a diverse team of over 80 professionals, we combine
-            technical expertise, sustainability-driven innovation, and integrity
-            to deliver customized recycling solutions for corporate
-            organizations, telecom operators, government agencies, and
-            communities across Africa.
-          </motion.p>
-
-          <motion.p variants={fadeUp} className="p-4">
-            At LTC Africa Recycling, we stand for innovation, integrity,
-            accountability, and impact in every operation.
-          </motion.p> */}
 
           <div id="who-we-are" className="pt-10 space-y-6">
+
             <motion.p
               variants={fadeUp}
               className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center p-2"
             >
-              Who we are!
+              {t("ewasteAboutPage.whoWeAre.title")}
             </motion.p>
 
             <motion.p variants={fadeUp} className="p-4">
-              LTC Recycling Limited is an African telecommunications asset
-              management and recycling company. It focuses on sustainable
-              lifecycle solutions for telecom infrastructure. We advance
-              sustainable WEEE and telecom equipment management through a
-              circular model built on repair, refurbishment, reuse, and
-              recycling. This approach extends device lifecycles, improves
-              resource efficiency, and reduces environmental impact.
+              {t("ewasteAboutPage.whoWeAre.description")}
             </motion.p>
+
           </div>
         </motion.div>
 
@@ -199,94 +194,44 @@ const AboutEwaste = () => {
           id="key-facts"
           className="header-txt text-3xl md:text-4xl font-bold text-[#003333] text-center p-4"
         >
-          Key Facts
+          {t("ewasteAboutPage.keyFacts.title")}
         </motion.h2>
 
         <motion.div
           variants={staggerContainer}
           className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 text-center"
         >
-          {[
-            {
-              icon: Factory,
-              header: "Industry:",
-              text: "Telecommunications asset management and recycling",
-            },
-            {
-              icon: Cpu,
-              header: "Primary focus:",
-              text: "Network equipment recovery and materials recycling",
-            },
-            { icon: Globe, header: "Region of operation:", text: " Africa" },
-            {
-              icon: Recycle,
-              header: "Services:",
-              text: "Decommissioning, logistics, refurbishment, and e-waste recycling",
-            },
-            {
-              icon: Leaf,
-              header: "Sustainability goal:",
-              text: "Circular economy for telecom assets",
-            },
-          ].map(({ icon: Icon, header, text }, i) => (
+
+          {keyFacts.map(({ icon: Icon, header, text }, i) => (
             <motion.div
               key={i}
               variants={scaleIn}
               whileHover={{ scale: 1.05 }}
               className="p-6 bg-white border border-gray-100 rounded-2xl transition-all"
             >
+
               <Icon className="mx-auto text-customGreen mb-3" size={28} />
-              <p className="text-lg font-bold">{header}</p>
-              <p className="text-sm text-gray-600">{text}</p>
+
+              <p className="text-lg font-bold">
+                {header}
+              </p>
+
+              <p className="text-sm text-gray-600">
+                {text}
+              </p>
+
             </motion.div>
           ))}
+
         </motion.div>
 
-        {/* MISSION / VISION */}
-        {/* <div id="mission" className="grid lg:grid-cols-2 gap-8 mt-16">
-          <motion.div
-            variants={fadeLeft}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl border border-gray-100 p-6"
-          >
-            <h3 className="text-2xl font-bold text-customBlue mb-4 flex gap-2">
-              <Target />
-              Our Mission
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed p-2">
-              Our mission is to revolutionize electronic waste by unlocking the
-              true value of waste and establishing new benchmarks in circular
-              economy innovation...
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={fadeRight}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl border border-gray-100 p-6"
-          >
-            <h3 className="text-2xl font-bold text-customBlue mb-4 flex gap-2">
-              <Eye />
-              Our Vision
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed p-2">
-              To be Africa’s most trusted and sustainable e-waste management and
-              resource recovery company, while setting industry standards
-              innovation, compliance, and circular economy excellence.
-            </p>
-          </motion.div>
-        </div> */}
       </motion.div>
+
       {/* CERTIFICATIONS */}
-      <div id="certification" className="">
+      <div id="certification">
         <Certifications />
       </div>
+
     </section>
   );
 };

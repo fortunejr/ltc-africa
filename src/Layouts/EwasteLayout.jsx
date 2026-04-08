@@ -1,7 +1,7 @@
 import React from "react";
 import EwasteNav from "../Ewaste/Components/EwasteNav/EwasteNav";
 import { Outlet } from "react-router-dom";
-import Footer from "../Components/Footer/Footer";
+import Footer from "../Ewaste/Components/Footer/Footer";
 
 const EwasteLayout = () => (
   <>

@@ -1,60 +1,55 @@
 import React from "react";
-import { Mail, MapPin, Linkedin, Instagram, X, Phone } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { logo } from "../../../imports";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-[#05070c] text-white py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 space-y-12">
+      <div className="mx-auto px-6 space-y-12">
         {/* TOP GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* CONTACT */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Contact</h3>
+            <h3 className="text-lg font-semibold">{t("ewasteFooter.contactTitle")}</h3>
 
             <div className="space-y-2 text-sm text-white/70">
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
-                <p>
-                  Regional Office Madagascar: LTC Group Collection &amp;
-                  Recycling Center – Bat II Afriport Warehouse, Forello
-                  Tanjumbato. Antananarivo, Madagascar
-                </p>
+                <p>{t("ewasteFooter.hqOffice")}</p>
               </div>
 
               <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
-                <p>
-                  Regional Office Nigeria: 4 Association Road, Governors Road
-                  Lagos
-                </p>
+                <p>{t("ewasteFooter.regionalOffice")}</p>
               </div>
 
-              {/* <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3">
                 <MapPin size={20} className="mt-1 shrink-0" />
-                <p>Regional Office South Africa</p>
-              </div> */}
+                <p>{t("ewasteFooter.regionalFacilities")}</p>
+              </div>
             </div>
           </div>
 
           {/* GET IN TOUCH */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">Get in Touch</h3>
+            <h3 className="text-lg font-semibold">{t("ewasteFooter.getInTouchTitle")}</h3>
 
             <div className="flex flex-col gap-2 text-sm text-white/70">
               <a
-                href="mailto:Recycling@ltcafrica.com"
+                href={`mailto:${t("ewasteFooter.email")}`}
                 className="flex items-center gap-2 hover:text-white transition"
               >
-                <Mail size={16} /> Recycling@ltcafrica.com
+                <Mail size={16} /> {t("ewasteFooter.email")}
               </a>
               <a
                 href="tel:+261328681658"
                 className="flex items-center gap-2 hover:text-white transition"
               >
-                <Phone size={16} /> WhatsApp +261 32 868 1658
+                <Phone size={16} /> {t("ewasteFooter.whatsapp")}
               </a>
             </div>
 
@@ -65,6 +60,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+                aria-label={t("ewasteFooter.linkedin")}
               >
                 <Linkedin size={16} />
               </a>
@@ -73,6 +69,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+                aria-label={t("ewasteFooter.instagram")}
               >
                 <Instagram size={16} />
               </a>
@@ -81,6 +78,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition"
+                aria-label={t("ewasteFooter.twitter")}
               >
                 <FaXTwitter size={16} />
               </a>
@@ -89,7 +87,7 @@ const Footer = () => {
 
           {/* MAP */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Find Us</h3>
+            <h3 className="text-lg font-semibold mb-4">{t("ewasteFooter.findUsTitle")}</h3>
             <div className="rounded-xl overflow-hidden">
               <iframe
                 title="LTC Africa Madagascar Location"
@@ -110,33 +108,27 @@ const Footer = () => {
           aria-label="WhatsApp"
         >
           <img
-            className="lg:h-16 lg:w-16 h-10 "
+            className="lg:h-16 lg:w-16 h-10"
             src="https://cdn-icons-png.flaticon.com/128/5968/5968841.png"
-            alt=""
+            alt="WhatsApp"
           />
         </a>
 
         {/* BOTTOM BAR */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3">
           <div className="flex flex-wrap gap-4">
-            <Link
-              to="/termsandconditions"
-              className="hover:text-white transition"
-            >
-              Terms & Conditions
+            <Link to="/termsandconditions" className="hover:text-white transition">
+              {t("ewasteFooter.terms")}
             </Link>
             <Link to="/cookie-policy" className="hover:text-white transition">
-              Cookies Policy
+              {t("ewasteFooter.cookies")}
             </Link>
             <Link to="/privacy-policy" className="hover:text-white transition">
-              Data Privacy
+              {t("ewasteFooter.privacy")}
             </Link>
           </div>
 
-          <p>
-            © {new Date().getFullYear()} LTC Africa Recycling. All rights
-            reserved.
-          </p>
+          <p>{t("ewasteFooter.copyright", { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>

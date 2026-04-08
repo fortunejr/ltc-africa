@@ -9,53 +9,50 @@ import {
   carbonemission,
   itad,
 } from "../../../imports";
+import { useTranslation } from "react-i18next";
 
-const slides = [
+const slidesData = [
   {
     video: telecommunication,
-    title: "WEEE & Telecom Equipment Management",
-    text:
-      "We advance sustainable WEEE and telecom equipment management through a circular model built on repair, refurbishment, reuse, and recycling. This approach extends device lifecycles, improves resource efficiency, and reduces environmental impact.",
+    titleKey: "ewaste.hero.weeeTelecom.title",
+    textKey: "ewaste.hero.weeeTelecom.text",
   },
   {
     video: itad,
-    title: "ITAD & Recovery Solutions",
-    text:
-      "We help organizations recover maximum value from decommissioned assets through secure ITAD, global partnerships, asset buyback, and compliant recycling processes.",
+    titleKey: "ewaste.hero.itad.title",
+    textKey: "ewaste.hero.itad.text",
   },
   {
     video: carbonemission,
-    title: "Social & Environmental Commitment",
-    text:
-      "Our operations reduce carbon emissions through responsible WEEE collection, pollution prevention, and energy efficient recycling initiatives across Africa.",
+    titleKey: "ewaste.hero.socialCommitment.title",
+    textKey: "ewaste.hero.socialCommitment.text",
   },
   {
     video: dirttruck,
-    title: "Extended Producer Responsibility (EPR)",
-    text:
-      "We support organizations and governments in meeting EPR and regulatory targets through traceable collection, compliant recycling, and transparent reporting.",
+    titleKey: "ewaste.hero.epr.title",
+    textKey: "ewaste.hero.epr.text",
   },
   {
     video: circularsustain,
-    title: "Circular Sustainability & Advisory",
-    text:
-      "We deliver advisory programs, training, and awareness initiatives that help organizations transition into circular, low carbon, and sustainable operations.",
+    titleKey: "ewaste.hero.circularSustain.title",
+    textKey: "ewaste.hero.circularSustain.text",
   },
 ];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % slidesData.length);
     }, 9000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {slides.map((slide, index) => (
+      {slidesData.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -83,18 +80,18 @@ const Hero = () => {
             <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
               <div className="max-w-2xl text-white">
                 <h1 className="header-txt mb-5 text-3xl md:text-6xl font-semibold lg:leading-14">
-                  {slide.title}
+                  {t(slide.titleKey)}
                 </h1>
 
                 <p className="mb-8 text-sm md:text-lg text-white/90 leading-relaxed">
-                  {slide.text}
+                  {t(slide.textKey)}
                 </p>
 
                 <a
                   href="/e-waste/contact"
-                  className="inline-flex items-center  bg-customGreen px-6 py-3 text-sm md:text-base font-medium text-white transition hover:opacity-90"
+                  className="inline-flex items-center bg-customGreen px-6 py-3 text-sm md:text-base font-medium text-white transition hover:opacity-90"
                 >
-                  Contact Us
+                  {t("ewaste.hero.contact")}
                 </a>
               </div>
             </div>
@@ -104,7 +101,7 @@ const Hero = () => {
 
       {/* Indicators */}
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
-        {slides.map((_, index) => (
+        {slidesData.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}

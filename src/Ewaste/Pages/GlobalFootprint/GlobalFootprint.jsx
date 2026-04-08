@@ -1,13 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Globe, CheckCircle, Users, Award } from "lucide-react";
-
-const stats = [
-  { icon: Globe, value: "120+", label: "Countries Reached" },
-  { icon: Users, value: "4", label: "Continents Covered" },
-  { icon: CheckCircle, value: "100%", label: "Certified Processing" },
-  { icon: Award, value: "Global", label: "Circular Economy Network" },
-];
+import { useTranslation } from "react-i18next";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,10 +9,18 @@ const fadeUp = {
 };
 
 const GlobalFootprint = () => {
+  const { t } = useTranslation();
+
+  const stats = [
+    { icon: Globe, value: "120+", label: t("globalFootprint.stats.countries") },
+    { icon: Users, value: "4", label: t("globalFootprint.stats.continents") },
+    { icon: CheckCircle, value: "100%", label: t("globalFootprint.stats.certified") },
+    { icon: Award, value: "Global", label: t("globalFootprint.stats.network") },
+  ];
+
   return (
     <section className="bg-white py-36 px-6">
-      <div className=" space-y-20">
-
+      <div className="space-y-20">
         {/* Header */}
         <motion.div
           className="max-w-4xl mx-auto text-center space-y-4"
@@ -28,14 +30,10 @@ const GlobalFootprint = () => {
           variants={fadeUp}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt">
-            Our Global Footprint
+            {t("globalFootprint.title")}
           </h2>
           <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-            At LTC Africa Recycling, our impact extends far beyond Africa. With a presence
-            and partnerships across 120 countries worldwide, we operate through a global
-            network of recycling experts, technology partners, and sustainability organizations
-            that strengthen our capacity to deliver world-class, compliant, and sustainable
-            electronic waste management solutions.
+            {t("globalFootprint.description")}
           </p>
         </motion.div>
 
@@ -50,10 +48,9 @@ const GlobalFootprint = () => {
           <div className="relative w-full">
             <img
               src="/images/map.png"
-              alt="Global Footprint"
+              alt={t("globalFootprint.mapAlt")}
               className="w-full object-cover"
             />
-            {/* <div className="absolute inset-0 bg-black/20" /> */}
           </div>
         </motion.div>
 
@@ -66,23 +63,18 @@ const GlobalFootprint = () => {
           variants={fadeUp}
         >
           <div className="space-y-4 text-gray-600 text-sm md:text-base leading-relaxed">
-            <p>
-              Through our membership in LTC Africa Group and partnerships with environmental
-              compliance schemes, certified recyclers, and global sustainability organizations,
-              we ensure that all recovered materials and waste streams are processed safely,
-              transparently, and in accordance with international standards.
-            </p>
+            <p>{t("globalFootprint.compliance.description")}</p>
           </div>
 
           <div className="rounded-2xl bg-gray-50 p-6 shadow-md">
             <h3 className="text-lg font-semibold text-blue-950 mb-4">
-              International Compliance Standards
+              {t("globalFootprint.compliance.title")}
             </h3>
             <ul className="space-y-2 text-gray-600 list-disc list-inside text-sm md:text-base">
-              <li>Basel Convention on Transboundary Movement of Hazardous Waste</li>
-              <li>EU WEEE and RoHS Directives</li>
-              <li>ISO 14001 Environmental Management Systems</li>
-              <li>OECD Environmental Guidelines for sustainable trade</li>
+              <li>{t("globalFootprint.compliance.item1")}</li>
+              <li>{t("globalFootprint.compliance.item2")}</li>
+              <li>{t("globalFootprint.compliance.item3")}</li>
+              <li>{t("globalFootprint.compliance.item4")}</li>
             </ul>
           </div>
         </motion.div>
@@ -96,32 +88,22 @@ const GlobalFootprint = () => {
           variants={fadeUp}
         >
           <h3 className="text-xl font-semibold text-blue-950">
-            Strategic Global Partnerships
+            {t("globalFootprint.partnerships.title")}
           </h3>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
-            Our global partnerships include collaborations with international recyclers,
-            extended producer responsibility (EPR) platforms, environmental consultants, and
-            logistics networks, which together enable seamless borderless operations —
-            from on-site IT asset decommissioning to cross-border material transfer and
-            final processing in certified global facilities.
+            {t("globalFootprint.partnerships.desc1")}
           </p>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
-            In partnership with renowned organizations such as <strong>Ecoreco India</strong>,
-            <strong> Majestic Corporation USA</strong>, <strong>UNEP</strong>, <strong>UNDP</strong>,
-            and multiple OEM recycling alliances, LTC Africa Recycling bridges the gap between
-            Africa’s growing electronic waste challenge and global circular economy opportunities.
+            {t("globalFootprint.partnerships.desc2")}
           </p>
           <ul className="list-disc list-inside space-y-2 max-w-5xl mx-auto text-gray-600 text-sm md:text-base">
-            <li>Exchange knowledge, innovation, and recycling technology across continents.</li>
-            <li>Facilitate international traceability and certification for all waste streams.</li>
-            <li>Support multinational corporations and telecom operators with unified e-waste management strategies across Africa and beyond.</li>
-            <li>Promote sustainable resource recovery and carbon reduction initiatives aligned with the UN SDGs.</li>
+            <li>{t("globalFootprint.partnerships.item1")}</li>
+            <li>{t("globalFootprint.partnerships.item2")}</li>
+            <li>{t("globalFootprint.partnerships.item3")}</li>
+            <li>{t("globalFootprint.partnerships.item4")}</li>
           </ul>
           <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
-            Our borderless approach reflects our belief that sustainability knows no limits.
-            By combining local expertise with global best practices, LTC Africa Recycling stands
-            as a trusted partner for governments, enterprises, and global brands seeking to build
-            a cleaner, circular, and climate-resilient world.
+            {t("globalFootprint.partnerships.desc3")}
           </p>
         </motion.div>
 

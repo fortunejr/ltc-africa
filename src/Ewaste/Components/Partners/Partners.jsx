@@ -2,10 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 
 import "swiper/css";
 
 const Partners = () => {
+  const { t } = useTranslation();
+
   const partnerList = [
     "/images/mcl.png",
     "/images/unep.svg",
@@ -29,7 +32,11 @@ const Partners = () => {
     "/images/zte.png",
   ];
 
-  const categories = ["Banks", "Healthcare", "Schools"];
+  const categories = [
+    t("partners.categories.banks"),
+    t("partners.categories.healthcare"),
+    t("partners.categories.schools")
+  ];
 
   return (
     <section className="relative w-full py-20 md:py-32 bg-customBlue/10">
@@ -46,17 +53,15 @@ const Partners = () => {
           viewport={{ once: true }}
         >
           <span className="text-customGreen font-bold tracking-widest text-xs uppercase block mb-3">
-            They Trust Us
+            {t("partners.trustLabel")}
           </span>
 
           <h2 className="header-txt text-3xl md:text-5xl font-bold text-[#003333] mb-6">
-            Our Partners
+            {t("partners.title")}
           </h2>
 
           <p className="text-gray-500 text-lg leading-relaxed">
-            Over the years, LTC Africa Recycling has earned the trust of leading
-            organizations across Africa and beyond, relying on us for secure,
-            compliant, and sustainable e-waste management solutions.
+            {t("partners.description")}
           </p>
         </motion.div>
 
@@ -81,15 +86,15 @@ const Partners = () => {
           className="opacity-70"
         >
           {partnerList.map((partner, index) => (
-<SwiperSlide key={index}>
-  <div className="flex items-center justify-center h-20 w-full transition duration-300">
-    <img
-      src={partner}
-      alt="partner logo"
-      className="h-full w-auto object-contain"
-    />
-  </div>
-</SwiperSlide>
+            <SwiperSlide key={index}>
+              <div className="flex items-center justify-center h-20 w-full transition duration-300">
+                <img
+                  src={partner}
+                  alt="partner logo"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+            </SwiperSlide>
           ))}
         </Swiper>
 
@@ -102,7 +107,7 @@ const Partners = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm text-gray-900 uppercase tracking-widest mb-6">
-            Collaborating across sectors
+            {t("partners.collaboration")}
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 md:gap-8">
@@ -116,7 +121,7 @@ const Partners = () => {
             ))}
 
             <span className="px-5 py-2 text-gray-900 text-sm italic">
-              ...and many more
+              {t("partners.more")}
             </span>
           </div>
         </motion.div>

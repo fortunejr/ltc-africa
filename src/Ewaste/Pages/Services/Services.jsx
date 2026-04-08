@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { itequipments, harzadous, telecom, others } from "../../../imports";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const industries = [
   { name: "Telecom", icon: Radio },
@@ -65,71 +66,82 @@ const itemVariants = {
 };
 
 const ServicesEwaste = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      title: t("ewasteServicesPage.services.borderlessCollection.title"),
+      text: t("ewasteServicesPage.services.borderlessCollection.text"),
+    },
+    {
+      title: t("ewasteServicesPage.services.assetRecovery.title"),
+      text: t("ewasteServicesPage.services.assetRecovery.text"),
+    },
+    {
+      title: t("ewasteServicesPage.services.epr.title"),
+      text: t("ewasteServicesPage.services.epr.text"),
+    },
+    {
+      title: t("ewasteServicesPage.services.consultancy.title"),
+      text: t("ewasteServicesPage.services.consultancy.text"),
+    },
+    {
+      title: t("ewasteServicesPage.services.buyback.title"),
+      text: t("ewasteServicesPage.services.buyback.text"),
+    },
+    {
+      title: t("ewasteServicesPage.services.weeeToEnergy.title"),
+      text: t("ewasteServicesPage.services.weeeToEnergy.text"),
+    },
+  ];
+
+  const acceptedItems = [
+    {
+      title: t("ewasteServicesPage.accepted.it.title"),
+      text: t("ewasteServicesPage.accepted.it.text"),
+      image: itequipments,
+    },
+    {
+      title: t("ewasteServicesPage.accepted.telecom.title"),
+      text: t("ewasteServicesPage.accepted.telecom.text"),
+      image: telecom,
+    },
+    {
+      title: t("ewasteServicesPage.accepted.hazardous.title"),
+      text: t("ewasteServicesPage.accepted.hazardous.text"),
+      image: harzadous,
+    },
+    {
+      title: t("ewasteServicesPage.accepted.others.title"),
+      text: t("ewasteServicesPage.accepted.others.text"),
+      image: others,
+    },
+  ];
+
   return (
     <section className="w-full bg-white text-slate-800 py-36">
       <div className="mx-auto max-w-7xl px-6 md:px-12 space-y-32">
+
         {/* CORE SERVICE */}
         <div className="max-w-4xl space-y-6">
           <span className="text-sm uppercase tracking-widest text-customGreen">
-            What We Do
+            {t("ewasteServicesPage.coreServices.header")}
           </span>
-
-          {/* <h1 className="text-3xl md:text-4xl header-txt font-bold text-[#003333]">
-            Core Services
-          </h1> */}
-
           <p className="text-base md:text-lg text-slate-600 leading-relaxed mt-5">
-            At LTC Africa Recycling, we specialize in borderless e-waste
-            management and IT Asset Deposition (ITAD) with recovery solutions
-            across Africa. Our operations are designed to be mobile, flexible,
-            and location- independent, enabling organizations to manage, sell,
-            refurbish and recycle their decommissioned IT/ Electronic Waste
-            Equipment Assets efficiently, wherever they are.Industries
+            {t("ewasteServicesPage.coreServices.description")}
           </p>
         </div>
 
         {/* SERVICES */}
         <div className="space-y-20 max-w-6xl">
           <h2 className="text-2xl md:text-4xl font-bold header-txt text-[#003333]">
-            Our Services
+            {t("ewasteServicesPage.services.title")}
           </h2>
 
-          {[
-            {
-              title: "Borderless Collection & Recycling",
-              text: "We provide nationwide and cross-border collection of Waste Electrical and Electronic Equipment through mobile recycling units and certified logistics partners. Our model allows fast response, lower logistics costs, and compliant recycling services across Africa.",
-            },
-            {
-              title: "IT Asset Recovery & Management",
-              text: "We manage decommissioned IT and telecom assets through secure inventory, auditing, valuation, and certified data destruction, ensuring maximum recovery value and full regulatory compliance.",
-            },
-            {
-              title: "Extended Producer Responsibility (EPR)",
-              text: "We design and manage EPR programs for governments, manufacturers, importers, and distributors, ensuring responsible take-back, traceability, and compliant recycling of electronic waste.",
-            },
-            {
-              title: "Consultancy & Environmental Advisory",
-              text: "Our advisory services support organizations and governments with sustainability planning, circular economy integration, carbon reduction strategies, and regulatory compliance training.",
-            },
-            {
-              title: "Buyback & Remarketing",
-              text: "Through structured buyback and resale programs, we help organizations recover financial value from decommissioned assets through repair, refurbishment, resale, reuse, or material recovery.",
-            },
-            {
-              title: "WEEE to Renewable Energy",
-              text: "By combining refurbished batteries with solar technology, we transform electronic waste into clean, affordable energy solutions for homes, businesses, and communities across Africa.",
-            },
-          ].map((service, index) => (
-            <div
-              key={index}
-              className="border-l-2 border-customGreen pl-6 space-y-3"
-            >
-              <h3 className="text-xl font-medium text-slate-900">
-                {service.title}
-              </h3>
-              <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                {service.text}
-              </p>
+          {services.map((service, index) => (
+            <div key={index} className="border-l-2 border-customGreen pl-6 space-y-3">
+              <h3 className="text-xl font-medium text-slate-900">{service.title}</h3>
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed">{service.text}</p>
             </div>
           ))}
         </div>
@@ -137,16 +149,12 @@ const ServicesEwaste = () => {
         {/* INDUSTRIES */}
         <div className="space-y-10">
           <h2 className="text-center text-2xl md:text-4xl font-bold header-txt text-[#003333]">
-            Industries We Serve
+            {t("ewasteServicesPage.industries.title")}
           </h2>
 
-          <motion.div
-            className="flex flex-wrap justify-center gap-4"
-            variants={containerVariants}
-          >
+          <motion.div className="flex flex-wrap justify-center gap-4" variants={containerVariants}>
             {industries.map((industry, index) => {
               const Icon = industry.icon;
-
               return (
                 <motion.div
                   key={index}
@@ -154,7 +162,7 @@ const ServicesEwaste = () => {
                   variants={itemVariants}
                 >
                   <Icon size={18} strokeWidth={1.5} />
-                  <span>{industry.name}</span>
+                  <span>{t(`ewasteServicesPage.industries.list.${industry.name}`)}</span>
                 </motion.div>
               );
             })}
@@ -164,53 +172,18 @@ const ServicesEwaste = () => {
         {/* WHAT WE ACCEPT */}
         <div className="space-y-16 max-w-6xl">
           <h2 className="text-2xl md:text-4xl header-txt font-bold text-[#003333]">
-            What We Accept
+            {t("ewasteServicesPage.accepted.title")}
           </h2>
 
           <div className="grid gap-10 sm:grid-cols-2">
-            {[
-              {
-                title: "IT Equipment",
-                text: "Desktop computers, laptops, servers, monitors, keyboards, printers, scanners, UPS systems, routers, network switches, storage devices, tablets, SIM cards, cables, and accessories.",
-                image: itequipments,
-              },
-              {
-                title: "Telecom Equipment",
-                text: "Mobile phones, PBX systems, BTS components, antennas, CCTV systems, POS terminals, VoIP devices, satellite equipment, networking racks, and communication hardware.",
-                image: telecom,
-              },
-              {
-                title: "Hazardous Components",
-                text: "Batteries, toner cartridges, capacitors, transformers, circuit boards, mercury lamps, PCB boards, and electronic chips.",
-                image: harzadous,
-              },
-              {
-                title: "Other Equipment",
-                text: "Medical electronic devices such as ECG systems and monitors, as well as audio-visual equipment including speakers and projectors.",
-                image: others,
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="group rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden transition hover:shadow-lg"
-              >
-                {/* IMAGE */}
+            {acceptedItems.map((item, index) => (
+              <div key={index} className="group rounded-2xl bg-white border border-slate-100 shadow-sm overflow-hidden transition hover:shadow-lg">
                 <div className="h-48 w-full overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-contain  transition-transform duration-300 group-hover:scale-105"
-                  />
+                  <img src={item.image} alt={item.title} className="h-full w-full object-contain  transition-transform duration-300 group-hover:scale-105"/>
                 </div>
-
-                {/* TEXT */}
                 <div className="p-6 space-y-3">
-                  <h3 className="text-lg font-medium text-customBlue">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                    {item.text}
-                  </p>
+                  <h3 className="text-lg font-medium text-customBlue">{item.title}</h3>
+                  <p className="text-sm md:text-base text-slate-600 leading-relaxed">{item.text}</p>
                 </div>
               </div>
             ))}

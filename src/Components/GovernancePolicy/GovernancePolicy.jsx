@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -8,11 +9,11 @@ const fadeInUp = {
 
 const GovernancePolicy = () => {
   const [showMore, setShowMore] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <section className="bg-white py-36 px-6">
       <div className="max-w-7xl mx-auto space-y-32">
-
         {/* HEADER */}
         <motion.div
           className="text-center max-w-4xl mx-auto space-y-6"
@@ -22,18 +23,18 @@ const GovernancePolicy = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <h1 className="text-3xl md:text-4xl font-bold text-[#003333] header-txt">
-            Governance Policy
+            {t("governance.title", "Governance Policy")}
           </h1>
 
           <p className="text-lg text-gray-700 font-medium">
-            LTC Africa Group Governance Policy
+            {t("governance.subtitle", "LTC Africa Group Governance Policy")}
           </p>
 
           <p className="text-gray-600 leading-relaxed">
-            At LTC Africa Group, strong governance is the foundation of our integrity,
-            performance, and long-term sustainability. We are committed to upholding
-            the highest standards of ethical conduct, accountability, and transparency
-            across all our operations.
+            {t(
+              "governance.description",
+              "At LTC Africa Group, strong governance is the foundation of our integrity, performance, and long-term sustainability. We are committed to upholding the highest standards of ethical conduct, accountability, and transparency across all our operations."
+            )}
           </p>
 
           {!showMore && (
@@ -41,7 +42,7 @@ const GovernancePolicy = () => {
               onClick={() => setShowMore(true)}
               className="mt-4 text-customGreen font-semibold hover:underline"
             >
-              Learn more
+              {t("governance.learnMore", "Learn more")}
             </button>
           )}
         </motion.div>
@@ -49,7 +50,6 @@ const GovernancePolicy = () => {
         {/* EVERYTHING BELOW IS HIDDEN UNTIL CLICK */}
         {showMore && (
           <>
-
             {/* GOVERNANCE APPROACH */}
             <motion.div
               className="grid md:grid-cols-2 gap-16 items-center"
@@ -59,20 +59,20 @@ const GovernancePolicy = () => {
             >
               <img
                 src="https://img.freepik.com/free-photo/group-business-talking-meeting_53876-26417.jpg"
-                alt="Governance framework"
+                alt={t("governance.imgAlt", "Governance framework")}
                 className="rounded-2xl object-cover w-full h-[420px]"
               />
 
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <h3 className="text-2xl font-semibold text-customBlue">
-                  Our Governance Approach
+                  {t("governance.approachTitle", "Our Governance Approach")}
                 </h3>
 
                 <p>
-                  Our governance framework ensures that LTC Africa Group is directed
-                  and controlled in a responsible and sustainable manner. It defines
-                  clear roles, decision-making processes, and oversight mechanisms
-                  that guide how we operate and grow.
+                  {t(
+                    "governance.approachDescription",
+                    "Our governance framework ensures that LTC Africa Group is directed and controlled in a responsible and sustainable manner. It defines clear roles, decision-making processes, and oversight mechanisms that guide how we operate and grow."
+                  )}
                 </p>
               </div>
             </motion.div>
@@ -85,61 +85,65 @@ const GovernancePolicy = () => {
               animate="visible"
             >
               <h2 className="text-3xl text-center font-semibold text-customBlue header-txt">
-                Leadership and Oversight
+                {t("governance.leadershipTitle", "Leadership and Oversight")}
               </h2>
 
               <div className="grid md:grid-cols-3 gap-10">
-
                 <div className="bg-gray-50 rounded-2xl p-8 space-y-5">
                   <h3 className="text-xl font-semibold text-customBlue">
-                    Board of Directors
+                    {t("governance.board.title", "Board of Directors")}
                   </h3>
 
                   <p className="text-gray-600">
-                    Our Board provides strategic leadership and oversight.
+                    {t(
+                      "governance.board.description",
+                      "Our Board provides strategic leadership and oversight."
+                    )}
                   </p>
 
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
-                    <li>Approving strategic plans and key policies</li>
-                    <li>Overseeing risk management and internal controls</li>
-                    <li>Monitoring financial performance and compliance</li>
-                    <li>Ensuring accountability to stakeholders</li>
+                    <li>{t("governance.board.item1", "Approving strategic plans and key policies")}</li>
+                    <li>{t("governance.board.item2", "Overseeing risk management and internal controls")}</li>
+                    <li>{t("governance.board.item3", "Monitoring financial performance and compliance")}</li>
+                    <li>{t("governance.board.item4", "Ensuring accountability to stakeholders")}</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 rounded-2xl p-8 space-y-5">
                   <h3 className="text-xl font-semibold text-customBlue">
-                    Board Committees
+                    {t("governance.committees.title", "Board Committees")}
                   </h3>
 
                   <p className="text-gray-600">
-                    The Board is supported by specialized committees:
+                    {t(
+                      "governance.committees.description",
+                      "The Board is supported by specialized committees:"
+                    )}
                   </p>
 
                   <ul className="list-disc pl-5 space-y-2 text-gray-600">
-                    <li>Audit and Risk Committee</li>
-                    <li>Governance and Nominations Committee</li>
-                    <li>Finance and Investment Committee</li>
+                    <li>{t("governance.committees.audit", "Audit and Risk Committee")}</li>
+                    <li>{t("governance.committees.governance", "Governance and Nominations Committee")}</li>
+                    <li>{t("governance.committees.finance", "Finance and Investment Committee")}</li>
                   </ul>
                 </div>
 
                 <div className="bg-gray-50 rounded-2xl p-8 space-y-5">
                   <h3 className="text-xl font-semibold text-customBlue">
-                    Executive Management
+                    {t("governance.executive.title", "Executive Management")}
                   </h3>
 
                   <p className="text-gray-600">
-                    Our executive leadership team manages daily operations and
-                    implements Board-approved strategies.
+                    {t(
+                      "governance.executive.description",
+                      "Our executive leadership team manages daily operations and implements Board-approved strategies."
+                    )}
                   </p>
                 </div>
-
               </div>
             </motion.div>
-
           </>
         )}
-
       </div>
     </section>
   );

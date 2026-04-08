@@ -1,92 +1,87 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { agric, ewastevid, realestate2, renewableenergy, crane, farmer, tractor, rubbish, ewastelast, telecommunication } from "../../imports";
+import { useTranslation } from "react-i18next";
+import {
+  agric,
+  ewastevid,
+  realestate2,
+  renewableenergy,
+  telecommunication,
+} from "../../imports";
 
-const slides = [
+const slidesData = [
   {
     video: telecommunication,
-    title: "IT /Telecom ASSET & WEEE MANAGEMENT",
-    subtitle: "We delivers end-to-end telecom asset lifecycle solutions across Africa, from secure decommissioning and refurbishment to certified resale and responsible recycling.",
+    titleKey: "hero.telecom.title",
+    subtitleKey: "hero.telecom.subtitle",
     link: "e-waste",
   },
   {
     video: "/videos/farm.mp4",
-    title: "AGRICULTURAL & FARM WASTE SOLUTIONS",
-    subtitle: "We are delivering a sustainable agriculturaland farm waste solutions across Africa by transforming organic waste into compost, biofertilizers, and renewable energy, Empowering farmers to improve soil health, reduce environmental impact, and building circular farming systems that enhance productivity and long- term sustainability.",
+    titleKey: "hero.agriculture.title",
+    subtitleKey: "hero.agriculture.subtitle",
     link: "agriculture",
   },
   {
     video: "/videos/realestate.mp4",
-    title: "SMART REAL- ESTATE MANAGEMENT",
-    subtitle: "We are using advanced technology, data insights, and sustainable strategies to improve property performance, lower operating costs, and enhance tenant satisfaction by combining digital monitoring, predictive maintenance, energy management, and lifecycle planning to maximize long-term asset value and efficiency.",
+    titleKey: "hero.realEstate.title",
+    subtitleKey: "hero.realEstate.subtitle",
     link: "real-estate",
   },
   {
     video: renewableenergy,
-    title: "RENEWABLE & GREEN ENERGY SOLUTION",
-    subtitle: "We are harnessing clean sources such as solar, wind, hydro, and bioenergy to generate sustainable power while reducing carbon emissions, while promoting energy efficiency, environmental protection, and long- term cost savings for businesses and communities across Africa.",
+    titleKey: "hero.energy.title",
+    subtitleKey: "hero.energy.subtitle",
     link: "renewable-energy",
   },
 ];
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
   const videoRefs = useRef([]);
   const hoverTimeout = useRef(null);
   const playId = useRef(0);
 
-  // Auto slide
+  // Auto slide every 8s
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % slidesData.length);
     }, 8000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // Video control (race-condition safe)
+  // Video control
   useEffect(() => {
     const currentVideo = videoRefs.current[current];
     if (!currentVideo) return;
 
-    // Unique play generation
     const myPlayId = ++playId.current;
 
-    // Pause all other videos
     videoRefs.current.forEach((video, index) => {
-      if (video && index !== current && !video.paused) {
-        video.pause();
-      }
+      if (video && index !== current && !video.paused) video.pause();
     });
 
-    // Play only if needed
     if (!currentVideo.paused) return;
 
     const playPromise = currentVideo.play();
-
     if (playPromise !== undefined) {
       playPromise.catch((err) => {
-        // Ignore outdated or aborted play attempts
         if (myPlayId !== playId.current) return;
-        if (err.name !== "AbortError") {
-          console.error("Video play error:", err);
-        }
+        if (err.name !== "AbortError") console.error("Video play error:", err);
       });
     }
   }, [current]);
 
-  // Throttled hover
   const handleHover = (index) => {
     clearTimeout(hoverTimeout.current);
-    hoverTimeout.current = setTimeout(() => {
-      setCurrent(index);
-    }, 150);
+    hoverTimeout.current = setTimeout(() => setCurrent(index), 150);
   };
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
       {/* Background Videos */}
-      {slides.map((slide, index) => (
+      {slidesData.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-[1500ms] ease-in-out ${
@@ -108,8 +103,8 @@ const Hero = () => {
       ))}
 
       {/* Content */}
-      <div className="cursor-default relative z-10  flex h-full w-full flex-col md:flex-row">
-        {slides.map((slide, index) => {
+      <div className="cursor-default relative z-10 flex h-full w-full flex-col md:flex-row">
+        {slidesData.map((slide, index) => {
           const isActive = current === index;
 
           return (
@@ -117,29 +112,25 @@ const Hero = () => {
               key={index}
               onMouseEnter={() => handleHover(index)}
               className={`relative flex flex-1 flex-col items-center justify-center px-8 text-center transition-all duration-700 ease-in-out
-                ${index !== slides.length - 1 ? "md:border-r md:border-white/5" : ""}
-                ${isActive ? "md:flex-[2] " : "hidden md:flex hover:bg-white/"}
-              `}
+                ${index !== slidesData.length - 1 ? "md:border-r md:border-white/5" : ""}
+                ${isActive ? "md:flex-[2]" : "hidden md:flex hover:bg-white/"}`}
             >
               <div
                 className={`max-w-md transition-all duration-1000 ${
-                  isActive
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
+                  isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
               >
-
                 <h2 className="mb-4 text-4xl font-light tracking-tight text-white md:text-3xl lg:text-5xl">
-                  {slide.title}
+                  {t(slide.titleKey)}
                 </h2>
 
                 <p className="mx-auto mb-10 max-w-xs text-sm font-light text-white/80">
-                  {slide.subtitle}
+                  {t(slide.subtitleKey)}
                 </p>
 
                 <Link to={`/${slide.link}`}>
                   <button className="cursor-pointer bg-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-900 transition-all hover:bg-customGreen hover:text-white active:scale-95">
-                    Explore
+                    {t("hero.explore")}
                   </button>
                 </Link>
               </div>
@@ -150,7 +141,7 @@ const Hero = () => {
 
       {/* Indicators */}
       <div className="absolute bottom-12 left-0 right-0 z-20 flex justify-center gap-10">
-        {slides.map((_, index) => (
+        {slidesData.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+
 import {
   Building2,
   ShieldCheck,
@@ -21,28 +23,6 @@ import {
   Pickaxe,
   FishingHook,
 } from "lucide-react";
-
-const industries = [
-  { name: "Telecom", icon: Radio },
-  { name: "Mining", icon: Pickaxe },
-  { name: "Marine", icon: FishingHook },
-  { name: "Finance", icon: Banknote },
-  { name: "Government", icon: ShieldCheck },
-  { name: "Energy", icon: Leaf },
-  { name: "Media", icon: Building2 },
-  { name: "Healthcare", icon: Stethoscope },
-  { name: "Education", icon: GraduationCap },
-  { name: "Manufacturing", icon: Factory },
-  { name: "Retail", icon: ShoppingCart },
-  { name: "NGOs", icon: HeartHandshake },
-  { name: "Hospitality", icon: Hotel },
-  { name: "Logistics", icon: Truck },
-  { name: "Shipping", icon: Ship },
-  { name: "Aviation", icon: Plane },
-  { name: "Public Utilities", icon: Landmark },
-  { name: "Real Estate", icon: Building2 },
-  { name: "IT & Software", icon: Cpu },
-];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -65,20 +45,44 @@ const itemVariants = {
 };
 
 const ServicesEwaste = () => {
+  const { t } = useTranslation();
+
+  const industries = [
+    { name: t("servicesComponent.industries.telecom"), icon: Radio },
+    { name: t("servicesComponent.industries.mining"), icon: Pickaxe },
+    { name: t("servicesComponent.industries.marine"), icon: FishingHook },
+    { name: t("servicesComponent.industries.finance"), icon: Banknote },
+    { name: t("servicesComponent.industries.government"), icon: ShieldCheck },
+    { name: t("servicesComponent.industries.energy"), icon: Leaf },
+    { name: t("servicesComponent.industries.media"), icon: Building2 },
+    { name: t("servicesComponent.industries.healthcare"), icon: Stethoscope },
+    { name: t("servicesComponent.industries.education"), icon: GraduationCap },
+    { name: t("servicesComponent.industries.manufacturing"), icon: Factory },
+    { name: t("servicesComponent.industries.retail"), icon: ShoppingCart },
+    { name: t("servicesComponent.industries.ngos"), icon: HeartHandshake },
+    { name: t("servicesComponent.industries.hospitality"), icon: Hotel },
+    { name: t("servicesComponent.industries.logistics"), icon: Truck },
+    { name: t("servicesComponent.industries.shipping"), icon: Ship },
+    { name: t("servicesComponent.industries.aviation"), icon: Plane },
+    { name: t("servicesComponent.industries.utilities"), icon: Landmark },
+    { name: t("servicesComponent.industries.realEstate"), icon: Building2 },
+    { name: t("servicesComponent.industries.itSoftware"), icon: Cpu },
+  ];
+
   const services = [
     {
-      title: "IT/Telecom Equipment",
-      text: "Desktop computers, laptops, servers, monitors, printers, network devices, storage equipment, mobile phones, PBX systems, antennas, CCTV systems, POS terminals and other telecom infrastructure.",
+      title: t("servicesComponent.services.itTelecomTitle"),
+      text: t("servicesComponent.services.itTelecomText"),
       image: "/images/pile.jpg",
     },
     {
-      title: "Hazardous Components",
-      text: "Batteries (Li-ion, lead-acid), toner cartridges, capacitors, transformers, circuit boards, fluorescent tubes and mercury containing lamps.",
+      title: t("servicesComponent.services.hazardousTitle"),
+      text: t("servicesComponent.services.hazardousText"),
       image: "/images/hazard.jpg",
     },
     {
-      title: "Medical Electronics",
-      text: "Medical electronic devices including ECG machines, monitoring equipment and other hospital electronic systems.",
+      title: t("servicesComponent.services.medicalTitle"),
+      text: t("servicesComponent.services.medicalText"),
       image: "/images/medical.jpg",
     },
   ];
@@ -92,28 +96,23 @@ const ServicesEwaste = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {/* Header */}
         <motion.div
           className="max-w-3xl mx-auto text-center mb-24"
           variants={itemVariants}
         >
           <h2 className="text-3xl md:text-5xl font-bold text-[#003333] header-txt mb-6 tracking-tight">
-            Core E-Waste & ITAD Services
+            {t("servicesComponent.headerTitle")}
           </h2>
 
           <p className="text-gray-500 text-lg leading-relaxed">
-            We deliver responsible e-waste management and IT Asset Disposition
-            services across Africa, helping organizations securely recover,
-            refurbish and recycle electronic assets.
+            {t("servicesComponent.headerText")}
           </p>
         </motion.div>
 
-        {/* Services Layout */}
         <motion.div
           className="grid lg:grid-cols-2 gap-12 mb-28"
           variants={containerVariants}
         >
-          {/* Featured Service */}
           <motion.div
             className="relative overflow-hidden border border-gray-200 bg-white shadow-sm group"
             variants={itemVariants}
@@ -137,7 +136,6 @@ const ServicesEwaste = () => {
             </div>
           </motion.div>
 
-          {/* Secondary Services */}
           <div className="grid sm:grid-cols-2 gap-8">
             {services.slice(1).map((service, index) => (
               <motion.div
@@ -167,7 +165,6 @@ const ServicesEwaste = () => {
           </div>
         </motion.div>
 
-        {/* Industries */}
         <motion.div className="mb-24" variants={containerVariants}>
           <motion.div
             className="flex items-center justify-center gap-4 mb-12"
@@ -175,7 +172,7 @@ const ServicesEwaste = () => {
           >
             <div className="h-px w-12 bg-gray-300" />
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-widest">
-              Industries We Serve
+              {t("servicesComponent.industriesTitle")}
             </h3>
             <div className="h-px w-12 bg-gray-300" />
           </motion.div>
@@ -201,13 +198,12 @@ const ServicesEwaste = () => {
           </motion.div>
         </motion.div>
 
-        {/* CTA */}
         <motion.div className="text-center" variants={itemVariants}>
           <Link
             to="/e-waste/services"
             className="inline-flex items-center justify-center px-10 py-4 bg-customBlue text-white text-sm font-bold uppercase tracking-widest hover:bg-customGreen transition shadow-lg"
           >
-            View Full E-Waste Services
+            {t("servicesComponent.cta")}
           </Link>
         </motion.div>
       </motion.div>

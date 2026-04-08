@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const container = {
   hidden: { opacity: 0 },
@@ -40,17 +41,10 @@ const textItem = {
 };
 
 const Welcome = () => {
-  const [expanded, setExpanded] = useState(false);
-
-  const shortText = `Pioneering Sustainable WEEE & IT/Telecom Waste Solutions Across Africa.
-
-LTC Africa Recycling, a proud member of the LTC Africa Group, is a modern and fully registered Waste Electrical and Electronic Equipment (WEEE) management company dedicated to redefining how Africa handles electronic waste. Since our inception in 2013, we have grown into a pan-African leader in sustainable, compliant, and technology-driven e-waste management, while advancing the circular economy through responsible recycling, IT asset disposition (ITAD), and resource recovery.
-
-With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanzania, and Madagascar, we provide end-to-end e-waste management and on-site collection services without geographical limits.`;
+  const { t } = useTranslation();
 
   return (
     <section className="relative w-full bg-white py-12 md:py-24 overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute top-0 left-0 w-full h-64 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/topography.png')]" />
 
       <motion.div
@@ -71,12 +65,7 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
               alt="LTC Facility"
               className="w-full h-[350px] md:h-[500px] object-cover"
             />
-
             <div className="absolute bottom-0 left-0 w-full h-2 bg-customGreen" />
-
-            {/* <div className="absolute top-1/2 -left-4 md:-left-8 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 bg-[#003333] flex items-center justify-center shadow-lg cursor-pointer hover:bg-customGreen transition-colors">
-              <div className="w-0 h-0 border-t-[6px] md:border-t-[8px] border-t-transparent border-l-[10px] md:border-l-[12px] border-l-white border-b-[6px] md:border-b-[8px] border-b-transparent ml-1" />
-            </div> */}
           </div>
 
           <motion.div
@@ -99,7 +88,7 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
             variants={textItem}
             className="header-txt text-3xl md:text-5xl font-bold text-[#003333] leading-tight mb-6 md:mb-8"
           >
-            Welcome to{" "}
+            {t("welcome.title")}{" "}
             <span className="text-customBlue">
               LTC <br className="hidden md:block" /> Africa Recycling
             </span>
@@ -109,13 +98,13 @@ With facilities located in Nigeria, Ghana, Morocco, South Africa, Botswana, Tanz
             variants={textItem}
             className="text-gray-500 text-base md:text-lg leading-relaxed mb-8 whitespace-pre-line"
           >
-            {expanded ? fullText : shortText}
+            {t("welcome.description")}
           </motion.div>
 
           <motion.div variants={textItem}>
             <Link to={"/e-waste/about"}>
               <button className="cursor-pointer group flex items-center gap-2 text-xs md:text-sm font-bold tracking-widest text-gray-400 hover:text-customGreen uppercase transition-colors">
-                Learn More
+                {t("welcome.learnMore")}
               </button>
             </Link>
           </motion.div>

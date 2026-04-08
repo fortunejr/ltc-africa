@@ -1,0 +1,735 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "company": "L'entreprise",
+    "solutions": "Solutions",
+    "globalFootprint": "Présence Mondiale",
+    "circularEconomy": "Économie Circulaire",
+    "media": "Médias",
+    "contact": "Contact",
+    "contactUs": "Contactez-nous"
+  },
+  "company": {
+    "whoWeAre": "Qui Nous Sommes",
+    "whatWeDo": "Ce Que Nous Faisons",
+    "missionVision": "Mission & Vision",
+    "leadership": "Direction",
+    "governancePolicy": "Politique de Gouvernance"
+  },
+  "solutions": {
+    "telecom": "GESTION DES ACTIFS ET DÉCHETS IT / Télécom",
+    "agriculture": "SOLUTIONS DE DÉCHETS AGRICOLES ET FERMIERS",
+    "realEstate": "GESTION IMMOBILIÈRE INTELLIGENTE",
+    "renewableEnergy": "SOLUTIONS D'ÉNERGIE RENOUVELABLE ET VERTE"
+  },
+  "hero": {
+    "telecom": {
+      "title": "GESTION DES ACTIFS ET DÉCHETS IT / Télécom",
+      "subtitle": "Nous fournissons des solutions complètes de cycle de vie des actifs télécom à travers l'Afrique, depuis la mise hors service sécurisée et la remise à neuf jusqu'à la revente certifiée et le recyclage responsable.",
+      "link": "e-waste"
+    },
+    "agriculture": {
+      "title": "SOLUTIONS DE DÉCHETS AGRICOLES ET FERMIERS",
+      "subtitle": "Nous fournissons des solutions durables pour les déchets agricoles et fermiers à travers l'Afrique en transformant les déchets organiques en compost, biofertilisants et énergie renouvelable, permettant aux agriculteurs d'améliorer la santé des sols, réduire l'impact environnemental et construire des systèmes agricoles circulaires qui améliorent la productivité et la durabilité à long terme.",
+      "link": "agriculture"
+    },
+    "realEstate": {
+      "title": "GESTION IMMOBILIÈRE INTELLIGENTE",
+      "subtitle": "Nous utilisons des technologies avancées, des analyses de données et des stratégies durables pour améliorer les performances des biens, réduire les coûts opérationnels et augmenter la satisfaction des locataires en combinant surveillance digitale, maintenance prédictive, gestion énergétique et planification du cycle de vie pour maximiser la valeur et l'efficacité à long terme des actifs.",
+      "link": "real-estate"
+    },
+    "energy": {
+      "title": "SOLUTIONS D'ÉNERGIE RENOUVELABLE ET VERTE",
+      "subtitle": "Nous exploitons des sources d'énergie propres telles que le solaire, l'éolien, l'hydroélectrique et la bioénergie pour générer une énergie durable tout en réduisant les émissions de carbone, en promouvant l'efficacité énergétique, la protection de l'environnement et les économies à long terme pour les entreprises et les communautés à travers l'Afrique.",
+      "link": "renewable-energy"
+    },
+    "explore": "Explorer"
+  },
+  "companyPage": {
+    "hero": {
+      "title": "L’Entreprise",
+      "links": {
+        "whoAreWe": "Qui Nous Sommes",
+        "whatWeDo": "Ce Que Nous Faisons",
+        "missionVision": "Mission & Vision",
+        "leadership": "Direction",
+        "governancePolicy": "Politique de Gouvernance"
+      }
+    },
+    "about": {
+      "title": "À Propos du Groupe",
+      "subtitle": "Présentation du Groupe LTC Africa",
+      "description": "LTC Africa Group est une entreprise africaine de premier plan, engagée à fournir des solutions complètes, innovantes et durables dans plusieurs secteurs afin de soutenir les entreprises, les prestataires de services et les institutions à travers l’Afrique. En tant que groupe, LTC Africa s’appuie sur des décennies d’expertise, les meilleures pratiques du secteur et des technologies de pointe pour offrir des services de bout en bout qui optimisent l’efficacité, maximisent la valeur et soutiennent la croissance économique de l’Afrique tout en respectant les normes environnementales et sociales les plus élevées.",
+      "closing": "Avec une approche holistique combinant technologie, durabilité et excellence opérationnelle, LTC Africa Group est un partenaire de confiance pour les entreprises, prestataires de services et institutions africaines souhaitant transformer les défis en opportunités. De la gestion des déchets électroniques et agricoles au développement de propriétés intelligentes et de solutions d’énergie propre, LTC Africa Group illustre l’innovation, la responsabilité et l’engagement à générer un impact durable, la croissance économique et la préservation de l’environnement en Afrique."
+    },
+    "whatWeDo": {
+      "title": "Ce Que Nous Faisons",
+      "learnMore": "En savoir plus",
+      "sectors": {
+        "itTelecom": {
+          "title": "Gestion des Actifs IT/TELECOM & DEEE",
+          "text": "Dans le secteur IT et Télécom, LTC Africa Group fournit des solutions complètes de gestion des actifs et des DEEE (Déchets d’Équipements Électriques et Électroniques)."
+        },
+        "agriculture": {
+          "title": "Agriculture & Gestion des Déchets Agricoles",
+          "text": "Dans le secteur de l’Agriculture et de la Gestion des Déchets Agricoles, LTC Africa Group promeut des pratiques agricoles durables et transforme les déchets organiques et agricoles en ressources précieuses telles que le compost, les biofertilisants et l’énergie renouvelable."
+        },
+        "realEstate": {
+          "title": "Gestion Immobilière Intelligente",
+          "text": "Les solutions de Gestion Immobilière Intelligente du Groupe intègrent les technologies avancées, l’analyse de données et des systèmes intelligents pour optimiser la performance des propriétés et améliorer l’expérience des locataires."
+        },
+        "renewableEnergy": {
+          "title": "Solutions Énergétiques Renouvelables et Vertes",
+          "text": "Dans le secteur des énergies renouvelables et vertes, LTC Africa Group soutient la transition énergétique propre de l’Afrique en proposant des solutions évolutives dans le solaire, l’éolien, l’hydroélectrique et la bioénergie."
+        }
+      }
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "text": "Être le groupe africain leader en solutions intégrées, favorisant une transformation durable grâce à l’innovation et aux pratiques d’économie circulaire, prospérant dans un futur résilient et responsable sur le plan environnemental."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "text": "Fournir des solutions complètes, technologiques et durables dans la gestion des actifs IT/Télécom & DEEE, la gestion des déchets agricoles, l’immobilier intelligent et les énergies renouvelables en maximisant la valeur et en accélérant la croissance économique inclusive."
+    },
+    "leadership": {
+      "title": "Direction",
+      "roles": {
+        "ceo": "Fondateur/PDG du Groupe",
+        "coo": "Directeur Général des Opérations",
+        "cfo": "Directeur Financier",
+        "sales": "Responsable des Ventes et Marketing",
+        "sustainability": "Responsable Durabilité, Partenariats et Conformité",
+        "mena": "Directeur Régional – Afrique MENA",
+        "pr": "Responsable RP & RSE"
+      }
+    }
+  },
+  "governance": {
+    "title": "Politique de Gouvernance",
+    "subtitle": "Politique de Gouvernance du Groupe LTC Africa",
+    "description": "Chez LTC Africa Group, une gouvernance solide est la base de notre intégrité, performance et durabilité à long terme. Nous nous engageons à respecter les normes les plus élevées de conduite éthique, de responsabilité et de transparence dans toutes nos opérations.",
+    "learnMore": "En savoir plus",
+    "imgAlt": "Cadre de gouvernance",
+    "approachTitle": "Notre Approche de Gouvernance",
+    "approachDescription": "Notre cadre de gouvernance garantit que LTC Africa Group est dirigé et contrôlé de manière responsable et durable. Il définit des rôles clairs, des processus de décision et des mécanismes de supervision qui guident notre fonctionnement et notre croissance.",
+    "leadershipTitle": "Direction et Supervision",
+    "board": {
+      "title": "Conseil d'Administration",
+      "description": "Notre conseil fournit leadership stratégique et supervision.",
+      "item1": "Approbation des plans stratégiques et des politiques clés",
+      "item2": "Supervision de la gestion des risques et des contrôles internes",
+      "item3": "Suivi de la performance financière et conformité",
+      "item4": "Assurer la responsabilité envers les parties prenantes"
+    },
+    "committees": {
+      "title": "Comités du Conseil",
+      "description": "Le Conseil est soutenu par des comités spécialisés :",
+      "audit": "Comité d'Audit et de Risque",
+      "governance": "Comité de Gouvernance et de Nominations",
+      "finance": "Comité des Finances et Investissements"
+    },
+    "executive": {
+      "title": "Direction Exécutive",
+      "description": "Notre équipe de direction exécutive gère les opérations quotidiennes et met en œuvre les stratégies approuvées par le Conseil."
+    }
+  },
+  "globalFootprint": {
+    "title": "Notre Empreinte Mondiale",
+    "description": "Chez LTC Africa Recycling, notre impact va bien au-delà de l'Afrique. Avec une présence et des partenariats dans 120 pays à travers le monde, nous opérons via un réseau mondial d'experts en recyclage, de partenaires technologiques et d'organisations de durabilité qui renforcent notre capacité à fournir des solutions de gestion des déchets électroniques de classe mondiale, conformes et durables.",
+    "mapAlt": "Empreinte Mondiale",
+    "stats": {
+      "countries": "Pays Atteints",
+      "continents": "Continents Couvertes",
+      "certified": "Traitement Certifié",
+      "network": "Réseau d'Économie Circulaire"
+    },
+    "compliance": {
+      "title": "Normes Internationales de Conformité",
+      "description": "Grâce à notre appartenance au groupe LTC Africa et à nos partenariats avec des régimes de conformité environnementale, des recycleurs certifiés et des organisations mondiales de durabilité, nous veillons à ce que tous les matériaux récupérés et flux de déchets soient traités de manière sûre, transparente et conformément aux normes internationales.",
+      "item1": "Convention de Bâle sur le mouvement transfrontière des déchets dangereux",
+      "item2": "Directives européennes WEEE et RoHS",
+      "item3": "Systèmes de management environnemental ISO 14001",
+      "item4": "Lignes directrices de l'OCDE pour le commerce durable"
+    },
+    "partnerships": {
+      "title": "Partenariats Stratégiques Mondiaux",
+      "desc1": "Nos partenariats mondiaux incluent des collaborations avec des recycleurs internationaux, des plateformes de responsabilité élargie des producteurs (REP), des consultants environnementaux et des réseaux logistiques, qui permettent ensemble des opérations transfrontalières fluides — de la mise hors service des actifs informatiques sur site au transfert de matériaux à l'étranger et au traitement final dans des installations certifiées.",
+      "desc2": "En partenariat avec des organisations renommées telles que Ecoreco India, Majestic Corporation USA, UNEP, UNDP et de multiples alliances de recycleurs OEM, LTC Africa Recycling comble le fossé entre le défi croissant des déchets électroniques en Afrique et les opportunités de l'économie circulaire mondiale.",
+      "item1": "Échanger connaissances, innovations et technologies de recyclage entre continents.",
+      "item2": "Faciliter la traçabilité et la certification internationales pour tous les flux de déchets.",
+      "item3": "Soutenir les multinationales et les opérateurs de télécommunications avec des stratégies unifiées de gestion des déchets électroniques à travers l'Afrique et au-delà.",
+      "item4": "Promouvoir la récupération durable des ressources et les initiatives de réduction du carbone alignées sur les ODD de l'ONU.",
+      "desc3": "Notre approche sans frontières reflète notre conviction que la durabilité n'a pas de limites. En combinant expertise locale et meilleures pratiques mondiales, LTC Africa Recycling est un partenaire de confiance pour les gouvernements, entreprises et marques mondiales souhaitant bâtir un monde plus propre, circulaire et résilient au climat."
+    }
+  },
+  "circularEconomy": {
+    "title": "Économie Circulaire",
+    "subtitle": "Politique d'Économie Circulaire du Groupe LTC Africa",
+    "introAlt": "Concept d'économie circulaire",
+    "introText": "Chez LTC Africa Group, nous reconnaissons que la croissance durable dépend de l'utilisation responsable des ressources. Notre approche d'économie circulaire est conçue pour minimiser les déchets, maximiser la valeur et promouvoir la protection de l'environnement dans toutes nos opérations et chaînes de valeur.",
+    "commitmentTitle": "Notre Engagement",
+    "commitmentText": "Nous nous engageons à passer d'un modèle traditionnel “prendre-fabriquer-jeter” à un système circulaire qui privilégie l'efficacité des ressources, la réutilisation, le recyclage et la régénération. Grâce à cette approche, nous visons à réduire notre empreinte environnementale tout en créant une valeur économique et sociale à long terme.",
+    "principlesTitle": "Nos Principes d'Économie Circulaire",
+    "principles": [
+      {
+        "image": "/images/pile.jpg",
+        "title": "1. Conception Durable",
+        "description": "Nous intégrons la durabilité dans la conception de nos produits, services et opérations en :",
+        "items": [
+          "Priorisant les matériaux durables, réparables et recyclables",
+          "Réduisant l'intensité des ressources et l'impact environnemental",
+          "Encourageant l'innovation dans les solutions durables"
+        ]
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e",
+        "title": "2. Efficacité des Ressources",
+        "description": "Nous optimisons l'utilisation des ressources naturelles en :",
+        "items": [
+          "Minimisant la consommation d'énergie et d'eau",
+          "Réduisant les déchets matériels dans toutes les opérations",
+          "Favorisant des processus de production et de prestation de services efficaces"
+        ]
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1604187351574-c75ca79f5807",
+        "title": "3. Réduction et Valorisation des Déchets",
+        "description": "Nous visons à éliminer les déchets en :",
+        "items": [
+          "Réduisant, réutilisant et recyclant les matériaux autant que possible",
+          "Convertissant les déchets en intrants précieux pour d'autres processus",
+          "Soutenant les chaînes d'approvisionnement circulaires et la symbiose industrielle"
+        ]
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216",
+        "title": "4. Approvisionnement Responsable et Innovation",
+        "description": "Nous travaillons avec des fournisseurs partageant nos valeurs de durabilité en :",
+        "items": [
+          "Encourageant des pratiques éthiques et respectueuses de l'environnement",
+          "Priorisant les matériaux renouvelables, recyclés et locaux",
+          "Promouvant la transparence dans la chaîne d'approvisionnement"
+        ]
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+        "title": "5. Gestion du Cycle de Vie des Produits et Actifs",
+        "description": "Nous prolongeons la durée de vie des produits et actifs en :",
+        "items": [
+          "Promouvant la maintenance, la réparation, la remise à neuf et la refabrication",
+          "Mettant en œuvre des programmes de retour et de récupération lorsque possible",
+          "Réduisant l'impact environnemental en fin de vie"
+        ]
+      },
+      {
+        "image": "/images/factory.jpeg",
+        "title": "6. Partenariat Gagnant-Gagnant",
+        "description": "Nous collaborons avec les parties prenantes pour accélérer les solutions circulaires en :",
+        "items": [
+          "Investissant dans des technologies et modèles commerciaux durables",
+          "Partenariat avec l'industrie, les communautés et les gouvernements",
+          "Soutenant la recherche et le partage des connaissances"
+        ]
+      }
+    ],
+    "focusTitle": "Nos Domaines Clés",
+    "focusAreas": [
+      "Excellence Opérationnelle : Nous améliorons continuellement les processus opérationnels pour réduire les déchets, les émissions et l'utilisation des ressources.",
+      "Infrastructure Durable : Nous investissons dans des infrastructures et systèmes qui soutiennent les pratiques circulaires, y compris le recyclage et les initiatives de récupération.",
+      "Transformation Digitale : Nous exploitons la technologie pour améliorer l'efficacité, suivre les flux de ressources et permettre des décisions durables basées sur les données.",
+      "Engagement des Employés et Parties Prenantes : Nous responsabilisons nos employés et parties prenantes pour soutenir nos objectifs d'économie circulaire en :"
+    ],
+    "focusList": [
+      "Fournissant des programmes de formation et de sensibilisation",
+      "Encourageant la consommation responsable et les pratiques de gestion des déchets",
+      "Impliquant les communautés dans des initiatives de durabilité"
+    ],
+    "metrics": [
+      {
+        "title": "Mesurer Notre Impact",
+        "description": "Nous nous engageons à la transparence et à la responsabilité en :",
+        "items": [
+          "Fixant des objectifs mesurables de durabilité et d'économie circulaire",
+          "Surveillant les indicateurs clés de performance (KPI)",
+          "Rapportant régulièrement les progrès aux parties prenantes"
+        ]
+      },
+      {
+        "title": "Conformité et Gouvernance",
+        "description": "Nous veillons à ce que nos pratiques d'économie circulaire :",
+        "items": [
+          "Respectent les lois et réglementations environnementales applicables",
+          "S'alignent sur les normes internationales de durabilité",
+          "Soient intégrées dans notre cadre de gouvernance global"
+        ]
+      },
+      {
+        "title": "Amélioration Continue",
+        "description": "Nous révisons et améliorons régulièrement notre stratégie d'économie circulaire pour nous adapter aux défis, technologies et opportunités émergents."
+      }
+    ]
+  },
+  "ewasteNav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "climateChange": "Changement Climatique",
+    "sdg": "Initiatives ODD",
+    "globalFootprint": "Empreinte Globale",
+    "media": "Médias",
+    "contact": "Contact"
+  },
+
+  "ewaste": {
+    "hero": {
+      "weeeTelecom": {
+        "title": "Gestion des DEEE et équipements télécom",
+        "text": "Nous promouvons une gestion durable des DEEE et des équipements télécom via un modèle circulaire basé sur la réparation, la remise à neuf, la réutilisation et le recyclage. Cette approche prolonge la durée de vie des appareils, améliore l'efficacité des ressources et réduit l'impact environnemental."
+      },
+      "itad": {
+        "title": "Solutions ITAD & récupération",
+        "text": "Nous aidons les organisations à récupérer une valeur maximale des actifs mis hors service grâce à l'ITAD sécurisé, aux partenariats mondiaux, au rachat d'actifs et aux processus de recyclage conformes."
+      },
+      "socialCommitment": {
+        "title": "Engagement social et environnemental",
+        "text": "Nos opérations réduisent les émissions de carbone grâce à la collecte responsable des DEEE, à la prévention de la pollution et aux initiatives de recyclage énergétiquement efficaces à travers l'Afrique."
+      },
+      "epr": {
+        "title": "Responsabilité élargie des producteurs (REP)",
+        "text": "Nous soutenons les organisations et gouvernements pour atteindre les objectifs REP et réglementaires grâce à une collecte traçable, un recyclage conforme et un reporting transparent."
+      },
+      "circularSustain": {
+        "title": "Durabilité circulaire & conseil",
+        "text": "Nous proposons des programmes de conseil, de formation et de sensibilisation qui aident les organisations à passer à des opérations circulaires, bas carbone et durables."
+      },
+      "contact": "Contactez-nous"
+    }
+  }, "welcome": {
+    "title": "Bienvenue à",
+    "company": "LTC Africa Recycling",
+    "description": "Solutions durables pionnières pour les déchets WEEE et IT/Télécom à travers l’Afrique.\n\nLTC Africa Recycling, fier membre du groupe LTC Africa, est une entreprise moderne et entièrement enregistrée de gestion des Déchets d’Équipements Électriques et Électroniques (WEEE), dédiée à redéfinir la manière dont l’Afrique gère les déchets électroniques. Depuis notre création en 2013, nous sommes devenus un leader panafricain dans la gestion durable, conforme et technologique des déchets électroniques, tout en faisant progresser l’économie circulaire grâce au recyclage responsable, à la gestion des actifs informatiques (ITAD) et à la récupération des ressources.\n\nAvec des installations situées au Nigéria, au Ghana, au Maroc, en Afrique du Sud, au Botswana, en Tanzanie et à Madagascar, nous fournissons des services complets de gestion des déchets électroniques et de collecte sur site sans limites géographiques.",
+    "learnMore": "En savoir plus"
+  }, "partners": {
+    "trustLabel": "Ils nous font confiance",
+    "title": "Nos Partenaires",
+    "description": "Au fil des années, LTC Africa Recycling a gagné la confiance d'organisations de premier plan à travers l'Afrique et au-delà, qui comptent sur nous pour des solutions de gestion des déchets électroniques sûres, conformes et durables.",
+    "collaboration": "Collaboration entre secteurs",
+    "categories": {
+      "banks": "Banques",
+      "healthcare": "Santé",
+      "schools": "Écoles"
+    },
+    "more": "...et bien d'autres"
+  }, "certifications": {
+    "title": "Certifications et Conformité Réglementaire",
+    "subtitle": "Conformité et Normes",
+    "readMore": "Lire plus",
+    "readLess": "Lire moins",
+    "sections": {
+      "permits": {
+        "title": "Permis Environnementaux Nationaux et Régionaux",
+        "items": [
+          "Licence / Permis de gestion des déchets délivré par les agences environnementales nationales.",
+          "Permis de gestion des déchets dangereux – Autorise la collecte, le transport, le stockage et l’élimination des composants électroniques dangereux.",
+          "Permis d'importation/exportation de déchets électroniques – Conformité avec les mouvements transfrontaliers de déchets électroniques selon les lois nationales.",
+          "Certificats de conformité opérationnelle locale – Pour les entrepôts, centres de traitement et dépôts de collecte."
+        ]
+      },
+      "compliance": {
+        "title": "Conventions Internationales et Conformité",
+        "items": [
+          "Conformité à la Convention de Bâle – Garantit que tous les mouvements transfrontaliers de déchets dangereux et électroniques sont effectués légalement et en toute sécurité.",
+          "Directives de la directive européenne DEEE (comme meilleure pratique) – Adoption des normes de responsabilité élargie des producteurs (REP) et des principes de gestion sécurisée des déchets électroniques."
+        ]
+      },
+      "global": {
+        "title": "Certifications et Normes Mondiales",
+        "items": [
+          "ISO 14001 : Système de gestion environnementale (EMS) – Démontre l’engagement envers des opérations durables et l’amélioration continue des performances environnementales.",
+          "ISO 9001 : Système de gestion de la qualité – Garantit la qualité et la cohérence dans les services de recyclage, de traitement et ITAD.",
+          "Certification R2 (Responsible Recycling) – Norme industrielle pour un recyclage électronique sûr, responsable et sécurisé et la gestion des actifs informatiques.",
+          "OHSAS 18001 / ISO 45001 : Gestion de la santé et sécurité au travail – Engagement envers la sécurité des travailleurs et la gestion des risques opérationnels.",
+          "ISO 27001 (Gestion de la sécurité de l'information) – Pour la gestion sécurisée et la destruction des données dans les opérations ITAD."
+        ]
+      },
+      "sustainability": {
+        "title": "Durabilité et Reconnaissance d’Entreprise",
+        "items": [
+          "Certification du programme REP – Pour les clients et partenaires dans le cadre des initiatives de responsabilité élargie des producteurs.",
+          "Conformité aux rapports CSR et ESG – Soutien aux entreprises dans les rapports de durabilité et la gestion environnementale."
+        ]
+      },
+      "partnerships": {
+        "title": "Approbations Basées sur des Partenariats",
+        "items": [
+          "Partenaire autorisé du PNUE, PNUD, PAM et d'autres programmes environnementaux internationaux pour la gestion responsable des déchets électroniques et les initiatives d'économie circulaire."
+        ]
+      }
+    }
+  }, "servicesComponent": {
+    "headerTitle": "Services principaux de déchets électroniques et ITAD",
+    "headerText": "Nous fournissons des services responsables de gestion des déchets électroniques et de disposition des actifs informatiques à travers l'Afrique, aidant les organisations à récupérer, reconditionner et recycler leurs équipements électroniques en toute sécurité.",
+
+    "services": {
+      "itTelecomTitle": "Équipements IT / Télécom",
+      "itTelecomText": "Ordinateurs de bureau, ordinateurs portables, serveurs, moniteurs, imprimantes, équipements réseau, équipements de stockage, téléphones mobiles, systèmes PBX, antennes, systèmes CCTV, terminaux POS et autres infrastructures télécom.",
+
+      "hazardousTitle": "Composants dangereux",
+      "hazardousText": "Batteries (Li-ion, plomb-acide), cartouches de toner, condensateurs, transformateurs, cartes électroniques, tubes fluorescents et lampes contenant du mercure.",
+
+      "medicalTitle": "Équipements électroniques médicaux",
+      "medicalText": "Appareils électroniques médicaux incluant machines ECG, équipements de surveillance et autres systèmes électroniques hospitaliers."
+    },
+
+    "industriesTitle": "Industries que nous servons",
+
+    "industries": {
+      "telecom": "Télécommunications",
+      "mining": "Exploitation minière",
+      "marine": "Maritime",
+      "finance": "Finance",
+      "government": "Gouvernement",
+      "energy": "Énergie",
+      "media": "Médias",
+      "healthcare": "Santé",
+      "education": "Éducation",
+      "manufacturing": "Fabrication",
+      "retail": "Commerce de détail",
+      "ngos": "ONG",
+      "hospitality": "Hôtellerie",
+      "logistics": "Logistique",
+      "shipping": "Transport maritime",
+      "aviation": "Aviation",
+      "utilities": "Services publics",
+      "realEstate": "Immobilier",
+      "itSoftware": "IT et logiciels"
+    },
+
+    "cta": "Voir tous les services de déchets électroniques"
+  }, "ewasteAboutPage": {
+    "hero": {
+      "title": "Bienvenue chez LTC Africa Recycling !",
+      "subtitle": "Des solutions durables pionnières pour les déchets WEEE et les équipements IT/Télécom à travers l'Afrique",
+      "explore": "Explorer cette page",
+      "whoWeAre": "Qui nous sommes",
+      "keyFacts": "Faits clés",
+      "certification": "Certification"
+    },
+    "whoWeAre": {
+      "title": "Qui nous sommes !",
+      "description": "LTC Recycling Limited est une entreprise africaine spécialisée dans la gestion et le recyclage des actifs de télécommunications. Elle se concentre sur des solutions durables de gestion du cycle de vie des infrastructures télécom. Nous favorisons une gestion durable des déchets WEEE et des équipements télécom grâce à un modèle circulaire basé sur la réparation, la remise à neuf, la réutilisation et le recyclage. Cette approche prolonge la durée de vie des appareils, améliore l'efficacité des ressources et réduit l'impact environnemental."
+    },
+    "keyFacts": {
+      "title": "Faits clés",
+      "facts": {
+        "industry": {
+          "header": "Industrie :",
+          "text": "Gestion et recyclage des actifs de télécommunications"
+        },
+        "focus": {
+          "header": "Objectif principal :",
+          "text": "Récupération des équipements réseau et recyclage des matériaux"
+        },
+        "region": {
+          "header": "Région d'activité :",
+          "text": "Afrique"
+        },
+        "services": {
+          "header": "Services :",
+          "text": "Décommissionnement, logistique, remise à neuf et recyclage des déchets électroniques"
+        },
+        "sustainability": {
+          "header": "Objectif de durabilité :",
+          "text": "Économie circulaire pour les actifs télécom"
+        }
+      }
+    }
+  }, "ewasteServicesPage": {
+      "coreServices": {
+        "header": "Ce que nous faisons",
+        "description": "Chez LTC Africa Recycling, nous sommes spécialisés dans la gestion des déchets électroniques sans frontières et la gestion des actifs informatiques (ITAD) avec des solutions de récupération à travers l'Afrique. Nos opérations sont conçues pour être mobiles, flexibles et indépendantes de l'emplacement, permettant aux organisations de gérer, vendre, remettre à neuf et recycler efficacement leurs équipements informatiques et électroniques désaffectés, où qu'ils se trouvent."
+      },
+      "services": {
+        "title": "Nos Services",
+        "borderlessCollection": {
+          "title": "Collecte et recyclage sans frontières",
+          "text": "Nous assurons la collecte nationale et transfrontalière des déchets électriques et électroniques grâce à des unités mobiles de recyclage et des partenaires logistiques certifiés. Notre modèle permet une réponse rapide, des coûts logistiques réduits et des services de recyclage conformes à travers l'Afrique."
+        },
+        "assetRecovery": {
+          "title": "Récupération et gestion des actifs informatiques",
+          "text": "Nous gérons les actifs informatiques et télécom désaffectés grâce à un inventaire sécurisé, des audits, des évaluations et une destruction certifiée des données, garantissant une valeur maximale de récupération et une conformité réglementaire complète."
+        },
+        "epr": {
+          "title": "Responsabilité élargie du producteur (REP)",
+          "text": "Nous concevons et gérons des programmes REP pour les gouvernements, fabricants, importateurs et distributeurs, garantissant la reprise responsable, la traçabilité et le recyclage conforme des déchets électroniques."
+        },
+        "consultancy": {
+          "title": "Conseil et accompagnement environnemental",
+          "text": "Nos services de conseil soutiennent les organisations et les gouvernements dans la planification de la durabilité, l'intégration de l'économie circulaire, les stratégies de réduction du carbone et la formation à la conformité réglementaire."
+        },
+        "buyback": {
+          "title": "Rachat et re-commercialisation",
+          "text": "Grâce à des programmes structurés de rachat et de revente, nous aidons les organisations à récupérer la valeur financière des actifs désaffectés par la réparation, la remise à neuf, la revente, la réutilisation ou la récupération de matériaux."
+        },
+        "weeeToEnergy": {
+          "title": "DEEE vers énergie renouvelable",
+          "text": "En combinant des batteries reconditionnées avec la technologie solaire, nous transformons les déchets électroniques en solutions énergétiques propres et abordables pour les foyers, les entreprises et les communautés à travers l'Afrique."
+        }
+      },
+      "industries": {
+        "title": "Secteurs que nous servons",
+        "list": {
+          "Telecom": "Télécom",
+          "Mining": "Mines",
+          "Marine": "Maritime",
+          "Finance": "Finance",
+          "Government": "Gouvernement",
+          "Energy": "Énergie",
+          "Media": "Médias",
+          "Healthcare": "Santé",
+          "Education": "Éducation",
+          "Manufacturing": "Industrie",
+          "Retail": "Commerce",
+          "NGOs": "ONG",
+          "Hospitality": "Hôtellerie",
+          "Logistics": "Logistique",
+          "Shipping": "Expédition",
+          "Aviation": "Aviation",
+          "Public Utilities": "Services publics",
+          "Real Estate": "Immobilier",
+          "IT & Software": "Informatique & Logiciels"
+        }
+      },
+      "accepted": {
+        "title": "Ce que nous acceptons",
+        "it": {
+          "title": "Équipements informatiques",
+          "text": "Ordinateurs de bureau, ordinateurs portables, serveurs, moniteurs, claviers, imprimantes, scanners, onduleurs, routeurs, commutateurs réseau, périphériques de stockage, tablettes, cartes SIM, câbles et accessoires."
+        },
+        "telecom": {
+          "title": "Équipements télécom",
+          "text": "Téléphones mobiles, systèmes PBX, composants BTS, antennes, systèmes CCTV, terminaux POS, dispositifs VoIP, équipements satellites, racks réseau et matériel de communication."
+        },
+        "hazardous": {
+          "title": "Composants dangereux",
+          "text": "Batteries, cartouches de toner, condensateurs, transformateurs, cartes électroniques, lampes au mercure, cartes PCB et puces électroniques."
+        },
+        "others": {
+          "title": "Autres équipements",
+          "text": "Dispositifs électroniques médicaux tels que systèmes ECG et moniteurs, ainsi que des équipements audiovisuels tels que haut-parleurs et projecteurs."
+        }
+      }
+    }, "ewasteServicesPage": {
+    "sustainability": "Durabilité",
+    "headerTitle": "Changement climatique et action climatique",
+    "headerText": "Notre engagement climatique vise à promouvoir l'action climatique et la réduction de l'empreinte carbone en Afrique en transformant les déchets électroniques en catalyseur pour la protection de l'environnement, la résilience économique et la croissance durable.",
+    
+    "introParagraph1": "Chez LTC Africa Recycling, nous reconnaissons que les déchets électroniques ne sont pas seulement un défi de gestion des déchets, mais aussi un problème majeur pour le climat et l'environnement. Le dépôt et la combustion incontrôlés des déchets électroniques libèrent des gaz à effet de serre tels que le dioxyde de carbone et le méthane, ainsi que des substances toxiques qui dégradent la qualité de l'air, du sol et de l'eau.",
+    "introParagraph2": "Notre mission est de transformer ce défi en résilience climatique en déployant des systèmes de recyclage intelligents qui réduisent les émissions, économisent l'énergie et favorisent l'efficacité des ressources en Afrique.",
+    
+    "sections": {
+      "carbonEmissions": {
+        "title": "Réduction des émissions de carbone grâce au recyclage responsable",
+        "bodyIntro": "LTC Africa empêche activement les émissions de carbone chaque année en :",
+        "list": [
+          "Détournant les déchets électroniques des décharges ouvertes où la combustion informelle libère des gaz à effet de serre nocifs.",
+          "Mettant en œuvre des processus de recyclage contrôlés avec des technologies écoénergétiques.",
+          "Promouvant la réutilisation et la remise à neuf pour prolonger le cycle de vie des équipements et réduire la demande de nouvelle production.",
+          "Encourageant la récupération sécurisée des matériaux pour réduire les activités minières énergivores."
+        ],
+        "bodyOutro": "Chaque tonne d'électronique recyclée de manière responsable se traduit par une réduction mesurable des émissions, de la consommation d'énergie et de la dégradation environnementale."
+      },
+      "circularEconomy": {
+        "title": "Économie circulaire pour la résilience climatique",
+        "bodyIntro": "LTC Africa promeut une économie circulaire où les déchets sont éliminés et les matériaux sont continuellement réutilisés.",
+        "bodyOutro": "Grâce à notre modèle Réparer → Remettre à neuf → Réutiliser → Recycler, nous réduisons la dépendance aux matériaux vierges, évitons la production à forte intensité de carbone, créons des emplois verts et renforçons la résilience économique en Afrique."
+      },
+      "lowEmission": {
+        "title": "Opérations à faible émission et logistique durable",
+        "list": [
+          "Optimisation des itinéraires logistiques grâce au suivi numérique pour réduire la consommation de carburant.",
+          "Installations de recyclage écoénergétiques et adoption d'énergies renouvelables lorsque possible.",
+          "Réduction des déchets d'emballage et modèles de transport partagé pour les collectes en gros.",
+          "Tri des déchets à la source pour minimiser les émissions liées au transport et au traitement."
+        ]
+      },
+      "carbonPrograms": {
+        "title": "Mesure, rapport et programmes de compensation du carbone",
+        "list": [
+          "Mesure de l'empreinte carbone liée à l'élimination des déchets électroniques et au déclassement des actifs informatiques.",
+          "Développement de stratégies conformes aux cadres mondiaux tels que l'Accord de Paris et l'ODD 13.",
+          "Soutien aux programmes de compensation, y compris le reboisement et l'adoption d'énergies propres."
+        ],
+        "bodyOutro": "Nous fournissons des rapports sur l'impact carbone et des certificats de recyclage quantifiant les économies d'émissions."
+      },
+      "partnerships": {
+        "title": "Partenariats, éducation et soutien aux politiques",
+        "list": [
+          "Campagnes de sensibilisation au climat sur l'impact de la gestion informelle des déchets électroniques.",
+          "Renforcement des capacités pour les entreprises, les recycleurs et les décideurs.",
+          "Conseils politiques pour intégrer les déchets électroniques dans les stratégies nationales climatiques et les cadres EPR."
+        ]
+      },
+      "innovation": {
+        "title": "Recherche, innovation et technologies vertes",
+        "list": [
+          "Innovations de traitement des déchets électroniques à faible consommation d'énergie.",
+          "Intégration des énergies renouvelables dans les opérations de recyclage.",
+          "Promotion de matériaux verts et de l'éco-conception dans l'électronique."
+        ]
+      },
+      "alignment": {
+        "title": "Alignement sur les objectifs climatiques mondiaux et régionaux",
+        "list": [
+          "ODD des Nations Unies, en particulier ODD 12 et ODD 13.",
+          "Conformité à la Convention de Bâle.",
+          "Agenda 2063 de l'Union africaine.",
+          "Normes ISO 14001 de management environnemental."
+        ]
+      },
+      "impact": {
+        "title": "Impact mesurable",
+        "list": [
+          "Des milliers de tonnes de déchets électroniques détournées chaque année.",
+          "Économies d'énergie significatives équivalentes à l'alimentation des foyers.",
+          "Émissions évitées provenant de la combustion informelle et de l'extraction de matériaux.",
+          "Soutien à la gestion durable du cycle de vie informatique pour les clients."
+        ]
+      }
+    },
+
+    "pledgeTitle": "Notre engagement pour un avenir à faible émission de carbone",
+    "pledgeIntro": "Nous restons déterminés à atteindre des opérations neutres en carbone d'ici 2030, grâce à :",
+    "pledgeList": [
+      "Utilisation accrue d'énergies renouvelables.",
+      "Améliorations continues de l'efficacité.",
+      "Collaboration avec des partenaires verts et des organisations axées sur le climat."
+    ],
+    "pledgeOutro": "Chez LTC Africa Recycling, l'action climatique n'est pas un projet secondaire — elle est intégrée dans notre mission, nos valeurs et nos opérations quotidiennes. Nous croyons qu'en gérant les déchets électroniques de manière responsable, nous protégeons non seulement l'environnement mais contribuons également à la transition de l'Afrique vers un avenir durable et faible en carbone."
+  }, "sdgServicesPage": {
+    "headerSmall": "Durabilité",
+    "headerTitle": "Initiative ODD LTC",
+    "headerText": "Construire l'avenir durable de l'Afrique en alignant responsabilité environnementale, croissance économique et impact social avec les ODD des Nations Unies.",
+    "sdgCards": {
+      "3": { "title": "Bonne santé et bien-être", "text": "Des pratiques de recyclage sûres réduisent les risques environnementaux et sanitaires liés aux déchets électroniques dangereux." },
+      "4": { "title": "Éducation de qualité", "text": "Formations, stages et programmes de sensibilisation sur la durabilité et l'économie circulaire." },
+      "7": { "title": "Énergie abordable et propre", "text": "Soutenir les technologies écoénergétiques grâce à la récupération responsable des matériaux." },
+      "8": { "title": "Travail décent et croissance économique", "text": "Création d'emplois verts et autonomisation des techniciens et PME locaux." },
+      "9": { "title": "Industrie, innovation et infrastructure", "text": "Suivi numérique, R&D et infrastructure mobile de recyclage à travers l'Afrique." },
+      "11": { "title": "Villes et communautés durables", "text": "Des villes plus propres et plus saines grâce à une collecte efficace des déchets électroniques." },
+      "12": { "title": "Consommation et production responsables", "text": "Approche de l'économie circulaire : Réparer → Remettre à neuf → Réutiliser → Recycler." },
+      "13": { "title": "Action climatique", "text": "Réduction des émissions de carbone grâce à des opérations de recyclage durables." },
+      "17": { "title": "Partenariats pour les objectifs", "text": "Collaboration avec les gouvernements, les agences de l'ONU et les partenaires mondiaux." }
+    },
+    "impactStats": {
+      "eWaste": "Tonnes de déchets électroniques recyclés",
+      "jobs": "Emplois verts créés",
+      "co2": "Émissions de CO₂ évitées",
+      "eWasteNum": "10 000+",
+      "jobsNum": "5 000+",
+      "co2Num": "25 000+"
+    },
+    "frameworkTitle": "Notre cadre de mise en œuvre des ODD",
+    "frameworkList": {
+      "integration": "Intégration des objectifs de l'ODD à tous les niveaux de nos opérations et de notre stratégie commerciale.",
+      "innovation": "Utilisation de la technologie et des outils numériques pour la traçabilité, les rapports basés sur les données et la récupération efficace des déchets.",
+      "impact": "Fournir des mesures transparentes sur la réduction du carbone, la récupération des ressources et l'impact social.",
+      "collaboration": "Partenariat avec les leaders de l'industrie et les organisations de développement pour atteindre des objectifs de durabilité partagés."
+    },
+    "commitmentTitle": "Notre engagement ODD",
+    "commitmentText": "Grâce à l'initiative ODD LTC, nous créons une feuille de route pour une Afrique plus verte, plus intelligente et plus inclusive où les déchets deviennent une ressource, les populations prospèrent et la planète prospère.",
+    "africaImpactTitle": "Impact à travers l'Afrique",
+    "africaImpactList": [
+      "Réduit l'accumulation de déchets électroniques et la contamination environnementale.",
+      "Récupère des ressources précieuses pour l'industrie locale, réduisant la dépendance aux matières premières importées.",
+      "Autonomise les communautés grâce à la sensibilisation, à l'éducation et à la création d'emplois.",
+      "Soutient les gouvernements et les entreprises dans le respect des réglementations et des objectifs de durabilité.",
+      "Réduit l'empreinte carbone de l'Afrique grâce au recyclage durable des déchets électroniques et à la récupération des ressources."
+    ],
+    "africaImpactQuote": "Transformer les déchets électroniques en opportunité tout en construisant une Afrique durable."
+  }, "globalFootprint": {
+    "title": "Notre empreinte mondiale",
+    "description": "Chez LTC Africa Recycling, notre impact va bien au-delà de l'Afrique. Présents et partenaires dans 120 pays à travers le monde, nous opérons via un réseau mondial d’experts en recyclage, de partenaires technologiques et d’organisations de durabilité, renforçant notre capacité à fournir des solutions de gestion des déchets électroniques conformes et durables de classe mondiale.",
+    "mapAlt": "Empreinte mondiale",
+    "stats": {
+      "countries": "Pays atteints",
+      "continents": "Continents couverts",
+      "certified": "Traitement certifié",
+      "network": "Réseau d'économie circulaire"
+    },
+    "compliance": {
+      "title": "Normes internationales de conformité",
+      "description": "Grâce à notre adhésion au LTC Africa Group et à des partenariats avec des régimes de conformité environnementale, des recycleurs certifiés et des organisations mondiales de durabilité, nous garantissons que tous les matériaux et flux de déchets récupérés sont traités en toute sécurité, de manière transparente et conformément aux normes internationales.",
+      "item1": "Convention de Bâle sur le mouvement transfrontalier des déchets dangereux",
+      "item2": "Directives européennes DEEE et RoHS",
+      "item3": "Systèmes de management environnemental ISO 14001",
+      "item4": "Directives environnementales de l'OCDE pour un commerce durable"
+    },
+    "partnerships": {
+      "title": "Partenariats mondiaux stratégiques",
+      "desc1": "Nos partenariats mondiaux incluent des collaborations avec des recycleurs internationaux, des plateformes de responsabilité élargie du producteur (REP), des consultants environnementaux et des réseaux logistiques, permettant des opérations sans frontières — du déclassement sur site des actifs informatiques au transfert transfrontalier des matériaux et au traitement final dans des installations mondiales certifiées.",
+      "desc2": "En partenariat avec des organisations renommées telles que Ecoreco India, Majestic Corporation USA, UNEP, UNDP et de multiples alliances de recyclage OEM, LTC Africa Recycling comble le fossé entre le défi croissant des déchets électroniques en Afrique et les opportunités mondiales de l’économie circulaire.",
+      "desc3": "Notre approche sans frontières reflète notre conviction que la durabilité ne connaît pas de limites. En combinant expertise locale et meilleures pratiques mondiales, LTC Africa Recycling est un partenaire de confiance pour les gouvernements, les entreprises et les marques mondiales souhaitant construire un monde plus propre, circulaire et résilient face au climat.",
+      "item1": "Échanger connaissances, innovation et technologies de recyclage entre continents.",
+      "item2": "Faciliter la traçabilité et la certification internationales pour tous les flux de déchets.",
+      "item3": "Soutenir les multinationales et les opérateurs télécom avec des stratégies unifiées de gestion des déchets électroniques en Afrique et au-delà.",
+      "item4": "Promouvoir la récupération durable des ressources et les initiatives de réduction du carbone alignées sur les ODD de l’ONU."
+    }
+  },  "contactEwaste": {
+    "title": "Contactez-nous",
+    "description": "Prenez contact avec LTC Africa",
+    "offices": {
+      "header": "Nos bureaux",
+      "hq": {
+        "title": "Siège Nigeria",
+        "address": "4 Association Road, Governors Road Lagos"
+      },
+      "regionalMadagascar": {
+        "title": "Bureau régional Madagascar",
+        "address": "Bat 49B II Afriport Warehouse, Antananarivo Madagascar"
+      },
+      "regionalFacilities": {
+        "title": "Installations régionales",
+        "address": "Ghana, Botswana, Tanzanie, Maroc, Afrique du Sud"
+      }
+    },
+    "contactChannels": {
+      "header": "Contactez-nous",
+      "email": {
+        "label": "E-mail",
+        "value": "Recycling@ltcafrica"
+      },
+      "whatsapp": {
+        "label": "WhatsApp",
+        "value": "+261 32 868 1658",
+        "link": "https://wa.me/261328681658"
+      },
+      "partnerships": {
+        "label": "Partenariats mondiaux",
+        "value": "Operations@Ltcafrica"
+      }
+    }
+  }, "homeFooter": {
+    "terms": "Conditions Générales",
+    "cookies": "Politique de Cookies",
+    "privacy": "Protection des Données",
+    "copyright": "© {{year}} Groupe LTC Africa. Tous droits réservés."
+  }, "ewasteFooter": {
+    "contactTitle": "Contact",
+    "getInTouchTitle": "Nous Contacter",
+    "findUsTitle": "Nous Trouver",
+    "hqOffice": "Bureau Administratif Principal Nigeria : 4 Association Road, Governors Road Lagos",
+    "regionalOffice": "Bureau Régional Madagascar – Bat 49B II Afriport Warehouse, Antananarivo Madagascar.",
+    "regionalFacilities": "Installations Régionales – Ghana, Botswana, Tanzanie, Maroc, Afrique du Sud.",
+    "email": "Recycling@ltcafrica.com",
+    "whatsapp": "WhatsApp +261 32 868 1658",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "twitter": "X Twitter",
+    "terms": "Conditions Générales",
+    "cookies": "Politique de Cookies",
+    "privacy": "Protection des Données",
+    "copyright": "© {{year}} LTC Africa Recycling. Tous droits réservés."
+  }
+}
