@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  recycling,
-  ewastevideo,
-  dirttruck,
-  garbage,
   circularsustain,
   telecommunication,
   carbonemission,
@@ -28,7 +24,7 @@ const slidesData = [
     textKey: "ewaste.hero.socialCommitment.text",
   },
   {
-    video: dirttruck,
+    video: "/videos/epr.mp4",
     titleKey: "ewaste.hero.epr.title",
     textKey: "ewaste.hero.epr.text",
   },

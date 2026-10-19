@@ -19,7 +19,7 @@ const EwasteNav = () => {
     { to: "/e-waste/climate-change", labelKey: "ewasteNav.climateChange" },
     { to: "/e-waste/sdg-initiatives", labelKey: "ewasteNav.sdg" },
     { to: "/global-footprint", labelKey: "ewasteNav.globalFootprint" },
-    { to: "/e-waste/media", labelKey: "ewasteNav.media" },
+    { to: "/media", labelKey: "ewasteNav.media" },
     { to: "/e-waste/contact", labelKey: "ewasteNav.contact" },
   ];
 

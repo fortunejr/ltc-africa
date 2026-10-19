@@ -14,7 +14,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* CONTACT */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">{t("ewasteFooter.contactTitle")}</h3>
+            <h3 className="text-lg font-semibold">
+              {t("ewasteFooter.contactTitle")}
+            </h3>
 
             <div className="space-y-2 text-sm text-white/70">
               <div className="flex items-start gap-3">
@@ -36,7 +38,9 @@ const Footer = () => {
 
           {/* GET IN TOUCH */}
           <div className="space-y-6">
-            <h3 className="text-lg font-semibold">{t("ewasteFooter.getInTouchTitle")}</h3>
+            <h3 className="text-lg font-semibold">
+              {t("ewasteFooter.getInTouchTitle")}
+            </h3>
 
             <div className="flex flex-col gap-2 text-sm text-white/70">
               <a
@@ -87,7 +91,9 @@ const Footer = () => {
 
           {/* MAP */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{t("ewasteFooter.findUsTitle")}</h3>
+            <h3 className="text-lg font-semibold mb-4">
+              {t("ewasteFooter.findUsTitle")}
+            </h3>
             <div className="rounded-xl overflow-hidden">
               <iframe
                 title="LTC Africa Madagascar Location"
@@ -117,7 +123,10 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white/50 gap-3">
           <div className="flex flex-wrap gap-4">
-            <Link to="/termsandconditions" className="hover:text-white transition">
+            <Link
+              to="/termsandconditions"
+              className="hover:text-white transition"
+            >
               {t("ewasteFooter.terms")}
             </Link>
             <Link to="/cookie-policy" className="hover:text-white transition">
@@ -128,7 +137,9 @@ const Footer = () => {
             </Link>
           </div>
 
-          <p>{t("ewasteFooter.copyright", { year: new Date().getFullYear() })}</p>
+          <p>
+            {t("ewasteFooter.copyright", { year: new Date().getFullYear() })}
+          </p>
         </div>
       </div>
     </footer>

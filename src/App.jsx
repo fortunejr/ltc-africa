@@ -30,6 +30,7 @@ import RealEstate from "./RealEstate/RealEstate";
 import RenewableEnergy from "./RenewableEnergy/RenewableEnergy";
 import CircularEconomy from "./Pages/CircularEconomy/CircularEconomy";
 import GovernancePolicy from "./Components/GovernancePolicy/GovernancePolicy";
+import MediaDetails from "./Ewaste/Pages/Media/MediaDetails";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -62,6 +63,8 @@ function App() {
           />
           <Route path="/contact" element={<ContactEwaste />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/media/:slug" element={<MediaDetails />} />
+          <Route path = "*"  element={<p>Nothing to show</p>} />
         </Route>
 
         {/* ewaste layout  */}
